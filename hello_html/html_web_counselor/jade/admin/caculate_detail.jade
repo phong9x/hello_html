@@ -1,0 +1,161 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Program detail - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .page-bar
+          ul.page-breadcrumb
+            li
+              span 정산 관리
+        // .page-bar
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .portlet.box
+            .portlet-body
+              form.form_sample_3.form-horizontal(action='#')
+                .form-body
+                  .form-group
+                    label.control-label.col-md-3.col-md-offset-1
+                      | 프로그램
+                      //- span.required *
+                    .col-md-6
+                      input.form-control(type='text', name='name', disabled, value="[언어] 스페인어를 배워요", style="width: 280px;")
+                  .form-group
+                    label.control-label.col-md-3.col-md-offset-1
+                      | 공급자
+                      //- span.required *
+                    .col-md-6
+                      input.form-control(type='text', name='name', disabled, value="홍길동", style="width: 280px;")
+                  .form-group
+                    label.control-label.col-md-3.col-md-offset-1
+                      | 총 결제금액
+                      //- span.required *
+                    .col-md-6
+                      input.form-control(type='text', name='name', disabled, value="500,000", style="width: 280px; display: inline-block; margin-right: 5px;")
+                      span.unit 원
+                  .form-group
+                    label.control-label.col-md-3.col-md-offset-1
+                      | 총 결제금액
+                      //- span.required *
+                    .col-md-6
+                      input.form-control(type='text', name='name', style="width: 280px; display: inline-block; margin-right: 5px;")
+                      span.unit 원
+                  .form-group
+                    label.control-label.col-md-3.col-md-offset-1
+                      | 총 결제금액
+                      //- span.required *
+                    .col-md-6
+                      input.form-control(type='text', name='name', style="width: 280px;")
+                  .form-group
+                    label.control-label.col-md-3.col-md-offset-1
+                      | 카테고리 
+                      //- span.required *
+                    .col-md-6
+                      select.form-control.select2me(name='options2', style="width: 280px;")
+                        option(value='') 카테고리
+                        option(value='언어') 언어
+                        option(value='지식/비즈') 지식/비즈
+                        option(value='운동') 운동
+                        option(value='라이프') 라이프
+                        option(value='건강') 건강
+                        option(value='뷰티') 뷰티
+                        option(value='문화') 문화
+                        option(value='소셜') 소셜
+                  .form-group
+                    .col-md-3.col-md-offset-1
+                      label.control-label
+                    .col-md-6 
+                      a.btn.green.btn-sumbit(href='#') 저장
+          .border-dashed            
+          .portlet.box.green
+            .portlet-title
+              .caption
+                strong 수강회원 목록
+            .portlet-body
+              .table-wrapper
+                .table-responsive
+                  table.table.table-striped.table-bordered.table-hover.text-center
+                    thead
+                      tr
+                        th 번호
+                        th 이름
+                        th 이메일
+                        th 결제일시
+                        th 사용쿠폰혜택
+                        th 결제액
+                        th 상태
+                    tbody
+                      tr
+                        td 01
+                        td 
+                          a(href="/member_detail.html") 김길동
+                        td abcd@edf.com
+                        td 2016-05-26 12:00-14:00
+                        td 5,000원 할인
+                        td 45,000
+                        td 결제완료
+                      tr
+                        td 02
+                        td 
+                          a(href="/member_detail.html") 김길동
+                        td abcd@edf.com
+                        td 2016-05-26 12:00-14:00
+                        td 100%할인
+                        td 0
+                        td 결제완료
+                      tr
+                        td 01
+                        td 
+                          a(href="/member_detail.html") 김길동
+                        td abcd@edf.com
+                        td 2016-05-26 12:00-14:00
+                        td 50%할인
+                        td 25,000
+                        td 환불요청(YYYY.MM.DD)
+                      tr
+                        td 02
+                        td 
+                          a(href="/member_detail.html") 김길동
+                        td abcd@edf.com
+                        td 2016-05-26 12:00-14:00
+                        td 100%할인
+                        td 0
+                        td 결제완료
+                      tr
+                        td 01
+                        td 
+                          a(href="/member_detail.html") 김길동
+                        td abcd@edf.com
+                        td 2016-05-26 12:00-14:00
+                        td 50%할인
+                        td 25,000
+                        td 환불요청(YYYY.MM.DD)
+                ="\n"
+                include ../includes/rw-pagination.jade  
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupContentSearch.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

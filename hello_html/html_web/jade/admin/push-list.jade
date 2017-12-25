@@ -1,0 +1,315 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Push List
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page.push-list
+            .page-bar
+              ul.page-breadcrumb
+                li
+                  a(href="home.html").home 
+                    i.fa.fa-home
+                    | 홈
+                li
+                  a(href="home.html") 회원 관리
+            // .page-bar
+            
+            ="\n"
+            form.form_sample_3
+              .member-main-top.border-full
+                .item-top
+                  .left
+                    span 등록일시 :
+                  .right
+                    .item.icon-next.datepicker-item
+                      span
+                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                      span.text 달력
+                    .item.datepicker-item
+                      span
+                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                      span.text 달력
+                
+                .item-top
+                  .left
+                    span 키워드 :
+                  .right 
+                    .item
+                      select.form-control.select2me(name='options2')
+                        option(value='') Select...
+                        option(value='Option 1') Option 1
+                        option(value='Option 2') Option 2
+                        option(value='Option 3') Option 3
+                        option(value='Option 4') Option 4
+                    .item
+                      input.form-control(type='text', name='name', data-required='1')
+              .link-submit
+                button.btn.green(type='submit') 검색
+
+
+            .member-title-table
+              .md-ct
+                span.title 푸시 발송 리스트  :
+                span 100건
+                button.btn.green.pull-right.mr-left15 발송취소
+                button.btn.green.pull-right 등록
+            .table-member-mng.table-responsive
+              table.table.table-striped.table-bordered.table-hover.text-center.checkall
+                thead
+                  tr
+                    th 
+                      .checkbox-list(data-error-container='#form_2_services_error')
+                        input#all(type='checkbox', value='1', name='all')
+                    th 번호
+                    th 랜딩 페이지
+                    th 푸시 내용
+                    th 등록일시
+                    th 시작일시
+                    th OS
+                    th 수신대상
+                    th 성공건수
+                    th 확인건수
+                    th 관리자명
+                tbody
+                  tr
+                    td 
+                      label
+                        input(type='checkbox', value='1', name='service')
+                    td 10
+                    td 공지사항
+                    td.text-left
+                      .des(data-toggle='tooltip', data-placement='bottom', title='<p>제목 : 화상 심리상담 화상 심리상</p><p>제목 : 화상 심리상담</p><p>기다…</p>')
+                        p 제목 : 화상 심리상담
+                        p 내용 : 전문가들이 
+                        p 기다…
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td.border 
+                      p iOS
+                      p Android
+                    td.border 
+                      p 1,000
+                      p 2,000
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td 홍길동
+                  tr
+                    td 
+                      label
+                        input(type='checkbox', value='1', name='service')
+                    td 10
+                    td 공지사항
+                    td.text-left
+                      .des(data-toggle='tooltip', data-placement='bottom', title='<p>제목 : 화상 심리상담</p><p>제목 : 화상 심리상담</p><p>기다…</p>')
+                        p 제목 : 화상 심리상담
+                        p 내용 : 전문가들이 
+                        p 기다…
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td.border 
+                      p iOS
+                      p Android
+                    td.border 
+                      p 1,000
+                      p 2,000
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td 홍길동
+                  tr
+                    td 
+                      label
+                        input(type='checkbox', value='1', name='service')
+                    td 10
+                    td 공지사항
+                    td.text-left
+                      .des(data-toggle='tooltip', data-placement='bottom', title='<p>제목 : 화상 심리상담</p><p>제목 : 화상 심리상담</p><p>기다…</p>')
+                        p 제목 : 화상 심리상담
+                        p 내용 : 전문가들이 
+                        p 기다…
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td.border 
+                      p iOS
+                      p Android
+                    td.border 
+                      p 1,000
+                      p 2,000
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td 홍길동
+                  tr
+                    td 
+                      label
+                        input(type='checkbox', value='1', name='service')
+                    td 10
+                    td 공지사항
+                    td.text-left
+                      .des(data-toggle='tooltip', data-placement='bottom', title='<p>제목 : 화상 심리상담</p><p>제목 : 화상 심리상담</p><p>기다…</p>')
+                        p 제목 : 화상 심리상담
+                        p 내용 : 전문가들이 
+                        p 기다…
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td.border 
+                      p iOS
+                      p Android
+                    td.border 
+                      p 1,000
+                      p 2,000
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td 홍길동
+                  tr
+                    td 
+                      label
+                        input(type='checkbox', value='1', name='service')
+                    td 10
+                    td 공지사항
+                    td.text-left
+                      .des(data-toggle='tooltip', data-placement='bottom', title='<p>제목 : 화상 심리상담</p><p>제목 : 화상 심리상담</p><p>기다…</p>')
+                        p 제목 : 화상 심리상담
+                        p 내용 : 전문가들이 
+                        p 기다…
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td.border 
+                      p iOS
+                      p Android
+                    td.border 
+                      p 1,000
+                      p 2,000
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td 홍길동
+                  tr
+                    td 
+                      label
+                        input(type='checkbox', value='1', name='service')
+                    td 10
+                    td 공지사항
+                    td.text-left
+                      .des(data-toggle='tooltip', data-placement='bottom', title='<p>제목 : 화상 심리상담</p><p>제목 : 화상 심리상담</p><p>기다…</p>')
+                        p 제목 : 화상 심리상담
+                        p 내용 : 전문가들이 
+                        p 기다…
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td.border 
+                      p iOS
+                      p Android
+                    td.border 
+                      p 1,000
+                      p 2,000
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td 홍길동
+                  tr
+                    td 
+                      label
+                        input(type='checkbox', value='1', name='service')
+                    td 10
+                    td 공지사항
+                    td.text-left
+                      .des(data-toggle='tooltip', data-placement='bottom', title='<p>제목 : 화상 심리상담</p><p>제목 : 화상 심리상담</p><p>기다…</p>')
+                        p 제목 : 화상 심리상담
+                        p 내용 : 전문가들이 
+                        p 기다…
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td 
+                      p 2016-03-10 
+                      p 15:29:55
+                    td.border 
+                      p iOS
+                      p Android
+                    td.border 
+                      p 1,000
+                      p 2,000
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td.border 
+                      p 900 (90%)
+                      p 2000 (100%)
+                    td 홍길동
+                    
+            //.table-member-mng
+
+            ="\n"
+            include ../includes/rw-pagination.jade
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

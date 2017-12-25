@@ -1,0 +1,413 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Push Sending
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page.push-sending
+            .page-bar
+              ul.page-breadcrumb
+                li
+                  a(href="home.html").home 
+                    i.fa.fa-home
+                    | 홈
+                li
+                  a(href="home.html") 회원 관리
+            // .page-bar
+            
+            ="\n"
+
+            #slide-push
+              .owl-carousel.owl-theme
+                .item
+                  .member-main-top.border-full.mrb-30
+                    p ㆍ 회원/비회원 구별 없이 모든 스마트폰에 발송하고 싶은 경우에는 디바이스 대상으로, 가입한 회원에게만 보내고 싶은 경우에는 회원 대상으로 보내면 됩니다.
+                    p ㆍ 하루에 여러 번 보내실 경우 조건에 따라 대상자가 겹칠 수 있습니다. (최소 주 1회 권장).
+                    p ㆍ 설정하신 조건에 따라 로딩이 길어질 수 있습니다.
+                    p ㆍ 하루에 여러 번 보내실 경우 조건에 따라 대상자가 겹칠 수 있습니다. (최소 주 1회 권장)
+                    p ㆍ 설정하신 조건에 따라 로딩이 길어질 수 있습니다.
+                  form.form_sample_3
+                    .member-main-content
+                      .tabbable-custom
+                        .top-tab#checked-push
+                          label
+                            input(type='checkbox', value='1', name='service')
+                            |  회원 전체 발송 
+                        ul.nav.nav-tabs
+                          li.active
+                            a(href='#tab-11', data-toggle='tab') 회원 대상
+                          li
+                            a(href='#tab-12', data-toggle='tab') 디바이스 대상
+
+                        ="\n"
+                        .tab-content
+                          #tab-11.tab-10.tab-pane.active
+                            form.form_sample_3.form-horizontal(action='#')
+                              .portlet.box#tab-none
+                                .portlet-body
+                                  .form-body
+                                    .form-group
+                                      .left
+                                        label.control-label.col-md-3
+                                          | 생년월일:
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          .row.all-select
+                                            .col-md-4
+                                              select.form-control.selectpickermember(name='selecttext',title='성명')
+                                                option(value='2015') 2015
+                                                option(value='2016') 2016
+                                                option(value='2017') 2017
+                                              span.note 년
+                                            .col-md-4
+                                              select.form-control.selectpickermember(name='selecttext',title='성명')
+                                                option(value='1') 01
+                                                option(value='2') 02
+                                                option(value='3') 03
+                                              span.note 월
+                                            
+                                      .right
+                                        label.control-label.col-md-3
+                                          | 성별 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          .checkbox-list(data-error-container='#form_2_services_error')
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  남자   
+                                            label
+                                              input(type='checkbox', value='2', name='service')
+                                              |  여자
+                                    .form-group
+                                      .left
+                                        label.control-label.col-md-3
+                                          | 결제 여부 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          .checkbox-list(data-error-container='#form_2_services_error')
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  Yes   
+                                            label
+                                              input(type='checkbox', value='2', name='service')
+                                              |  No
+                                      .right
+                                        label.control-label.col-md-3
+                                          | 상담 여부 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          .checkbox-list(data-error-container='#form_2_services_error')
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  Yes   
+                                            label
+                                              input(type='checkbox', value='2', name='service')
+                                              |  No
+                                    .form-group
+                                      .left
+                                        label.control-label.col-md-3
+                                          | 심리검사 여부 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          .checkbox-list(data-error-container='#form_2_services_error')
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  Yes   
+                                            label
+                                              input(type='checkbox', value='2', name='service')
+                                              |  No
+                                      .right
+                                        label.control-label.col-md-3
+                                          | 회원 구분 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          .checkbox-list(data-error-container='#form_2_services_error')
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  개인   
+                                            label
+                                              input(type='checkbox', value='2', name='service')
+                                              |  기업 소속
+                                    .form-group
+                                      .left
+                                        label.control-label.col-md-3
+                                          | 소속 기업 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          button.btn.default(style="margin-right: 10px;")
+                                            | 선택
+                                          span 5개   [취소]
+                                      .right
+                                        label.control-label.col-md-3
+                                          | 상담권 유무 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          .checkbox-list(data-error-container='#form_2_services_error')
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  상담권 있음   
+                                            label
+                                              input(type='checkbox', value='2', name='service')
+                                              |  상담권 없음 
+                                    .form-group
+                                      .left
+                                        label.control-label.col-md-3(style="padding-top: 20px;")
+                                          | iOS 선택 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          p
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  iOS 선택
+                                          p
+                                            span 앱 버전
+                                            button.btn.default(style="margin-right: 10px;")
+                                              | 선택
+                                            span 5개   [취소] 
+                                          
+                                      .right
+                                        label.control-label.col-md-3(style="padding-top: 20px;")
+                                          | Android 선택 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          p
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  Android
+                                          p
+                                            span 앱 버전
+                                            button.btn.default(style="margin-right: 10px;")
+                                              | 선택
+                                            span 5개   [취소]
+                                    .form-group.member-main-top
+                                      .left(style="margin-top: 20px;")
+                                        label.control-label.col-md-3
+                                          | 최근 로그인 일시 :
+                                          //- span.required *
+                                        .col-md-8.ct.item-top(style="padding-left: 15px;")
+                                          .right(style="width: 100%")
+                                            .item.icon-next.datepicker-item
+                                              span
+                                                input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                                              span.text 달력
+                                            .item.datepicker-item
+                                              span
+                                                input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                                              span.text 달력
+
+
+                                .portlet-footer(style="display: inline-block;width:100%;")
+                                  button.btn.green.click-slide2(style="margin-top: 30px;") 
+                                    | 다음 단계로 
+                                    i.fa.fa-angle-right
+  
+                                  
+                          #tab-12.tab-12.tab-pane
+                            form.form_sample_3.form-horizontal(action='#')
+                              .portlet.box
+                                .portlet-body
+                                  .form-body
+                                    .form-group
+                                      .left
+                                        label.control-label.col-md-3(style="padding-top: 20px;")
+                                          | iOS 선택 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          p
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  iOS 선택
+                                          p
+                                            span 앱 버전
+                                            button.btn.default(style="margin-right: 10px;")
+                                              | 선택
+                                            span 5개   [취소] 
+                                          
+                                      .right
+                                        label.control-label.col-md-3(style="padding-top: 20px;")
+                                          | Android 선택 :
+                                          //- span.required *
+                                        .col-md-6.ct
+                                          p
+                                            label
+                                              input(type='checkbox', value='1', name='service')
+                                              |  Android
+                                          p
+                                            span 앱 버전
+                                            button.btn.default(style="margin-right: 10px;")
+                                              | 선택
+                                            span 5개   [취소]
+                                    .form-group.member-main-top
+                                      .left(style="margin-top: 20px;")
+                                        label.control-label.col-md-3
+                                          | 최근 로그인 일시 :
+                                          //- span.required *
+                                        .col-md-8.ct.item-top(style="padding-left: 15px;")
+                                          .right(style="width: 100%")
+                                            .item.icon-next.datepicker-item
+                                              span
+                                                input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                                              span.text 달력
+                                            .item.datepicker-item
+                                              span
+                                                input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                                              span.text 달력
+
+
+                                .portlet-footer(style="display: inline-block;width:100%;")
+                                  button.btn.green(style="margin-top: 30px;") 
+                                    | 다음 단계로 
+                                    i.fa.fa-angle-right
+                  
+                .item
+                  .member-main-top.border-full.mrb-30
+                    p ㆍ 회원/비회원 구별 없이 모든 스마트폰에 발송하고 싶은 경우에는 디바이스 대상으로, 가입한 회원에게만 보내고 싶은 경우에는 회원 대상으로 보내면 됩니다.
+                    p ㆍ 하루에 여러 번 보내실 경우 조건에 따라 대상자가 겹칠 수 있습니다. (최소 주 1회 권장).
+                    p ㆍ 설정하신 조건에 따라 로딩이 길어질 수 있습니다.
+                    p ㆍ 하루에 여러 번 보내실 경우 조건에 따라 대상자가 겹칠 수 있습니다. (최소 주 1회 권장)
+                    p ㆍ 설정하신 조건에 따라 로딩이 길어질 수 있습니다.
+                  .member-title-table
+                    .md-ct
+                      span.title 푸시 대상자 리스트  :
+                      span Android – 200  /  iOS - 100건
+                      button.btn.green.pull-right.mr-left15 삭제
+                  .table-member-mng.table-responsive
+                    table.table.table-striped.table-bordered.table-hover.text-center.checkall
+                      thead
+                        tr
+                          th 
+                            .checkbox-list(data-error-container='#form_2_services_error')
+                              input#all(type='checkbox', value='1', name='all')
+                          th 번호
+                          th ID
+                          th 회원명
+                          th 사용 OS
+                          th 최근 로그인 일시
+                      tbody
+                        tr
+                          td 
+                            label
+                              input(type='checkbox', value='1', name='service')
+                          td 10
+                          td 공지사항
+                          td mail@
+                          td 
+                            p 2016-03-10 
+                            p 15:29:55
+                          td 
+                            p 2016-03-10 
+                            p 15:29:55
+                        tr
+                          td 
+                            label
+                              input(type='checkbox', value='1', name='service')
+                          td 10
+                          td 공지사항
+                          td mail@
+                          td 
+                            p 2016-03-10 
+                            p 15:29:55
+                          td 
+                            p 2016-03-10 
+                            p 15:29:55
+                        tr
+                          td 
+                            label
+                              input(type='checkbox', value='1', name='service')
+                          td 10
+                          td 공지사항
+                          td mail@
+                          td 
+                            p 2016-03-10 
+                            p 15:29:55
+                          td 
+                            p 2016-03-10 
+                            p 15:29:55
+                        tr
+                          td 
+                            label
+                              input(type='checkbox', value='1', name='service')
+                          td 10
+                          td 공지사항
+                          td mail@
+                          td 
+                            p 2016-03-10 
+                            p 15:29:55
+                          td 
+                            p 2016-03-10 
+                            p 15:29:55
+                    ="\n"
+                    include ../includes/rw-pagination.jade
+                          
+                .item
+                  .member-main-top.border-full.mrb-30
+                    p ㆍ 회원/비회원 구별 없이 모든 스마트폰에 발송하고 싶은 경우에는 디바이스 대상으로, 가입한 회원에게만 보내고 싶은 경우에는 회원 대상으로 보내면 됩니다.
+                    p ㆍ 하루에 여러 번 보내실 경우 조건에 따라 대상자가 겹칠 수 있습니다. (최소 주 1회 권장).
+                    p ㆍ 설정하신 조건에 따라 로딩이 길어질 수 있습니다.
+                    p ㆍ 하루에 여러 번 보내실 경우 조건에 따라 대상자가 겹칠 수 있습니다. (최소 주 1회 권장)
+                    p ㆍ 설정하신 조건에 따라 로딩이 길어질 수 있습니다.
+                  .member-title-table
+                    .md-ct
+                      span.title 문구 작성
+                  form.form_sample_3
+                    .member-main-top.border-full
+                      .item-top
+                        .left
+                          span 랜딩 페이지 :
+                        .right
+                          .item
+                            select.form-control.selectpickermember.text-left(name='selecttext',title='성명')
+                              option(value='2015') 2015
+                              option(value='2016') 2016
+                              option(value='2017') 2017
+                          .item
+                            input.form-control(type='text', name='name', data-required='1')
+                      
+                      .item-top
+                        .left
+                          span 키워드 :
+                        .right 
+                          .item
+                            select.form-control.select2me(name='options2')
+                              option(value='') Select...
+                              option(value='Option 1') Option 1
+                              option(value='Option 2') Option 2
+                              option(value='Option 3') Option 3
+                              option(value='Option 4') Option 4
+                          .item
+                            input.form-control(type='text', name='name', data-required='1')
+                    .link-submit
+                      button.btn.green(type='submit') 검색
+            
+
+                    
+            //.table-member-mng
+
+            ="\n"
+            include ../includes/rw-pagination.jade
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

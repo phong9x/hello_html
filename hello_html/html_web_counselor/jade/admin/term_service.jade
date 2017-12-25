@@ -1,0 +1,70 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Term Service
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.massage
+      .page-title
+        .title
+          span 쪽지
+        .title-ct 
+          span 회원과 주고 받은 쪽지 리스트입니다.
+      .page-content.term-sevice
+        .container
+          .main-top.border-full.bg-fff
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li.active
+                  a(href='#tab-11', data-toggle='tab') 
+                   span 서비스 이용약관 
+                   i.fa.fa-caret-down(aria-hidden="true")
+                li
+                  a(href='#tab-12', data-toggle='tab') 
+                    span 개인정보 취급방침
+                    i.fa.fa-caret-down(aria-hidden="true")
+
+              ="\n"
+              .tab-content
+                #tab-11.tab-10.tab-pane.active
+                  .module-content 
+                    p hello 심리상담 웹 서비스 (이하 ‘헬로’이라 함)는 정보주체의 개인정보를 중시하며,「정보통신망 이용촉진 및  hello 심리상담 웹 서비스 (이하 ‘헬로’이라 함)는 정보주체의 개인정보를 중시하며,「정보통신망 이용촉진 및 
+                    
+                #tab-12.tab-10.tab-pane
+                  .module-content 
+                    p aaaaaaaaaaaaaaaaaaahello 심리상담 웹 서비스 (이하 ‘헬로’이라 함)는 정보주체의 개인정보를 중시하며,「정보통신망 이용촉진 및  hello 심리상담 웹 서비스 (이하 ‘헬로’이라 함)는 정보주체의 개인정보를 중시하며,「정보통신망 이용촉진 및 
+                    
+    
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popup-psychlogical3.jade
+  ="\n"
+  include ../includes/popup-massage.jade
+  
+  

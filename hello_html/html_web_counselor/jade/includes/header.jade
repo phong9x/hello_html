@@ -1,0 +1,69 @@
+.page-header.navbar
+  .page-header-inner.container
+    // BEGIN LOGO
+    .page-logo
+      a(href='home.html')
+        img.logo-default(src='../../assets/images/logo/logo.png', alt='logo')
+        span 심리상담사 전용 페이지
+    // .page-logo
+
+    ="\n"
+    a.menu-toggler.responsive-toggler(href='javascript:;', data-toggle='collapse', data-target='.navbar-collapse')
+    // .responsive-toggler
+    
+    ="\n"
+    .top-menu
+      .top-accmenu
+        .dropdown
+          .acc-name#dLabel(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false")
+            span.name 로그인
+            //- span.icon
+              //- <i class="fa fa-angle-down" aria-hidden="true"></i>
+          .dropdown-menu(aria-labelledby="dLabel")
+            p.title 심리상담사 로그인
+            form.form_sample_3.form-horizontal(action='#')
+              .acc-content
+                .item
+                  input.form-control(type='text', name='name', data-required='1',placeholder="아이디", data-tr-placeholder="아이디") 
+                  p.note-error 아이디를 입력해주세요.
+                .item
+                  input.form-control(type='password', name='password', data-required='1',placeholder="비밀번호") 
+                button.btn.green.submit(type="submit") 로그인
+            .acc-footer
+              button.v1 아이디/비밀번호 찾기
+              button.v2 심리상담사 등록 바로가기
+      .top-accmenu.acount
+        .dropdown
+          .acc-name#dLabel(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false")
+            span.avatar
+              img(src='../../assets/images/img-7.jpg', alt='avatar')
+            span.name 김태희
+            span.name.style2 님
+            span.icon
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+          .dropdown-menu(aria-labelledby="dLabel")
+            .title 
+              span 김태희 
+              span.normal 심리상담사
+            .acount-content
+              .item-acount
+                a(href="#")
+                  span.icon.iconacc
+                  span.text 기본 정보 수정
+                  span.icon-next
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+              .item-acount
+                a(href="#")
+                  span.icon.iconsetting
+                  span.text 서비스 노출 정보 수정
+                  span.icon-next
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+            .acc-footer
+              span 최근 로그인   2016-03-09 18:00:00
+      
+      .top-logout
+        button 로그아웃
+    // .top-menu
+// .page-header
+
+.clearfix

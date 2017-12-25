@@ -1,0 +1,55 @@
+#popupcontent2file.modal.fade.popupcontentfile(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 상담분야 아이콘 등록
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        h4 상담분야 아이콘 등록 시 On/Off 상태의 아이콘을 모두 등록해야 합니다.
+        p.mrb-30 (이미지 형식은 .png만 등록 가능합니다.)
+        //- .inputfile
+        //-   input.input-file(type="file")
+        h4  
+          i.fa.fa-caret-right(aria-hidden='true')
+          span.mrl-10 ON 상태 아이콘 등록
+        .inputfile
+          .tr-file-upload.image-upload
+            .preview-image.hidden
+              img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+            
+            //- span.help-inline 선택된 파일 없음.
+            .input-icon.input-large.input-inline.right
+              //- span.btn-delete
+              span.show-file-info.vali-file1
+            label.btn.green.btn-select-file.pull-right
+              | 찾아보기
+              input.hidden.input-file(type="file",accept="image/png")
+            //- .note-img * JPG, GIF, PNG (3MB 이하)
+        p.red.mrt-20
+          i.fa.fa-warning(aria-hidden='true')
+          span 아이콘이 등록되지 않았습니다
+        p.red 
+          i.fa.fa-warning(aria-hidden='true')
+          span 파일 형식이 맞지 않습니다.
+        h4  
+          i.fa.fa-caret-right(aria-hidden='true')
+          span.mrl-10 OFF 상태 아이콘 등록
+        .inputfile
+          .tr-file-upload.image-upload
+            .preview-image.hidden
+              img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+            
+            //- span.help-inline 선택된 파일 없음.
+            .input-icon.input-large.input-inline.right
+              //- span.btn-delete
+              span.show-file-info.vali-file2
+            label.btn.green.btn-select-file.pull-right
+              | 찾아보기
+              input.hidden.input-file(type="file",accept="image/png")
+            //- .note-img * JPG, GIF, PNG (3MB 이하)
+        .bs-example.bs-example-bg-classes.mrt-30.hidden
+          p.bg-danger(style="padding: 10px 15px;") 아이콘이 등록되지 않았습니다.
+            
+      .modal-footer.text-center
+        a.btn.green.btn-confirm.width100(href="#") 확인
+// .popupConfirmDelete

@@ -1,0 +1,75 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Content recom - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .page-bar
+          ul.page-breadcrumb
+            li
+              span 프로그램 관리
+        // .page-bar
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .block-1
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li
+                  a(href='content_upload.html') 컨텐츠 관리
+                li.active
+                  a(href='content_recom.html') 추천 컨텐츠 관리
+
+              ="\n"
+              .tab-content
+                .tab-product.tab-pane.active
+                  .portlet.box
+                    .portlet-body
+                      form.form_sample_3.form-horizontal(action='#')
+                        .form-body
+                          .form-group
+                            .col-md-12
+                              div
+                                label.control-label 1. [지식/비즈]  현명한 소비습관
+                                .controls-button  
+                                   a.btn.blue(href="#", data-toggle='modal', data-target="#popupContentSearch", type='button', style="padding: 7px 29px; margin-right: 15px;") 검색
+                                   a.btn.default(href="#", data-toggle='modal', style="padding: 7px 29px;", data-target='#popupConfirmDelete') 삭제
+                              div
+                                label.control-label 2. [지식/비즈]  현명한 소비습관
+                                .controls-button  
+                                   a.btn.blue(href="#", data-toggle='modal', data-target="#popupContentSearch", type='button', style="padding: 7px 29px; margin-right: 15px;") 검색
+                                   a.btn.default(href="#", data-toggle='modal', style="padding: 7px 29px;", data-target='#popupConfirmDelete') 삭제
+                              div
+                                label.control-label 2. [지식/비즈]  현명한 소비습관
+                                .controls-button  
+                                   a.btn.blue(href="#", data-toggle='modal', data-target="#popupContentSearch", type='button', style="padding: 7px 29px; margin-right: 15px;") 검색
+                                   a.btn.default(href="#", data-toggle='modal', style="padding: 7px 29px;", data-target='#popupConfirmDelete') 삭제
+                          
+                          .form-actions.text-center
+                            a.btn.red(href="#", data-toggle='modal', style="padding: 7px 29px;", data-target='#popupConfirmDelete') 삭제
+                            a.btn.green.btn-sumbit(href='#') 수정
+          // .block-1
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupContentSearch.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

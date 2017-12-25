@@ -1,0 +1,202 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title member - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+
+        .page-content
+          .container
+            ="\n"
+            .sidebar-left
+              include ../includes/page-sidebar-left.jade
+            .main-body-content.member-page
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+              // .page-bar
+              
+              ="\n"
+              form.form_sample_3
+                .member-main-top.border-full
+                  .item-top
+                    .left
+                      span 가입 일시 :
+                    .right
+                      .item.icon-next
+                        span
+                          input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                        span.text 달력
+                      .item
+                        span
+                          input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                        span.text 달력
+                  .item-top
+                    .left
+                      span 회원 구분 :
+                    .right
+                      .item
+                        .checkbox-list(data-error-container='#form_2_services_error')
+                          label
+                            input(type='checkbox', value='1', name='service')
+                            |  개인   
+                          label
+                            input(type='checkbox', value='2', name='service')
+                            |  기업 
+                      .item
+                        select.form-control.select2me(name='options2')
+                          option(value='') Select...
+                          option(value='Option 1') Option 1
+                          option(value='Option 2') Option 2
+                          option(value='Option 3') Option 3
+                          option(value='Option 4') Option 4
+                  .item-top.stylev2
+                    .left
+                      span 성별 :
+                    .right
+                      .item
+                        .checkbox-list(data-error-container='#form_2_services_error')
+                          label
+                            input(type='checkbox', value='1', name='service')
+                            |  남자   
+                          label
+                            input(type='checkbox', value='2', name='service')
+                            |  여자 
+                      .item.style2
+                        .title
+                          span 연령 :
+                        .checkbox-list(data-error-container='#form_2_services_error')
+                          .top-check
+                            label
+                              input(type='checkbox', value='1', name='service')
+                              |  남자   
+                            label
+                              input(type='checkbox', value='2', name='service')
+                              |  여자
+                            label
+                              input(type='checkbox', value='1', name='service')
+                              |  남자  
+                          .bottom-check 
+                            label
+                              input(type='checkbox', value='2', name='service')
+                              |  여자
+                            label
+                              input(type='checkbox', value='1', name='service')
+                              |  남자 
+                  .item-top.stylev2.v2
+                    .left
+                      span 사용 OS :
+                    .right
+                      .item
+                        .checkbox-list(data-error-container='#form_2_services_error')
+                          label
+                            input(type='checkbox', value='1', name='service')
+                            |  iOS   
+                          label
+                            input(type='checkbox', value='2', name='service')
+                            |  Android
+                          label
+                            input(type='checkbox', value='2', name='service')
+                            |  기타  
+                      .item.style2
+                        .title
+                          span 상태 :
+                        .checkbox-list(data-error-container='#form_2_services_error')
+                            label
+                              input(type='checkbox', value='1', name='service')
+                              |  정상   
+                            label
+                              input(type='checkbox', value='2', name='service')
+                              |  제재
+                            label
+                              input(type='checkbox', value='1', name='service')
+                              |  휴면  
+                            label
+                              input(type='checkbox', value='1', name='service')
+                              |  탈퇴   
+                  .item-top
+                    .left
+                      span 키워드 :
+                    .right 
+                      .item
+                        select.form-control.select2me(name='options2')
+                          option(value='') Select...
+                          option(value='Option 1') Option 1
+                          option(value='Option 2') Option 2
+                          option(value='Option 3') Option 3
+                          option(value='Option 4') Option 4
+                      .item
+                        input.form-control(type='text', name='name', data-required='1')
+                .link-submit
+                  button.btn.green(type='submit') 검색
+
+
+              .member-title-table
+                .md-ct
+                  span.title 가입 회원  :
+                  span 100건
+                  select.form-control.select2me.pull-right(name='options2')
+                    option(value='') 최근 가입 순...
+                    option(value='Option 1') Option 1
+                    option(value='Option 2') Option 2
+                    option(value='Option 3') Option 3
+                    option(value='Option 4') Option 4
+              .table-member-mng.table-responsive
+                table.table.table-striped.table-bordered.table-hover.text-center
+                  thead
+                    tr
+                      th 번호
+                      th 아이디
+                      th 회원명
+                      th 생년월일
+                      th 소속
+                      th 상담권
+                      th 헬로코인
+                      th 가입일시
+                      th 상태
+                  tbody
+                    tr
+                      td 10
+                      td aa@aim.com
+                      td 
+                        a(href="member-detail.html") 홍길동
+                      td 1983-02-18
+                      td 메트라이프신세계
+                      td 1
+                      td 30,000
+                      td 
+                        p 2016-03-10 
+                        p 15:00:00
+                      td 정상
+                      
+              //.table-member-mng
+
+              ="\n"
+              include ../includes/rw-pagination.jade
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

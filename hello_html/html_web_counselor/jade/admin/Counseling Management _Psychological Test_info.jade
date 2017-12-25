@@ -1,0 +1,120 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Counseling Management _Psychological Test Info
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.detail.psychological-info
+      .page-title
+        .title
+          span 심리검사
+        .title-ct 
+          span 회원에게 요청한 심리상담 정보입니다.
+      .page-content
+        .container
+          .main-content.border-full.bg-fff
+            .content-main
+              .main-ct
+                .main-item(style="margin-bottom: 40px;")
+                  .item-title 
+                    span 상세 정보
+                  .item-content
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          span content
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content 
+                          button() 쪽지쓰기
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          span content
+                          button.style-v2() 쪽지쓰기
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content
+                    
+                .main-item(style="margin-bottom: 20px;")
+                  .item-title 
+                    span 심리검사 요청
+                  .item-content
+                    .itemv2
+                      span.title 2016-05-02 (월)
+                      .item-right
+                        span.title-2 title
+                        span.color2 MCI진로탐색검사_20160302.pdf
+                      .item-right(style="border-top: 1px solid #e5e5e5;")
+                        span.title-2 title
+                        .inputfile
+                          .tr-file-upload.image-upload
+                            //- .preview-image
+                            //-   img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                            label.btn.green.btn-select-file
+                              | 검사 결과 업로드
+                              input.hidden.input-file(type="file", accept="application/pdf")
+                            span.help-inline.file pdf 파일만 허용
+                            .input-icon.input-large.input-inline.right
+                              //- span.btn-delete
+                              span.show-file-info
+                            //- .note-img * JPG, GIF, PNG (3MB 이하)
+                        //- button() 검사 결과 업로드
+                        //- span.file pdf 파일만 허용
+                        
+                      .item-right(style="border-top: 1px solid #e5e5e5;")
+                        span.title-2 title
+                        .inputfile
+                          .tr-file-upload.image-upload
+                            //- .preview-image
+                            //-   img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                            label.btn.green.btn-select-file
+                              | 검사 결과 업로드
+                              input.hidden.input-file(type="file", accept="application/pdf")
+                            span.help-inline.file pdf 파일만 허용
+                            .input-icon.input-large.input-inline.right
+                              //- span.btn-delete
+                              span.show-file-info
+                            //- .note-img * JPG, GIF, PNG (3MB 이하)
+                        //- button() 검사 결과 업로드
+                        //- span.file pdf 파일만 허용
+                        
+          .main-submit
+            button 
+              span 목록 보기
+
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  
+  

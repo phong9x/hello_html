@@ -1,0 +1,152 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Reservation Details
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    ="\n"
+    .page-content-wrapper
+        .page-content
+          .container
+            .main-body-content.member-page.member-detail
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 가입 회원
+                  li
+                    a(href="home.html") 상세 정보
+              // .page-bar
+              
+              ="\n"
+              .member-main-content
+                .form-title(style="display: inline-block;width: 100%;margin-bottom: 20px;")
+                  span.title(style="display: inline-block;line-height: 40px;") 기본 정보
+                  a.btn.green.pull-right(href='#') 예약 취소
+                .tabbable-custom
+                  ="\n"
+                  .tab-content
+                    #tab-11.tab-10.tab-pane.active
+                      form.form_sample_3.form-horizontal(action='#')
+                        .portlet.box
+                          .portlet-body
+                            form.form_sample_3.form-horizontal(action='#')
+                              .form-body
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 예약 번호 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 12345
+                                  .right
+                                    label.control-label.col-md-3
+                                      | 예약자 아이디 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span aa@aim.com
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 예약자명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      a(href="#",style="line-height: 40px;") 홍길동
+                                  .right
+                                    label.control-label.col-md-3
+                                      | 회원 구분 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      p 기업
+                                      p 메트라이프 > 2016 > 종신상품
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 상담사명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      a(href="#",style="line-height: 40px;") 김태희
+                                  .right
+                                    label.control-label.col-md-3
+                                      | 예약신청 일시 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 2016-03-10 15:00:00
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 약취소 일시 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span -
+                                  .right
+                                    label.control-label.col-md-3
+                                      | 상담예정 일시 :
+                                      //- span.required *
+                                    .col-md-8.ct.v2
+                                      span 2016-03-10 15:00:00 
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 상담시간 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 30분
+                                  .right
+                                    label.control-label.col-md-3
+                                      | 결제 구분 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 메트라이프 상담권 1매
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 사용 OS :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span Android
+                                  .right
+                                    label.control-label.col-md-3
+                                      | 상태 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 예약 완료
+                                
+                          .portlet-footer
+                            button.btn.green.submit(type="submit") 목록    
+
+                      
+              //.table-member-mng
+
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade
+  ="\n"
+  include ../includes/popupBanAcc.jade
+  ="\n"
+  include ../includes/popupDeleteAcc.jade
+  ="\n"
+  include ../includes/popupRemoveBanAcc.jade

@@ -1,0 +1,276 @@
+/* --------------------------------------------------------------------- */
+/* .footer
+/* --------------------------------------------------------------------- */
+.footer {
+  /**/  
+}
+@color2          : #1caf9a;
+.schedule{
+  .schedule-tab{
+    padding: 20px 30px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    .tab-main{
+      .width100();
+      position: relative;
+      padding-left: 100px;
+      .tab-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        text-align: center;
+        line-height: 32px;
+        color: #8191a1;
+        font-weight: bold;
+      }
+      .tab-content{
+        float: left;
+        width: 100%;
+        margin-bottom: 0;
+        ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          li{
+            float: left;
+            margin-right: 10px;
+            a{
+              display: inline-block;
+              line-height: 30px;
+              border: 1px solid #cdcdcd;
+              float: left;
+              height: 32px;
+              padding: 0 40px;
+              border-radius: 4px;
+              color: #3d4956;
+              text-transform: uppercase;
+              font-size: 13px;
+              font-weight: bold;
+              span.status{
+                margin-left: 15px;
+              }
+              &:hover{
+                background: #50b7f0;
+                color: #fff;
+                text-decoration: none;
+                border-color: #50b7f0;
+              }
+            }
+            &.active{
+              a{
+                background: #50b7f0;
+                color: #fff;
+                text-decoration: none;
+                border-color: #50b7f0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .schedule-main-content {
+    padding: 15px 20px;
+    .schedule-day{
+      padding-left: 60px;
+      float: left;
+      width: 100%;
+      background: #e7f3f9;
+      margin-bottom: 10px;
+      position: relative;
+      .day-title{
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        top: 0;
+        left: 0;
+      }
+      ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li{
+          float: left;
+          width: 14.2857%;
+          span{
+            text-align: center;
+            line-height: 38px;
+            display: inline-block;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .schedule-table-content{
+      display: inline-block;
+      width: 100%;
+      padding-left: 60px;
+      position: relative;
+      height: 600px;
+      position: relative;
+      overflow-x: auto;
+      .schedule-hours{
+        width: 60px;
+        border-left: 1px solid #ddd;
+        height: 4320px;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        &:before{
+          width: 100%;
+          height: 1px;
+          background: #ddd;
+          top: 0;
+          left: 0;
+          content: "";
+          position: absolute;
+        }
+        ul{
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+          li{
+            float: left;
+            width: 100%;
+            text-align: center;
+            height: 180px;
+            padding-top: 70px;
+            position: relative;
+            &:before{
+              width: 100%;
+              height: 1px;
+              background: #ddd;
+              bottom: 0;
+              left: 0;
+              content: "";
+              position: absolute;
+            }
+            span{
+              display: inline-block;
+              width: 100%;
+              color: #7d7d7d;
+              line-height: 16px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      table{
+        border-right: none;
+        // border-left: none;
+        border-bottom: none;
+      }
+      tbody {
+        tr{
+          td{
+            // border-right: 1px solid #cdcdcd;
+            // float: left;
+            width: 14.285714%;
+            height: 30px;
+            padding: 0;
+            border: none;
+            line-height: 30px;
+            position: relative;
+            text-align: left;
+            padding-left: 10px;
+            &:before{
+              width: 100%;
+              height: 1px;
+              background: #ddd;
+              bottom: 0;
+              left: 0;
+              content: "";
+              position: absolute;
+            }
+            &:after{
+              width: 1px;
+              height: 100%;
+              background: #ddd;
+              top: 0;
+              right: 0;
+              content: "";
+              position: absolute;
+            }
+            &:last-child{
+              // border-right: 1px solid #ddd;
+            }
+            &.active{
+              background: #feffc1;
+              &:before{
+                display: none;
+              }
+            }
+            &.active2{
+              background: #8191a1;
+              color: #fff;
+              &:before{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .schedule-top{
+    float: right;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    span.title-date {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    span{
+      line-height: 30px;
+      display: inline-block;
+      margin-left: 20px;
+      &.navi{
+        cursor: pointer;
+        padding: 0 15px;
+        text-align: center;
+        &:hover{
+          i{
+            color: #26a69a;
+          }
+        }
+        i{
+          font-size: 24px;
+          float: left;
+        }
+      }
+    }
+  }
+  .schedule-content{
+    .title{
+      float: left;
+      font-weight: bold;
+      font-size: 18px;
+      padding-left: 15px;
+    }
+  }
+  &.schedule-full{
+    .schedule-main-content .schedule-day ul li{
+      width: 7.14285714%;
+    }
+    .schedule-main-content .schedule-table-content tbody tr td{
+      width: 7.14285714%;
+    }
+  }
+}
+
+.full-schedule{
+  .schedule .schedule-main-content{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .schedule .schedule-content .title{
+    padding-left: 0;
+  }
+  .schedule-tab{
+    float: left;
+    width: 100%;
+  }
+}

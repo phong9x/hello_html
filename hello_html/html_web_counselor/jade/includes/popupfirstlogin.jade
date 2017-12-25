@@ -1,0 +1,19 @@
+#popupfirstlogin.modal.fade(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 심리상담사 등록 완료
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        h4
+          p [이름] 상담사님. 환영합니다.
+          p Hello 공식 심리상담사 등록이 완료되었습니다.
+          br
+          p 상담사 매뉴얼에는 정산, 상담 설정 등 상담사님들이 꼭 확인해야 하는 내용들이 포함되어 있습니다. 
+          br
+          p.bold 아래의 상담사 매뉴얼을 다운로드하여 꼭 확인해주세요.
+          // Are you sure you want to delete?
+      .modal-footer
+        a.btn.red.btn-confirm(data-dismiss='modal') 상담사 매뉴얼 Download
+        //- button.btn.btn-default(type='button', data-dismiss='modal') 취소
+// .popupConfirmDelete

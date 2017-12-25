@@ -1,0 +1,155 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Face Talk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content face-talk")
+
+append body-contents
+  .face-header
+    .logo
+      a(href='home.html')
+        img.logo-default(src='../../assets/images/logo/logo_caountselor.png', alt='logo')
+    .face-menu
+      ul
+        li.active
+          a.icon1(href='home.html')
+            span 전체화면
+
+        ="\n"
+        li
+          a.icon2.talk(href='member.html')
+            span 마이크끄기
+
+        ="\n"
+        li
+          a.icon3(href='product.html')
+            span 문서공유
+
+        ="\n"
+        li
+          a.icon4.close-facetalk()
+            span 상담종료
+
+        ="\n"
+    .icon-next
+      a(href="#")
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+  ="\n"
+  .face-time
+    .time-md
+      span.title 남은 시간
+      span.time 00 : 29 : 59
+  .face-video
+    .bg-video#load-file
+    .bg-video.position-center
+      //- iframe(src='https://player.vimeo.com/video/123956715', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='',
+      //- allowfullscreen='')
+      img.logo-default(src='../../assets/images/face-demo.png', alt='logo') 
+      
+    .bg-video#thum-video2
+      iframe(src='https://player.vimeo.com/video/123956715', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+    .thum-video
+      iframe(src='https://player.vimeo.com/video/132656337', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+    //- .thum-video.style2
+    //-   iframe(src='https://player.vimeo.com/video/132656337', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+
+  .page-container
+    .footer-content
+      .md-content
+        span 내담자 이름
+        span.title 김선아 님
+        button
+          span 자세히 보기
+          span.icon-next
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+      .md-content
+        span 마인드체크 정보
+        button
+          span 자세히 보기
+          span.icon-next
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+      .md-content
+        span 자가진단
+        button
+          span 정보 보기
+          span.icon-next
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+    .footer-right
+      .item.icon3.open-chatface
+        span 상담메모 입력
+      .item.icon2
+        span 심리검사
+      .item.icon1
+        span 검사 사이트계정 정보
+
+  .menu-right
+    .right-header
+      span 문서 공유
+      button
+    span.close-right
+    .right-content.style1
+      ul
+        li
+          .img
+            img(src='../../assets/images/avatar_men.png', alt='logo')
+            span.notefile ten file
+          span.remove-pdf
+        li
+          .img
+            img(src='../../assets/images/avatar_men.png', alt='logo')
+            span.notefile ten file
+          span.remove-pdf
+        li
+          .img
+            img(src='../../assets/images/avatar_men.png', alt='logo')
+            span.notefile ten file
+          span.remove-pdf
+        li
+          .img
+            img(src='../../assets/images/avatar_men.png', alt='logo')
+            span.notefile ten file
+        li
+          .img
+            img(src='../../assets/images/avatar_men.png', alt='logo')
+            span.notefile ten file
+      .right-content.style2
+
+        ul
+          li
+            .img
+              img(src='../../assets/images/avatar_men.png', alt='logo')
+              span.notefile ten file 2
+          li
+            .img
+              img(src='../../assets/images/avatar_men.png', alt='logo')
+              span.notefile ten file 2 
+          li
+            .img
+              img(src='../../assets/images/avatar_men.png', alt='logo')
+              span.notefile ten file 2
+          
+        
+    .right-fotter
+      a
+
+        // .page-content
+    // .member
+  //page loading
+  //- .loading-page
+  //-   .img-loading
+  //-     img(src='../../assets/images/animal.gif', alt='loading')
+
+
+  ="\n"
+  include ../includes/popupLogout-facetalk.jade
+  ="\n"
+  include ../includes/popupList-facetalk.jade
+  ="\n"
+  include ../includes/popupListv2-facetalk.jade
+  ="\n"
+  include ../includes/popupList-facechat.jade
+  
+  

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mind Check</title>
+
+    <!-- Web Fonts-->
+    <link rel="stylesheet" type="text/css" href="fonts/font/font-kopo.min.css" />
+
+    <!-- Vendor CSS-->
+    <!-- Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="css/drum.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom2.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css" />
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    
+    -->
+
+  </head>
+
+  <body class="body main-page register-email flash-intro">
+    <div class="header-bar">
+      <div class="header-bar-icon">
+        <a href="javascript:window.history.back(-1);" class="back-link"></a>
+      </div>
+      <div class="page-title text-center">마인드체크</div>
+      <div class="header-bar-icon"></div>
+    </div>
+    <div class="main container-register-email container-mindCheck">
+      <div id="owl-demo" class="owl-carousel">
+        <div id="1" class="item">
+          <div class="title-step title-step-1 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-right"></div>
+            </div>
+            <div class="text text-center title-question">___님에 대해 조금만 더 알려주세요~ 
+              <br/>응답해주신 내용은 담당 심리상담사만 볼 수 있으며 
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다. 
+              <br/>상담 시작 전 조금만 시간을 내주세요.
+              <i class="icon-smile"></i>
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step-1">
+            <form id="frm-question-1" name="frm-question-1" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">혹시 결혼 하셨나요?</div>
+              <div class="answer-content">
+                <div class="item-mindcheck">
+                  <input type="radio" id="question-1" name="question-1"/>
+                  <label class="after-checkbox" for="question-1">
+                    <div class="item-text text-center">네</div>
+                  </label>
+                </div>
+                <div class="item-mindcheck">
+                  <input type="radio" id="question-2" name="question-1"/>
+                  <label class="after-checkbox text-center" for="question-2">
+                    <div class="item-text text-center">아니오</div>
+                  </label>
+                </div>
+              </div>
+              <div class="button-control">
+                <a id="btn-next-step1" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="2" class="item">
+          <div class="title-step title-step-2 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-top"></div>
+            </div>
+            <div class="text text-center title-question">___님에 대해 조금만 더 알려주세요~ 
+              <br/>응답해주신 내용은 담당 심리상담사만 볼 수 있으며 
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다. 
+              <br/>상담 시작 전 조금만 시간을 내주세요.
+              <i class="icon-smile"></i>
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step2">
+            <form id="frm-question-2" name="frm-question-2" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">지금 하고 계신 일은 어떤 것인가요?</div>
+              <div class="answer-content">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-3" name="question-2"/>
+                      <label class="after-checkbox" for="question-3">
+                        <div class="item-text text-center">무직</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-4" name="question-2"/>
+                      <label class="after-checkbox" for="question-4">
+                        <div class="item-text text-center">자영업</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-5" name="question-2"/>
+                      <label class="after-checkbox" for="question-5">
+                        <div class="item-text text-center">회사원</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-6" name="question-2"/>
+                      <label class="after-checkbox" for="question-6">
+                        <div class="item-text text-center">학생</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-7" name="question-2"/>
+                      <label class="after-checkbox" for="question-7">
+                        <div class="item-text text-center">회사원</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-8" name="question-2"/>
+                      <label class="after-checkbox" for="question-8">
+                        <div class="item-text text-center">학생</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="button-control">
+                <a href="#" id="btn-preview-step2" class="btn-preview">이전</a>
+                <a href="#" id="btn-next-step2" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="3" class="item">
+          <div class="title-step title-step-3 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-top"></div>
+            </div>
+            <div class="text text-center title-question">___님에 대해 조금만 더 알려주세요~ 
+              <br/>응답해주신 내용은 담당 심리상담사만 볼 수 있으며 
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다. 
+              <br/>상담 시작 전 조금만 시간을 내주세요.
+              <i class="icon-smile"></i>
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step3">
+            <form id="frm-question-2" name="frm-question-2" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">지금 살고 계신 지역은 어디인가요?</div>
+              <div class="answer-content">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-9" name="question-3"/>
+                      <label class="after-checkbox" for="question-9">
+                        <div class="item-text text-center">서울, 수도권</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-10" name="question-3"/>
+                      <label class="after-checkbox" for="question-10">
+                        <div class="item-text text-center">강원도</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-11" name="question-3"/>
+                      <label class="after-checkbox" for="question-11">
+                        <div class="item-text text-center">경상도</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-12" name="question-3"/>
+                      <label class="after-checkbox" for="question-12">
+                        <div class="item-text text-center">전라도</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-13" name="question-3"/>
+                      <label class="after-checkbox" for="question-13">
+                        <div class="item-text text-center">충청도</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-14" name="question-3"/>
+                      <label class="after-checkbox" for="question-14">
+                        <div class="item-text text-center">제주도</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-15" name="question-3"/>
+                      <label class="after-checkbox" for="question-15">
+                        <div class="item-text text-center">해외거주</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="button-control">
+                <a href="#" id="btn-preview-step3" class="btn-preview">이전</a>
+                <a href="#" id="btn-next-step3" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="4" class="item">
+          <div class="title-step title-step-4 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-top"></div>
+            </div>
+            <div class="text text-center title-question">
+              지난 일주일 간 어떤 느낌이 드셨는지 저희와 나눠주세요.
+              <br/> 응답해 주신 내용은 담당 심리상담사만 볼 수 있으며
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다.
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step4">
+            <form id="frm-question-4" name="frm-question-4" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">내가 쓸모없는 사람이라고 느껴졌다.</div>
+              <div class="answer-content">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-16" name="question-4"/>
+                      <label class="after-checkbox" for="question-16">
+                        <div class="item-text text-center">전혀 그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-17" name="question-4"/>
+                      <label class="after-checkbox" for="question-17">
+                        <div class="item-text text-center">그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-18" name="question-4"/>
+                      <label class="after-checkbox" for="question-18">
+                        <div class="item-text text-center">보통이다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-19" name="question-4"/>
+                      <label class="after-checkbox" for="question-19">
+                        <div class="item-text text-center">그랬다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-20" name="question-4"/>
+                      <label class="after-checkbox" for="question-20">
+                        <div class="item-text text-center">항상 그랬다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-control">
+                <a href="#" id="btn-preview-step4" class="btn-preview">이전</a>
+                <a href="#" id="btn-next-step4" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="5" class="item">
+          <div class="title-step title-step-5 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-top"></div>
+            </div>
+            <div class="text text-center title-question">
+              지난 일주일 간 어떤 느낌이 드셨는지 저희와 나눠주세요.
+              <br/> 응답해 주신 내용은 담당 심리상담사만 볼 수 있으며
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다.
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step4">
+            <form id="frm-question-5" name="frm-question-5" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">가족이나 친구, 가까운 사람들과 잘 지내지 못했다.</div>
+              <div class="answer-content">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-21" name="question-5"/>
+                      <label class="after-checkbox" for="question-21">
+                        <div class="item-text text-center">전혀 그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-22" name="question-5"/>
+                      <label class="after-checkbox" for="question-22">
+                        <div class="item-text text-center">그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-23" name="question-5"/>
+                      <label class="after-checkbox" for="question-23">
+                        <div class="item-text text-center">보통이다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-24" name="question-5"/>
+                      <label class="after-checkbox" for="question-24">
+                        <div class="item-text text-center">그랬다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-25" name="question-5"/>
+                      <label class="after-checkbox" for="question-25">
+                        <div class="item-text text-center">항상 그랬다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-control">
+                <a href="#" id="btn-preview-step5" class="btn-preview">이전</a>
+                <a href="#" id="btn-next-step5" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="6" class="item">
+          <div class="title-step title-step-6 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-top"></div>
+            </div>
+            <div class="text text-center title-question">
+              지난 일주일 간 어떤 느낌이 드셨는지 저희와 나눠주세요.
+              <br/> 응답해 주신 내용은 담당 심리상담사만 볼 수 있으며
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다.
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step6">
+            <form id="frm-question-6" name="frm-question-6" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">괴로운 생각들이 머릿속에서 떠나지 않았다.</div>
+              <div class="answer-content">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-26" name="question-6"/>
+                      <label class="after-checkbox" for="question-26">
+                        <div class="item-text text-center">전혀 그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-27" name="question-6"/>
+                      <label class="after-checkbox" for="question-27">
+                        <div class="item-text text-center">그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-28" name="question-6"/>
+                      <label class="after-checkbox" for="question-28">
+                        <div class="item-text text-center">보통이다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-29" name="question-6"/>
+                      <label class="after-checkbox" for="question-29">
+                        <div class="item-text text-center">그랬다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-30" name="question-6"/>
+                      <label class="after-checkbox" for="question-30">
+                        <div class="item-text text-center">항상 그랬다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-control">
+                <a href="#" id="btn-preview-step6" class="btn-preview">이전</a>
+                <a href="#" id="btn-next-step6" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+       
+        <div id="7" class="item">
+          <div class="title-step title-step-7 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-top"></div>
+            </div>
+            <div class="text text-center title-question">
+              지난 일주일 간 어떤 느낌이 드셨는지 저희와 나눠주세요.
+              <br/> 응답해 주신 내용은 담당 심리상담사만 볼 수 있으며
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다.
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step7">
+            <form id="frm-question-7" name="frm-question-7" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">삶을 끝내는 것에 대해 생각해보았다.</div>
+              <div class="answer-content">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-31" name="question-7"/>
+                      <label class="after-checkbox" for="question-31">
+                        <div class="item-text text-center">전혀 그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-32" name="question-7"/>
+                      <label class="after-checkbox" for="question-32">
+                        <div class="item-text text-center">그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-33" name="question-7"/>
+                      <label class="after-checkbox" for="question-33">
+                        <div class="item-text text-center">보통이다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-34" name="question-7"/>
+                      <label class="after-checkbox" for="question-34">
+                        <div class="item-text text-center">그랬다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-35" name="question-7"/>
+                      <label class="after-checkbox" for="question-35">
+                        <div class="item-text text-center">항상 그랬다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-control">
+                <a href="#" id="btn-preview-step7" class="btn-preview">이전</a>
+                <a href="#" id="btn-next-step7" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+       
+        <div id="8" class="item">
+          <div class="title-step title-step-8 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-top"></div>
+            </div>
+            <div class="text text-center title-question">
+              지난 일주일 간 어떤 느낌이 드셨는지 저희와 나눠주세요.
+              <br/> 응답해 주신 내용은 담당 심리상담사만 볼 수 있으며
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다.
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step8">
+            <form id="frm-question-8" name="frm-question-8" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">괴로운 생각들이 머릿속에서 떠나지 않았다.</div>
+              <div class="answer-content">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-36" name="question-8"/>
+                      <label class="after-checkbox" for="question-36">
+                        <div class="item-text text-center">뭔가 나쁜 일이 생길 것 같았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-37" name="question-8"/>
+                      <label class="after-checkbox" for="question-37">
+                        <div class="item-text text-center">그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-38" name="question-8"/>
+                      <label class="after-checkbox" for="question-38">
+                        <div class="item-text text-center">보통이다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-39" name="question-8"/>
+                      <label class="after-checkbox" for="question-39">
+                        <div class="item-text text-center">그랬다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-40" name="question-8"/>
+                      <label class="after-checkbox" for="question-40">
+                        <div class="item-text text-center">항상 그랬다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-control">
+                <a href="#" id="btn-preview-step8" class="btn-preview">이전</a>
+                <a href="#" id="btn-next-step8" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+       
+        <div id="9" class="item">
+          <div class="title-step title-step-9 text-center">
+            <div class="line-slide">
+              <div class="icon-ellipse"></div>
+              <div class="bg-title bg-left"></div>
+            </div>
+            <div class="text text-center title-question">
+              지난 일주일 간 어떤 느낌이 드셨는지 저희와 나눠주세요.
+              <br/> 응답해 주신 내용은 담당 심리상담사만 볼 수 있으며
+              <br/> ___님을 더 잘 도와드리기 위한 목적으로만 활용됩니다.
+            </div>
+          </div>
+          <div class="box-frm-step box-frm-step9">
+            <form id="frm-question-9" name="frm-question-9" action="" method="get" class="mind-check-form">
+              <div class="ask-content text-center">직장이나 학교 등에서 나의 역할을 잘 못해내고 있는 것 같았다.</div>
+              <div class="answer-content">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-41" name="question-9"/>
+                      <label class="after-checkbox" for="question-41">
+                        <div class="item-text text-center">전혀 그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-42" name="question-9"/>
+                      <label class="after-checkbox" for="question-42">
+                        <div class="item-text text-center">그렇지 않았다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-43" name="question-9"/>
+                      <label class="after-checkbox" for="question-43">
+                        <div class="item-text text-center">보통이다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-44" name="question-9"/>
+                      <label class="after-checkbox" for="question-44">
+                        <div class="item-text text-center">그랬다</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="item-mindcheck">
+                      <input type="radio" id="question-45" name="question-9"/>
+                      <label class="after-checkbox" for="question-45">
+                        <div class="item-text text-center">항상 그랬다.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-control">
+                <a href="#" id="btn-preview-step9" class="btn-preview">이전</a>
+                <a href="#" id="btn-next-step9" class="btn-next" style="opacity: 0.5; pointer-events: none; cursor: default;">다음</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="10" class="item">
+          <div class="box-frm-step box-frm-step10">
+            <form id="frm-question-10" name="frm-question-9" action="" method="get" class="mind-check-form">
+              <div class="last-screen text-center">
+                <img src="../images/img-last-screen.png"/> 
+              </div>
+              <div class="link-submit">
+                <button type="submit" class="btn-submit">홈으로 이동</button>
+              </div>
+            </form>
+          </div>
+        </div>
+       
+      </div>
+     
+    </div>
+  </body>
+
+  <!-- Vendor jQuery-->
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/icheck.min.js"></script>
+  <script type="text/javascript" src="js/drum.js"></script>
+  <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+  <!-- <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script> -->
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+  <script type="text/javascript" src="js/admin.js"></script>
+  
+  <script type="text/javascript" >
+    var height_screen = $(window).height();
+    var content_h = height_screen - 100; 
+    document.write("<style> .box-frm-step{height: " + content_h +"px;}</style>");
+
+    /*function choose_item(){
+      if($(this).is(":checked")) {
+        $('.btn-next').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        $('#btn-next-step2').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+      }
+      else{
+        $('.btn-next').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        /*$('#btn-next-step2').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+      }
+    }*/
+    $(document).ready(function() {
+
+      $('input[name="question-1"]').change(function(){
+        if($('input[name="question-1"]').is(":checked")) {
+          $('#btn-next-step1').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step1').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+      $('input[name="question-2"]').change(function(){
+        if($('input[name="question-2"]').is(":checked")) {
+          $('#btn-next-step2').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step2').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+      $('input[name="question-3"]').change(function(){
+        if($('input[name="question-3"]').is(":checked")) {
+          $('#btn-next-step3').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step3').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+      $('input[name="question-4"]').change(function(){
+        if($('input[name="question-4"]').is(":checked")) {
+          $('#btn-next-step4').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step4').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+      $('input[name="question-5"]').change(function(){
+        if($('input[name="question-5"]').is(":checked")) {
+          $('#btn-next-step5').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step5').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+      $('input[name="question-6"]').change(function(){
+        if($('input[name="question-6"]').is(":checked")) {
+          $('#btn-next-step6').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step6').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+      $('input[name="question-7"]').change(function(){
+        if($('input[name="question-7"]').is(":checked")) {
+          $('#btn-next-step7').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step7').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+      $('input[name="question-8"]').change(function(){
+        if($('input[name="question-8"]').is(":checked")) {
+          $('#btn-next-step8').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step8').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+      $('input[name="question-9"]').change(function(){
+        if($('input[name="question-9"]').is(":checked")) {
+          $('#btn-next-step9').css({"pointer-events": "auto", "opacity": "1", "cursor": "pointer"});
+        }
+        else{
+          $('#btn-next-step9').css({"pointer-events": "auto", "opacity": "0.5", "cursor": "pointer"});
+        }
+      });
+
+      
+      $('.btn-next').on('click', function(){
+        $(this).closest('.owl-item').fadeOut(300).next('.owl-item').fadeIn(300);
+      });
+
+      $('.btn-preview').on('click', function(){
+        $(this).closest('.owl-item').fadeOut(300).prev('.owl-item').fadeIn(300);
+      });
+
+      var owl = $("#owl-demo");
+      owl.owlCarousel({
+        touchDrag: false,
+        navigation : true,
+        singleItem : true,
+        transitionStyle : "fade"
+      });
+    });
+  </script>
+
+
+  
+</html>

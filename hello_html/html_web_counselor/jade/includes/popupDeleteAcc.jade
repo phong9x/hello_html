@@ -1,0 +1,14 @@
+#popupDeleteAcc.modal.fade(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3 회원 강제탈퇴
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        h4
+          strong 회원을 강제 탈퇴한 경우 보유하고 있던헬로코인, 상담권, 하트 등의 데이터가 모두 삭제되며,복구할 수 없습니다.강제탈퇴 하시겠습니까?
+          // Are you sure you want to delete?
+      .modal-footer
+        a.btn.red.btn-confirm(href="#") 확인
+        button.btn.btn-default(type='button', data-dismiss='modal') 취소
+// .popupConfirmDelete

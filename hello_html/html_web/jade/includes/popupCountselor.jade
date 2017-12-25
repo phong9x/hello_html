@@ -1,0 +1,14 @@
+#popupCountselor.modal.fade(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3 회원 제재 취소
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        h4
+          strong 회원 제재를 취소하면 바로 로그인이 가능한 상태로변경됩니다.제재 하시겠습니까?
+          // Are you sure you want to delete?
+      .modal-footer
+        a.btn.red.btn-confirm(href="#") 확인
+        button.btn.btn-default(type='button', data-dismiss='modal') 취소
+// .popupConfirmDelete

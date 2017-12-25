@@ -1,0 +1,27 @@
+#popupcontentfile.modal.fade.popupcontentfile(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 title
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        //- .inputfile
+        //-   input.input-file(type="file")
+        .inputfile
+          .all-file-upload.image-upload
+            //- .preview-image
+            //-   img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+            
+            //- span.help-inline 선택된 파일 없음.
+            .input-icon.input-large.input-inline.right
+              //- span.btn-delete
+              span.show-file-info
+            label.btn.green.btn-select-file.pull-right
+              | 찾아보기
+              input.hidden.input-file(type="file")
+            //- .note-img * JPG, GIF, PNG (3MB 이하)
+            
+      .modal-footer
+        a.btn.red.btn-confirm(href="#") 확인
+        button.btn.btn-default(type='button', data-dismiss='modal') 취소
+// .popupConfirmDelete

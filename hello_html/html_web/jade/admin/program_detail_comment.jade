@@ -1,0 +1,177 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Program detail comment - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append popup-wrapper
+  include ../includes/popupConfirmDelete.jade 
+  
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .portlet.box
+          .page-bar
+            ul.page-breadcrumb
+              li
+                span 평균 별점
+            .reviews_result
+              ul.reviews_list
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_yes.png")
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_yes.png")
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_yes.png")
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_yes.png")
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_no.png")
+              .number_review 8    
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .block-1
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li
+                  a(href='/program_detail.html') 상세정보
+                li.active
+                  a(href='/program_detail_comment.html') 후기
+                li
+                  a(href='/program_detail_qa.html') Q&A
+
+              ="\n"
+              .tab-content
+                .tab-product.tab-pane.active
+                  .portlet.box   
+                    .portlet-body
+                      .list-comment
+                        .item-comment
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            ul.reviews-result
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_no.png")  
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-comment
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            ul.reviews-result
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_no.png")  
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-comment
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            ul.reviews-result
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_no.png")  
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-comment
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            ul.reviews-result
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_yes.png")
+                              li
+                                span.item_reviews
+                                  img(src="../../assets/images/icon/star_no.png")  
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                      
+                  ="\n"
+                  include ../includes/rw-pagination.jade
+          // .block-1
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

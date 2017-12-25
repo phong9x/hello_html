@@ -1,0 +1,111 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Faq
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+    .page-content-wrapper.business-detail
+
+        .page-content
+          .container
+            .main-body-content.member-page
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              .member-main-content
+                .tabbable-custom
+                  ul.nav.nav-tabs
+                    li.disabled
+                      a(href='#tab-11', data-toggle='tab') 회원 FAQ
+                    li.active
+                      a(href='#tab-12', data-toggle='tab') 상담사 FAQ
+
+                  ="\n"
+                  .tab-content
+                    #tab-11.tab-10.tab-pane
+                      
+                    #tab-12.tab-10.tab-pane.active
+                        .member-main-top
+                          .item-top.mrb-30
+                            .left
+                              span 가입 일시 :
+                            .right
+                              .item.icon-next.datepicker-item
+                                span
+                                  input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                                span.text 달력
+                              .item.datepicker-item
+                                span
+                                  input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                                span.text 달력
+                              button.btn.red 지난주
+                              button.btn.green 지난달
+                          .item-top.mrb-30
+                            .left
+                              span 결제 구분 :
+                            .right
+                              .item
+                                .checkbox-list(data-error-container='#form_2_services_error')
+                                  label
+                                    input(type='checkbox', value='1', name='service')
+                                    |  개인   
+                                  label
+                                    input(type='checkbox', value='2', name='service')
+                                    |  기업
+                              .col-md-1
+                                span.line-36 센터명 :
+                              .col-md-2
+                                .select-option
+                                  select.form-control.selectpickermember(name='selecttext',title='성명')
+                                    option(value='0') 2015
+                                    option(value='1') 2015
+                                    option(value='2') 2015
+                          .item-top
+                            .left
+                              span 키워드 :
+                            .right.row
+                              .col-md-2
+                                .select-option
+                                  select.form-control.selectpickermember(name='selecttext',title='성명')
+                                    option(value='0') 2015
+                                    option(value='1') 2015
+                                    option(value='2') 2015
+                              .col-md-4
+                                input.form-control(type='text', name='name', data-required='1')
+                      
+
+
+              ="\n"
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade
+  ="\n"
+    include ../includes/popupUploadAgain.jade
+  

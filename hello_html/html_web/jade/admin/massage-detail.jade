@@ -1,0 +1,75 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Massage Detail
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    ="\n"
+    .page-content-wrapper.countselor
+
+        .page-content
+          .container
+            ="\n"
+            .main-body-content.member-page.business
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              
+              ="\n"
+              form.form_sample_3
+                .title
+                    h4.bold 상세 정보
+                .member-main-top.border-full.mrb-40
+                  .row.mrb-20
+                    .col-md-2.text-right 쪽지 번호 :
+                    .col-md-3 12345
+                    .col-md-2.col-md-offset-1.text-right 
+                    .col-md-3 
+                  .row.mrb-20
+                    .col-md-2.text-right 보낸 사람 :
+                    .col-md-3 홍길동
+                    .col-md-2.col-md-offset-1.text-right 보낸 일시 :
+                    .col-md-3 2016-03-10 15:29:55
+                  .row.mrb-20
+                    .col-md-2.text-right 받는 사람 :
+                    .col-md-3 김태희
+                    .col-md-2.col-md-offset-1.text-right 받은 일시 :
+                    .col-md-3 2016-03-10 15:29:56
+                  .row.mrb-20
+                    .col-md-2.text-right.pdt-30 내용 :
+                    .col-md-10 
+                      p 항상 감사합니다. 김태희 상담사님!!
+                  
+                .link-submit
+                  button.btn.green(type='submit') 목록
+              
+                      
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade

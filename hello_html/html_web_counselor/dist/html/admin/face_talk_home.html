@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Face Talk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Web Fonts-->
+
+    <!-- Vendor CSS (GLOBAL MANDATORY STYLES)-->
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/simple-line-icons/simple-line-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/uniform/css/uniform.default.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css">
+
+    <!-- Vendor CSS (GLOBAL PAGE LEVEL STYLES)-->
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/select2/select2.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/owl.carousel/assets/owl.carousel.css">
+
+    <!-- Vendor CSS (THEME STYLES)-->
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/admin/layout/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/admin/layout/css/themes/darkblue.css">
+
+    <!-- Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/admin-countselor.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    
+    -->
+  </head>
+
+  <body class="page-header-fixed page-quick-sidebar-over-content face-talk">
+    <div class="face-header">
+      <div class="logo"><a href="home.html"><img src="../../assets/images/logo/logo_caountselor.png" alt="logo" class="logo-default"/></a></div>
+      <div class="face-menu">
+        <ul>
+          <li class="active"><a href="home.html" class="icon1"><span>전체화면</span></a></li>
+
+          <li><a href="member.html" class="icon2 talk"><span>마이크끄기</span></a></li>
+
+          <li><a href="product.html" class="icon3"><span>문서공유</span></a></li>
+
+          <li><a class="icon4 close-facetalk"><span>상담종료</span></a></li>
+
+        </ul>
+      </div>
+      <div class="icon-next"><a href="#">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
+    </div>
+
+    <div class="face-time">
+      <div class="time-md"><span class="title">남은 시간</span><span class="time">00 : 29 : 59</span></div>
+    </div>
+    <div class="face-video">
+      <div id="load-file" class="bg-video"></div>
+      <div class="bg-video position-center"><img src="../../assets/images/face-demo.png" alt="logo" class="logo-default"/>
+      </div>
+      <div id="thum-video2" class="bg-video">
+        <iframe src="https://player.vimeo.com/video/123956715" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+      <div class="thum-video">
+        <iframe src="https://player.vimeo.com/video/132656337" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+    </div>
+    <div class="page-container">
+      <div class="footer-content">
+        <div class="md-content"><span>내담자 이름</span><span class="title">김선아 님</span>
+          <button><span>자세히 보기</span><span class="icon-next"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+        </div>
+        <div class="md-content"><span>마인드체크 정보</span>
+          <button><span>자세히 보기</span><span class="icon-next"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+        </div>
+        <div class="md-content"><span>자가진단</span>
+          <button><span>정보 보기</span><span class="icon-next"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="item icon3 open-chatface"><span>상담메모 입력</span></div>
+        <div class="item icon2"><span>심리검사</span></div>
+        <div class="item icon1"><span>검사 사이트계정 정보</span></div>
+      </div>
+    </div>
+    <div class="menu-right">
+      <div class="right-header"><span>문서 공유</span>
+        <button></button>
+      </div><span class="close-right"></span>
+      <div class="right-content style1">
+        <ul>
+          <li>
+            <div class="img"><img src="../../assets/images/avatar_men.png" alt="logo"/><span class="notefile">ten file</span></div><span class="remove-pdf"></span>
+          </li>
+          <li>
+            <div class="img"><img src="../../assets/images/avatar_men.png" alt="logo"/><span class="notefile">ten file</span></div><span class="remove-pdf"></span>
+          </li>
+          <li>
+            <div class="img"><img src="../../assets/images/avatar_men.png" alt="logo"/><span class="notefile">ten file</span></div><span class="remove-pdf"></span>
+          </li>
+          <li>
+            <div class="img"><img src="../../assets/images/avatar_men.png" alt="logo"/><span class="notefile">ten file</span></div>
+          </li>
+          <li>
+            <div class="img"><img src="../../assets/images/avatar_men.png" alt="logo"/><span class="notefile">ten file</span></div>
+          </li>
+        </ul>
+        <div class="right-content style2">
+          <ul>
+            <li>
+              <div class="img"><img src="../../assets/images/avatar_men.png" alt="logo"/><span class="notefile">ten file 2</span></div>
+            </li>
+            <li>
+              <div class="img"><img src="../../assets/images/avatar_men.png" alt="logo"/><span class="notefile">ten file 2 </span></div>
+            </li>
+            <li>
+              <div class="img"><img src="../../assets/images/avatar_men.png" alt="logo"/><span class="notefile">ten file 2</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-fotter"><a>
+          <!-- .page-content--></a></div>
+      <!-- .member-->
+    </div>
+    <!--page loading-->
+    
+
+    <div id="popupLogout-facetalk" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade popup-facetalk">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>심리 상담 종료</h4>
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close-face"></button>
+          </div>
+          <div class="modal-body"><strong>삭제하시겠습니까?</strong>
+            <!-- Are you sure you want to delete?-->
+          </div>
+          <div class="modal-footer">
+            <button href="#" class="btn">취소하기</button>
+            <button type="button" data-dismiss="modal" class="btn close-face-popup">상담종료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .popupConfirmDelete-->
+
+    <div id="popupList-facetalk" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade popup-facetalk">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>심리 상담 종료</h4>
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close-face"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-list">
+              <ul>
+                <li><span class="title">text</span><span>content</span></li>
+                <li><span class="title">text</span><span>content</span></li>
+                <li><span class="title">text</span><span>content</span></li>
+                <li><span class="title">text</span><span>content</span></li>
+                <li><span class="title">text</span><span>content</span></li>
+              </ul>
+              <!-- Are you sure you want to delete?-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .popupConfirmDelete-->
+
+    <div id="popupListv2-facetalk" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade popup-facetalk">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>심리 상담 종료</h4>
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close-face"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-list">
+              <ul>
+                <li><span>Q</span><span>content</span></li>
+                <li><span>A</span><span>content</span></li>
+                <li><span>Q</span><span>content</span></li>
+                <li><span>A</span><span>content</span></li>
+                <li><span>Q</span><span>content</span></li>
+                <li><span>A</span><span>content</span></li>
+                <li><span>Q</span><span>content</span></li>
+                <li><span>A</span><span>content</span></li>
+                <li><span>Q</span><span>content</span></li>
+                <li><span>A</span><span>content</span></li>
+                <li><span>Q</span><span>content</span></li>
+              </ul>
+              <!-- Are you sure you want to delete?-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .popupConfirmDelete-->
+
+    <div id="popupList-facechat" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade popup-facetalk face-chat">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>상담 메모</h4>
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close-face"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-top"><span class="title">내담자 이름</span><span class="content">김선아</span></div>
+            <div class="modal-chat">
+              <div class="title"><span>상담 중에 가급적 필요한 내용만 적어주세요. 다른 상담사들은 볼 수 없습니다</span></div>
+              <textarea name="editor2" rows="6" data-error-container="#editor2_error" class="rw-ckeditor form-control"></textarea>
+              <div class="footer">
+                <button>상담메모 입력</button>
+              </div>
+            </div>
+            <div class="modal-main">
+              <div class="modal-main-header"><span class="title">상세 메모</span></div>
+              <div id="owl-demo" class="owl-carousel">
+                <div class="item">
+                  <div class="item-date"><span>2016년 12월</span></div>
+                  <div class="item-content">
+                    <div class="item-ct">
+                      <div class="item-chat">
+                        <div class="title"> <span>2016-12-03 (월) </span><span class="time-comment">15:10:30</span></div>
+                        <div class="date-time"> <span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                      <div class="item-chat style2">
+                        <div class="date-time"> <span class="time-comment">15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-ct">
+                      <div class="item-chat">
+                        <div class="title"> <span>2016-12-03 (월)</span><span class="time-comment">15:10:30</span></div>
+                        <div class="date-time"> <span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                      <div class="item-chat style2">
+                        <div class="date-time"> <span class="time-comment">15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-date"><span>2017년 01월</span></div>
+                  <div class="item-content">
+                    <div class="item-ct">
+                      <div class="item-chat">
+                        <div class="title"> <span>2016-12-03 (월)</span></div>
+                        <div class="date-time"> <span class="time-comment">15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                      <div class="item-chat style2">
+                        <div class="date-time"> <span class="time-comment">15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-ct">
+                      <div class="item-chat">
+                        <div class="title"> <span>2016-12-03 (월)</span></div>
+                        <div class="date-time"> <span>15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                      <div class="item-chat style2">
+                        <div class="date-time"> <span>15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-ct">
+                      <div class="item-chat">
+                        <div class="title"> <span>2016-12-03 (월)</span></div>
+                        <div class="date-time"> <span>15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                      <div class="item-chat">
+                        <div class="date-time"> <span>15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-ct">
+                      <div class="item-chat">
+                        <div class="title"> <span>2016-12-03 (월)</span></div>
+                        <div class="date-time"> <span>15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                      <div class="item-chat">
+                        <div class="date-time"> <span>15:10:30</span><span class="remove"></span></div>
+                        <div class="content">
+                          <p>자녀가 둘이 있는데 아들은 모범생으로 전교 1등, 딸은 날라리로 전교 꼴등이라 함 장남인 아들이 주로 예쁨을 받고</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Are you sure you want to delete?-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .popupConfirmDelete-->
+
+    <!-- Vendor jQuery (CORE PLUGINS - METRONIC)-->
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery.blockui.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery.cokie.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/uniform/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+
+    <!-- Vendor jQuery (PAGE LEVEL PLUGINS - METRONIC)-->
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-validation/js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.kr.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/ckeditor/adapters/jquery.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/ckeditor/lang/ko.js"></script>
+    <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support, and moment.min.js-->
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/moment.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/fullcalendar/lang/en.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/owl.carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="../../libs//starwars.js"></script>
+    <script type="text/javascript" src="../../libs//bootstrap-rating.js"></script>
+
+    <!-- Vendor jQuery (PAGE LEVEL STYLES - METRONIC)-->
+    <script type="text/javascript" src="../../libs/metronic-admin/global/scripts/metronic.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/admin/layout/scripts/layout.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/admin/layout/scripts/quick-sidebar.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/admin/layout/scripts/demo.js"></script>
+
+    <!-- Theme Script-->
+    <script type="text/javascript" src="../../assets/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/admin-countselor.js"></script>
+    <script type="text/javascript" src="../../assets/js/customer-countselor.js"></script>
+    <script type="text/javascript">
+      //- $(function () {
+      //-     $('#yourId').jalendar({
+      //-         dateType: 'mm-dd-yyyy',
+      //-         color: '#577e9a', // Unlimited Colors
+      //-         color2: '#57c8bf', // Unlimited Colors
+      //-         lang: 'KR',
+      //-         sundayStart: true
+      //-     });
+      //- });
+        $(document).ready(function() {
+          if($('input[name="status_support"]').value=="Off"){
+            $('.btn-support').hide();
+          }
+          $(".stars-default").rating();
+          $(".stars-green").rating('create',{coloron:'green',onClick:function(){ alert('rating is ' + this.attr('data-rating')); }});
+          $(".stars-herats").rating('create',{coloron:'red',limit:10,glyph:'glyphicon-heart'});
+      
+          
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Business Member - Hello
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper.business-detail
+        .page-content
+          .container
+            ="\n"
+            .sidebar-left
+              include ../includes/page-sidebar-left.jade
+            .main-body-content.member-page
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              .member-main-content
+                .tabbable-custom
+                  ul.nav.nav-tabs
+                    li
+                      a(href='#tab-11', data-toggle='tab') 기업 상세 정보
+                    li.active
+                      a(href='#tab-12', data-toggle='tab') 홍보페이지
+
+                  ="\n"
+                  .tab-content
+                    #tab-11.tab-10.tab-pane
+                      .portlet.box
+                        .portlet-body
+                          .form-title
+                            span.title 기업 상세 정보
+                          form.form_sample_3.form-horizontal(action='#')
+                            .form-body
+                              .form-group
+                                .left
+                                  label.control-label.col-md-4
+                                    | 기업 번호 :
+                                    //- span.required *
+                                  .col-md-6.ct
+                                    input.form-control(type='text', name='name', value='')
+                                .right
+                                  label.control-label.col-md-4
+                                    | 기업명 :
+                                    //- span.required *
+                                  .col-md-6.ct
+                                    input.form-control(type='text', name='name', value='메트라이프')
+                              .form-group
+                                .left
+                                  label.control-label.col-md-4
+                                    | ID :
+                                    //- span.required *
+                                  .col-md-6.ct
+                                    input.form-control(type='text', name='name', value='metlife')
+                                .right
+                                  label.control-label.col-md-4
+                                    | 비밀번호 :
+                                    //- span.required *
+                                  .col-md-6.ct
+                                    input.form-control(type='text', name='name', data-required='1', value='abcd1234')
+                              .form-group
+                                .left
+                                  label.control-label.col-md-4
+                                    | 기업 구분 :
+                                    //- span.required *
+                                  .col-md-6.ct
+                                    select.form-control.selectpickermember(name='selecttext',title='성명')
+                                          option(value='0') 2015
+                                          option(value='1') 2015
+                                          option(value='2') 2015
+                                .right
+                                  label.control-label.col-md-4
+                                    | 사업자번호 :
+                                    //- span.required *
+                                  .col-md-8.ct
+                                    input.form-control(type='text', name='name', data-required='1', value='123-12-12345')
+                                      
+                              .form-group
+                                .left
+                                  label.control-label.col-md-4
+                                    | 전체 기업 상세 분류 :
+                                    //- span.required *
+                                  .col-md-6.ct
+                                    span 3 개
+                                .right
+                                  label.control-label.col-md-4
+                                    | 활성화 기업 상세 분류 :
+                                    //- span.required *
+                                  .col-md-8.ct.v2
+                                    span 2 개
+                              .form-group
+                                .left
+                                  label.control-label.col-md-4
+                                    | 정산 방식 :
+                                    //- span.required *
+                                  .col-md-6.ct
+                                    select.form-control.selectpickermember(name='selecttext',title='성명')
+                                      option(value='0') 2015
+                                      option(value='1') 2015
+                                      option(value='2') 2015
+                                .right
+                                  label.control-label.col-md-4
+                                    | 등록일시 :
+                                    //- span.required *
+                                  .col-md-6.ct
+                                    span 2016-01-10 15:00:00
+                              
+                            .form-footer
+                              button.btn.green(type="submit") 목록 
+                              button.btn.green.submit.pull-right(type="submit") 저장 
+                    #tab-12.tab-10.tab-pane.active
+                      .portlet.box.preview-mobile
+
+                        .portlet-body
+                          .body-preview
+                            .preview-body
+                              .preview-logo
+                              .preview-ctbox
+                              .preview-contetnt
+
+                          form.form_sample_3.form-horizontal.preview(action='#')
+                            .form-title
+                                span 홍보 페이지 편집
+                                button.btn.green.pull-right(type="submit") 초기화
+                            .form-body
+                              .form-group
+                                .item-group.item1
+                                  label.control-label.col-md-4
+                                    | 페이지 노출 :
+                                    //- span.required *
+                                  .col-md-8.ct
+                                    .radio-list(data-error-container='#form_2_membership_error')
+                                        label
+                                          input(type='radio', name='membership', value='1')
+                                          | ON
+                                        label
+                                          input(type='radio', name='membership', value='2')
+                                          | OFF
+                              .form-group(style="margin-bottom: 25px;")
+                                .item-group.item2
+                                  label.control-label.col-md-4
+                                    | 기업 로고 :
+                                    //- span.required *
+                                  .col-md-8.ct
+                                    .inputfile
+                                      .tr-file-upload.image-upload
+                                        .preview-image
+                                          img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                                        label.btn.green.btn-select-file
+                                          | 찾아보기
+                                          input.hidden.input-file(type="file")
+                                        //- span.help-inline 선택된 파일 없음.
+                                        .input-icon.input-large.input-inline.right
+                                          //- span.btn-delete
+                                          //- span.show-file-info
+                                        .note-img * JPG, GIF, PNG (3MB 이하)
+                                        
+                              .form-group(style="margin-bottom: 25px;")
+                                .item-group.item3
+                                  label.control-label.col-md-4
+                                    span 문구 ( 
+                                    span.total-input 
+                                    span ) :
+                                    //- span.required *
+                                  .col-md-8.ct.add-textbox
+                                    .input-box
+                                      input.form-control(type='text', name='name', data-required='1', value='01012341234')
+                                      input.form-control(type='text', name='name', data-required='1', value='01012341234')
+                                    .item-button
+                                      button.btn.green.add-input(type="text") + 추가 
+                                      span.note-button * 최대 10개까지
+                              .form-group
+                                .item-group.item4
+                                  label.control-label.col-md-4
+                                    | 배경 이미지 :
+                                    //- span.required *
+                                  .col-md-8.ct
+                                    .inputfile
+                                      .tr-file-upload.image-upload
+                                        .preview-image
+                                          img(src="../../assets/images/demo_single_1.jpg", alt='thumbnail')
+                                        label.btn.green.btn-select-file
+                                          | 찾아보기
+                                          input.hidden.input-file(type="file")
+                                        //- span.help-inline 선택된 파일 없음.
+                                        .input-icon.input-large.input-inline.right
+                                          //- span.btn-delete
+                                          //- span.show-file-info
+                                        .note-img * JPG, GIF, PNG (3MB 이하)
+                                          p * 1920 x 1080 px 사이즈에 최적화
+                                        
+                              
+                            .form-footer
+                              button.btn.green(type="submit") 목록 
+                              button.btn.green.submit.pull-right(type="submit") 저장 
+                              button.btn.green.submit.pull-right.click-review(type="submit") 미리보기      
+
+                      
+
+
+              ="\n"
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade

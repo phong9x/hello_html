@@ -1,0 +1,179 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Home Page
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper
+      .page-content
+        .container
+          .main-body-content
+            // top
+            .home-top.border-full
+              .col-md-4
+                p
+                  | 5월 17일 15시 기준
+              .col-md-4
+                p
+                  span 상담 예약 설정
+                  span.bold 150/500명
+              .col-md-4
+                p
+                  span 실시간 상담 가능
+                  span.bold 120/500명
+            
+            // home top 2
+            .home-top2.border-full
+              .top
+                span.bold 메뉴 바로가기
+                a.pull-right(href="#", data-toggle='modal', data-target="#popupEditMenu") 메뉴 바로가기 편집
+              .content.row
+                .item
+                  .border-full
+                    p 
+                      span 회원관리
+                      span >
+                      span 가입회원
+                      span.pull-right >
+                .item
+                  .border-full
+                    p 
+                      span 회원관리
+                      span >
+                      span 가입회원
+                      span.pull-right >
+                .item
+                  .border-full
+                    p 
+                      span 회원관리
+                      span >
+                      span 가입회원
+                      span.pull-right >
+                .item
+                  .border-full
+                    p 
+                      span 회원관리
+                      span >
+                      span 가입회원
+                      span.pull-right >
+                .item
+                  .border-full
+                    p 
+                      span 회원관리
+                      span >
+                      span 가입회원
+                      span.pull-right >
+                .item
+                  .border-full
+                    p 
+                      span 회원관리
+                      span >
+                      span 가입회원
+                      span.pull-right >
+
+            .home-top3.row
+              .col-md-6
+                .content.border-full
+                  .title
+                    span.bold 전체 회원
+                    span.pull-right 2016-05-16 기준
+                  .md-ct
+                    .item
+                      p 가입 회원
+                      p.bold 100,000
+                    .item
+                      p 상담사
+                      p.bold 500
+                    .item
+                      p 기업
+                      p.bold 200
+                    .item
+                      p 상담센터
+                      p.bold 3
+                  .md-bt
+                    p
+                      | 계약종료 예정 기업 : 
+                      span.bold 10
+
+
+              .col-md-3
+                .content.border-full
+                  .title-right 승인 신청
+                  .item-right 
+                   span 상담사 등록
+                   span.right 3
+                  .item-right
+                   span 상담사 등록
+                   span.right 3
+                  .item-right
+                   span 상담사 등록
+                   span.right 3
+              .col-md-3
+                .content.border-full.v2
+                  .title-right 1:1 문의 접수
+                  .item-right 
+                   span 상담사 등록
+                   span.right 1
+                  .item-right
+                   span 상담사 등록
+                   span.right 2
+            
+            .home-top4.row
+              .col-md-6
+                .content.border-full.ichat-height
+                  .top 
+                    span.title 회원 가입/탈퇴 통계
+                    span.pull-right 최근 1주일 기준
+                  script(type="text/javascript", src="../../assets/js/Chart.bundle.min.js")
+                  canvas#cavas-chart
+              .col-md-6
+                .content.border-full.ichat-height2
+                  .top 
+                    span.title 주요 통계
+                    span.pull-right 최근 1주일 기준
+                  .prenext
+                    button.pre
+                      i.fa.fa-caret-left
+                    span 로그인
+                    button.next
+                      i.fa.fa-caret-right
+
+                  .slide-map
+                      .item-map
+                        span map bo vao day
+                      //- .item-map
+                      //-   span map bo vao day 22
+                      //- .item-map
+                      //-   span map bo vao day 3
+                      //- .item-map
+                      //-   span map bo vao day 3
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupEditMenu.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  
+  

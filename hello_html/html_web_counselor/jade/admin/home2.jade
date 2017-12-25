@@ -1,0 +1,187 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Home - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper
+      .page-content
+        .container
+          // home top 3
+          .home-top3.row
+            .col-md-9
+              .content.border-full.bg-fff
+                .content-top
+                  .top3-title
+                    span.md-title 내 프로필
+                    span.md-ct 현재 나의 상태를 나타냅니다
+                  .top3-content
+                    a.link
+                      span 프로필 수정
+                      <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    .acc-img
+                      img.logo-default(src='../../assets/images/avatar_men.png')
+                    .acc-content
+                      .title
+                        span.bold 김태희
+                        span.ct 심리상담사
+                        .item-review.stylev2
+                          input.rating(type='number', data-readonly='', value='4')
+                      .item
+                        span 소개
+                        p 우리 아이가 점점 난폭해지지는 않나요? 반항하지는 않나요?
+                      .item-bottom
+                        .md
+                          .md-left 약력
+                          .md-right 3 건
+                        .md
+                          .md-left 자격증
+                          .md-right 3 건
+                        .md
+                          .md-left 상담횟수
+                          .md-right 500 회 이상
+              .content.border-full.bg-fff
+                .content-main
+                  .item
+                    a.link 자세히 보기
+                    .title 
+                      span 실시간 상담
+                      <i class="fa fa-commenting" aria-hidden="true"></i>
+                    p.ct
+                      span 실시간 스케줄 설정이 가능합니다
+                    .status.on
+                      span ON
+                  .item
+                    a.link 자세히 보기
+                    .title 
+                      span 상담 예정
+                      <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    p.ct
+                      span 실시간 스케줄 설정이 가능합니다
+                    .status
+                      span.number 2
+                      span.spa 건
+                  .item
+                    a.link 자세히 보기
+                    .title 
+                      span 실시간 상담
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    p.ct
+                      span 실시간 스케줄 설정이 가능합니다
+                    .status
+                      span.number 3
+                      span.spa 건
+                
+            .col-md-3
+              .content-right.border-full.bg-fff
+                .note-link 지급완료
+                .md-item
+                  .icon
+                    <i class="fa fa-dollar" aria-hidden="true"></i>
+                  p.title 지난 달 정산 금액
+                  p
+                    span.price 1,000,000 
+                    span 원
+                .md-item
+                  .icon
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                  p.title 지난 달 상담 건수
+                  p
+                    span.price 1,000
+                    span 원
+                .md-item
+                  .icon
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  p.title 이번 달 상담 건수
+                  p
+                    span.price 1
+                    span 원
+                
+          
+          .home-top4.row
+            .col-md-9
+              .content.border-full.bg-fff
+                .md-content
+                  .md-title 
+                    span 공지사항
+                    a.link(href="") 더보기
+                  .row
+                    .col-md-6.pa-right-30
+                      .title 
+                        span [공지] Hello 업데이트 안내  
+                        span.date-time 2016.10.17
+                      .item-ct
+                        p 안녕하세요. Hello 관리자 입니다. 2016년 10월 17일 기준 Hello 관리자 입니다. 2016년 10월 17일 기준 
+                    .col-md-6.pa-left-30
+                      .title 
+                        span [공지] Hello 업데이트 안내  
+                        span.date-time 2016.10.17
+                      .item-ct
+                        p 안녕하세요. Hello 관리자 입니다. 2016년 10월 17일 기준 Hello 관리자 입니다. 2016년 10월 17일 기준 
+                .md-content
+                  .md-title 
+                    span 만족도 평가
+                    a.link(href="") 더보기
+                  .row
+                      .md-content-title.col-md-6 
+                        span.title [공지] Hello 업데이트 안내 Hello 업데이트 안내  
+                        .item-review
+                          input.rating(type='number', data-readonly='', value='4')
+                      .md-content-title.col-md-6
+                        span.title [공지] Hello 업데이트 안내 Hello 업데이트 안내  
+                        .item-review
+                          input.rating(type='number', data-readonly='', value='1')
+                      .md-content-title.col-md-6
+                        span.title [공지] Hello 업데이트 안내  Hello 업데이트 안내 
+                        .item-review
+                          input.rating(type='number', data-readonly='', value='4')
+                      .md-content-title.col-md-6
+                        span.title [공지] Hello 업데이트 안내 Hello 업데이트 안내  
+                        .item-review
+                          input.rating(type='number', data-readonly='', value='2')
+             
+            .col-md-3
+              .content.content-right.border-full.bg-fff
+                .md-item
+                  .title 
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    span 서비스 관련 문의
+                  span.mail hello@aimmed.com
+                .md-item
+                  span 상담사 메뉴얼을 보시려면?  
+                  .item-psd
+                    .md-ct
+                      a(href="#")
+                        <i class="fa fa-save" aria-hidden="true"></i>
+                        span 상담사 매뉴얼 보기
+
+    
+
+
+          
+            // .block-1
+          // .member-main
+
+    include ../includes/footer.jade
+
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  
+  

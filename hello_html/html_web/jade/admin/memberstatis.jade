@@ -1,0 +1,134 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Member Statistics
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+    .page-content-wrapper
+        .page-content
+          .container
+            .main-body-content.member-page.member-static
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              .member-main-content
+                .tabbable-custom
+                  ul.nav.nav-tabs
+                    li.active
+                      a(href='#tab-11', data-toggle='tab') 회원
+                    li
+                      a(href='#tab-12', data-toggle='tab') 상담사
+
+                  ="\n"
+                  .tab-content
+                    #tab-11.tab-10.tab-pane.active
+                      .title.border-bottom
+                        h4.bold.pull-left 회원 분포도
+                        span.pull-right 2016-04-10 기준
+                      .content.borderfull
+                        .row.jschart
+                          .col-md-6.border-right.border-bottom
+                            <div id="jqChart"></div>
+                            p.text-center [성별 비율]
+                          .col-md-6.border-bottom
+                            <div id="jqChart2"></div>
+                            p.text-center [연령 비율]
+                        .row.jschart
+                          .col-md-6.border-right
+                            <div id="jqChart3"></div>
+                            p.text-center [회원 형태 비율]
+                          .col-md-6
+                            <div id="jqChart4"></div>
+                            p.text-center [OS 비율]
+                    #tab-12.tab-10.tab-pane
+                      .faq-page
+                        .faq-title
+                          span FAQ 리스트
+                          button.btn.green.pull-right.add-faq 신규
+                        .faq-content.border-full
+                          ul.top-faq
+                            li
+                              .col-md-1
+                              .col-md-9.text-center.borderfull
+                                span 제목
+                              .col-md-2.text-center
+                                span 노출 상태
+                          ul.add-colum-faq
+                            li
+                              .col-md-1
+                                label.check
+                                  input(type='checkbox', value='1', name='service')
+                              .col-md-9.text-center.borderfull
+                                .title
+                                  input.form-control(type='text', name='name', data-required='1', value="12fd fjdkjfk d")
+                                .content
+                                  textarea.form-control(name='editor2', rows='4')
+                              .col-md-2.text-center
+                                .radio-list
+                                  label
+                                    input(type='radio', name='membership', value='1',checked)
+                                    |  ON
+                                  label
+                                    input(type='radio', name='membership2', value='2')
+                                    |  OFF
+                            li
+                              .col-md-1
+                                label.check
+                                  input(type='checkbox', value='1', name='service')
+                              .col-md-9.text-center.borderfull
+                                .title
+                                  input.form-control(type='text', name='name', data-required='1')
+                                .content
+                                  textarea.form-control(name='editor2', rows='4')
+                              .col-md-2.text-center
+                                .radio-list
+                                  label
+                                    input(type='radio', name='membership3', value='1')
+                                    |  ON
+                                  label
+                                    input(type='radio', name='membership4', value='2')
+                                    |  OFF
+                        .faq-bottom
+                          button.btn.green
+                            i.fa.fa-caret-down(aria-hidden='true')
+                          button.btn.green
+                            i.fa.fa-caret-up(aria-hidden='true')
+                          button.btn.green.pull-right 저장
+
+                      
+
+
+              ="\n"
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade
+  ="\n"
+    include ../includes/popupUploadAgain.jade
+  

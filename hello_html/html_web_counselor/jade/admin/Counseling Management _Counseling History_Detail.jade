@@ -1,0 +1,122 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Detail
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.detail
+      .page-title
+        .title
+          span 상담 내역
+        .title-ct 
+          span 지난 상담내역 확인이 가능합니다
+      .page-content
+        .container
+          .main-content.border-full.bg-fff
+            .content-main
+              .main-ct
+                .main-item(style="margin-bottom: 40px;")
+                  .item-title 
+                    span 상세 정보
+                  .item-content
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          span content
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content 
+                          button() 쪽지쓰기
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          span content
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          span content
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          span 
+                            input.rating(type='number', data-readonly='', value='4.5')
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content
+                .main-item(style="margin-bottom: 20px;")
+                  .item-title 
+                    span 상세 메모
+                    span.note-title 상담 시 입력했던 내용
+                    span.edit 작성하기
+                  .item-content
+                    .itemv2
+                      span.title 2016-05-02 (월)
+                      .item-right
+                        span title
+                        .right-remove
+                          .date-time 
+                            span 15:10:30
+                            span.remove
+                      .item-right(style="border-top: 1px solid #e5e5e5;")
+                        span title
+                        .right-remove
+                          .date-time 
+                            span 15:10:30
+                            span.remove
+                    .itemv2.v2
+                      span.title 2016-05-02 (월)
+                      .item-right
+                        span title
+                        .right-remove
+                          .date-time 
+                            span 15:10:30
+                            span.remove
+          .main-submit
+            button 
+              span 목록 보기
+
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  
+  

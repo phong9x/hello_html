@@ -1,0 +1,298 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Common Element - RestWalk
+
+append body
+  +body(class="")
+
+append css
+  style.
+    body {
+      background: #E8E8E8;
+    }
+    #example-wrapper {
+      padding-top: 40px;
+      margin: auto;
+    }
+    #example-wrapper .well {
+      background: #fff;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    #example-wrapper .well:before,
+    #example-wrapper .well:after {
+      content: " ";
+      clear: both;
+      display: table;
+    }
+    #example-wrapper .t1 {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 80px;
+      margin-bottom: 10px;
+    }
+    #example-wrapper .t2 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    #example-wrapper .rw-inputbox-wrapper {
+      max-width: 300px;
+    }
+    #example-wrapper .bg1 {
+      background-color: #ff7831 !important;
+    }
+    #example-wrapper .bg2 {
+      background-color: #f5f5f5 !important;
+    }
+
+append body-contents
+  #example-wrapper
+    .container
+      .t1 Typo
+      
+      .t2 .rw-f{x}
+      .well
+        - for(var i = 6; i <= 30; i++)
+          div(class="rw-f#{2*i}") .rw-f#{2*i}
+
+    //----------------------------------------------------------------------
+
+    .container
+      .t1 TEXT OVERFLOW ELLIPSIS
+      
+      .t2 .rw-overflow-ellipsis
+      .well
+        .div(style='width: 300px;')
+          .rw-overflow-ellipsis 두 번 누르기 간격은 두 번 누를 때 " 두 번 누른 것으로 " 인식하기 위한 최대 클릭 간 간격입니다. 만약 두 번째 클릭이 첫 번째 클릭 후 이 시간 안에 발생한다면, 이것은 두 번 누른 것으로 인식됩니다
+
+    //----------------------------------------------------------------------
+
+    .container
+      .t1 FORM
+
+      .portlet.light.bordered
+        .portlet-body.form
+          // BEGIN FORM
+          form.form_sample_3.form-horizontal(action='#')
+            .form-body
+              .alert.alert-danger.display-hide
+                button.close(data-close='alert')
+                |                     You have some form errors. Please check below.
+              .alert.alert-success.display-hide
+                button.close(data-close='alert')
+                |                     Your form validation is successful!
+
+              .form-group
+                label.control-label.col-md-3
+                  | Name 
+                  span.required *
+                .col-md-4
+                  input.form-control(type='text', name='name', data-required='1')
+              .form-group
+                label.col-md-3.control-label
+                  | Email Address 
+                  span.required *
+                .col-md-4
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-envelope
+                    input.form-control(type='email', name='email', placeholder='Email Address')
+              .form-group
+                label.control-label.col-md-3 Occupation  
+                .col-md-4
+                  input.form-control(name='occupation', type='text')
+              .form-group
+                label.control-label.col-md-3
+                  | Select2 Dropdown 
+                  span.required *
+                .col-md-4
+                  select.form-control.select2me(name='options2')
+                    option(value='') Select...
+                    option(value='Option 1') Option 1
+                    option(value='Option 2') Option 2
+                    option(value='Option 3') Option 3
+                    option(value='Option 4') Option 4
+              .form-group
+                label.control-label.col-md-3
+                  | Select2 Tags 
+                  span.required *
+                .col-md-4
+                  input#select2_tags.form-control(type='hidden', value='', name='select2tags')
+                  span.help-block
+                    | select tags
+              .form-group
+                label.control-label.col-md-3 Datepicker
+                .col-md-4
+                  input.form-control.date-picker(type='text', data-date-format='yyyy-mm-dd', name='datepicker')
+                  span.help-block
+                    | select a date
+              .form-group
+                label.control-label.col-md-3
+                  | Membership 
+                  span.required *
+                .col-md-4
+                  .radio-list(data-error-container='#form_2_membership_error')
+                    label
+                      input(type='radio', name='membership', value='1')
+                      |                         Fee
+                    label
+                      input(type='radio', name='membership', value='2')
+                      |                         Professional
+                  #form_2_membership_error
+              .form-group
+                input#toggle-event(type="checkbox", data-toggle="toggle")
+                span butoncheck demo
+              .form-group
+                label.control-label.col-md-3
+                  | Services 
+                  span.required *
+                .col-md-4
+                  .checkbox-list.checkall(data-error-container='#form_2_services_error')
+                    input#all(type='checkbox', value='1', name='all')
+                    span check all list checkbox
+                    label
+                      input(type='checkbox', value='1', name='service')
+                      |  Service 1
+                    label
+                      input(type='checkbox', value='2', name='service')
+                      |  Service 2
+                    label
+                      input(type='checkbox', value='3', name='service')
+                      |  Service 3
+                  span.help-block
+                    | (select at least two)
+                  #form_2_services_error
+              .form-group.last
+                label.control-label.col-md-3
+                  | CKEditor 
+                  span.required *
+                .col-md-9
+                  textarea.rw-ckeditor.form-control(name='editor2', rows='6', data-error-container='#editor2_error')
+                  #editor2_error
+            .form-actions
+              .row
+                .col-md-offset-3.col-md-9
+                  button.btn.green(type='submit') Submit
+                  button.btn.default(type='button') Cancel
+              .col-md-offset-3.col-md-9
+                  span input upload file
+                  .inputfile
+                    .tr-file-upload.image-upload
+                      .preview-image
+                        img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                      label.btn.green.btn-select-file
+                        | 찾아보기
+                        input.hidden.input-file(type="file")
+                      //- span.help-inline 선택된 파일 없음.
+                      .input-icon.input-large.input-inline.right
+                        //- span.btn-delete
+                        span.show-file-info
+                      .note-img * JPG, GIF, PNG (3MB 이하)
+              .col-md-12.mrb-20
+                a.btn.green.openpopup-faq-new open popup faq new
+              .col-md-12
+                a.btn.green.openpopup-faq-tab open popup faq tab
+          // END FORM
+        // END VALIDATION STATES
+
+    //----------------------------------------------------------------------
+
+    .container
+      .t1 PAGINATION
+
+      .well
+        .pagination-wrapper
+          ul.pagination
+            li.first
+              a(href='#')
+                i.fa.fa-angle-double-left
+            li
+              a(href='#')
+                i.fa.fa-angle-left
+            li
+              a(href='#') 1
+            li
+              a(href='#') 2
+            li.active
+              a 3
+            li
+              a(href='#') 4
+            li
+              a(href='#') 5
+            li
+              a(href='#')
+                i.fa.fa-angle-right
+            li.last
+              a(href='#')
+                i.fa.fa-angle-double-right
+    
+    //----------------------------------------------------------------------
+
+    .container
+      .t1 POPUP
+      
+      //- .well
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupAddPointPlace") #popupAddPointPlace
+      //-   ="\n"
+      //-   include ../includes/popupAddPointPlace.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupConfirmDelete") #popupConfirmDelete
+      //-   ="\n"
+      //-   include ../includes/popupConfirmDelete.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupConfirmEdit") #popupConfirmEdit
+      //-   ="\n"
+      //-   include ../includes/popupConfirmEdit.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupConfirmMoveToList") #popupConfirmMoveToList
+      //-   ="\n"
+      //-   include ../includes/popupConfirmMoveToList.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupConfirmRegisterComment") #popupConfirmRegisterComment
+      //-   ="\n"
+      //-   include ../includes/popupConfirmRegisterComment.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupConfirmSave") #popupConfirmSave
+      //-   ="\n"
+      //-   include ../includes/popupConfirmSave.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupHasBeenRegister") #popupHasBeenRegister
+      //-   ="\n"
+      //-   include ../includes/popupHasBeenRegister.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupHasBeenSaved") #popupHasBeenSaved
+      //-   ="\n"
+      //-   include ../includes/popupHasBeenSaved.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupProductScheduleConfirm") #popupProductScheduleConfirm
+      //-   ="\n"
+      //-   include ../includes/popupProductScheduleConfirm.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupProductScheduleCreate") #popupProductScheduleCreate
+      //-   ="\n"
+      //-   include ../includes/popupProductScheduleCreate.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupProductSearch") #popupProductSearch
+      //-   ="\n"
+      //-   include ../includes/popupProductSearch.jade
+
+      //-   hr
+      //-   a.btn.green(href="#", data-toggle='modal', data-target="#popupUploadAgain") #popupUploadAgain
+      ="\n"
+      include ../includes/popup-faq-new.jade
+      ="\n"
+      include ../includes/popup-faq-tab.jade

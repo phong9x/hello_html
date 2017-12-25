@@ -1,0 +1,169 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Massage
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.massage
+      .page-title
+        .title
+          span 쪽지
+        .title-ct 
+          span 회원과 주고 받은 쪽지 리스트입니다.
+      .page-content
+        .container
+          .main-top.border-full.bg-fff
+            .tabbable-custom
+              .sent-mail
+                i.fa.fa-envelope-o
+                span 쪽지쓰기
+              ul.nav.nav-tabs
+                li.active
+                  a(href='#tab-11', data-toggle='tab') 
+                   span 받은 쪽지 
+                   i.fa.fa-caret-down(aria-hidden="true")
+                li
+                  a(href='#tab-12', data-toggle='tab') 
+                    span 보낸 쪽지
+                    i.fa.fa-caret-down(aria-hidden="true")
+
+              ="\n"
+              .tab-content
+                #tab-11.tab-10.tab-pane.active
+                  .content-top
+                    .md-content
+                      .md-item
+                        span.title 받은 날짜
+                        .item-ct
+                          .item.icon-next.datepicker-item
+                              input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                          .item.datepicker-item
+                              input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                      
+                      .md-item
+                        span.title 검색
+                        .item-ct.input-form
+                          input.form-control(type='text', name='name', data-required='1')
+                    .md-link
+                      span 검색
+                #tab-12.tab-10.tab-pane
+                  .content-top
+                    .md-content
+                      .md-item
+                        span.title 보낸 날짜
+                        .item-ct
+                          .item.icon-next.datepicker-item
+                              input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                          .item.datepicker-item
+                              input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                      
+                      .md-item
+                        span.title 검색
+                        .item-ct.input-form
+                          input.form-control(type='text', name='name', data-required='1')
+                    .md-link
+                      span 검색
+          .main-content.border-full.bg-fff
+            .content-main
+              .main-top
+                span.title 받은 쪽지 리스트
+                span.price 10건
+                select.form-control.selectpickermember.pull-right(name='options2')
+                  option(value='Option 1') Option 1
+                  option(value='Option 2') Option 2
+                  option(value='Option 3') Option 3
+                  option(value='Option 4') Option 4
+              .main-ct
+                .table-wrapper
+                  .table-responsive
+                    table.table.table-striped.table-hover.text-center
+                      thead
+                        tr
+                          th 
+                            .radio-checkboxstyle2
+                              input#massage-all-checkbox(type='checkbox', value='1', name='service')
+                          th 번호
+                          th 보낸 회원
+                          th 내용
+                          th 받은 일시
+                      tbody
+                        tr
+                          td 
+                            .radio-checkboxstyle2
+                              input.item-checkbox(type='checkbox', value='1', name='service')
+                          td 01
+                          td.openpopup-confim 심한
+                          td.openpopup-confim 심한 부부싸움을 했습니다. 어떻게 화해를 해야 할지 모르겠습니다. 저는 단지 .... 심한 부부싸움을 했습니다. 
+                          td 2016-03-02 19:15:00
+                        tr
+                          td 
+                            .radio-checkboxstyle2
+                              input.item-checkbox(type='checkbox', value='1', name='service')
+                          td 01
+                          td.openpopup-confim 심한
+                          td.openpopup-confim 심한 부부싸움을 했습니다. 어떻게 화해를 해야 할지 모르겠습니다. 저는 단지 .... 심한 부부싸움을 했습니다.  
+                          td 2016-03-02 19:15:00
+                        tr
+                          td 
+                            .radio-checkboxstyle2
+                              input.item-checkbox(type='checkbox', value='1', name='service')
+                          td 01
+                          td.openpopup-confim 심한
+                          td.openpopup-confim 심한 부부싸움을 했습니다. 어떻게 화해를 해야 할지 모르겠습니다. 저는 단지 .... 심한 부부싸움을 했습니다.  
+                          td 2016-03-02 19:15:00
+                          
+                        
+                    ="\n"
+                  button.search-name 삭제
+                  .rw-pagination
+                    ul.pagination
+                      li
+                        a(href='#')
+                          span 이전
+                      li
+                        a(href='#') 1
+                      li
+                        a(href='#') 2
+                      li.active
+                        a 3
+                      li
+                        a(href='#') 4
+                      li
+                        a(href='#') 5
+                      li
+                        a(href='#')
+                          span 다음
+    
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popup-psychlogical3.jade
+  ="\n"
+  include ../includes/popup-massage.jade
+  
+  

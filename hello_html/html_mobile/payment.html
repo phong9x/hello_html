@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment</title>
+
+    <!-- Web Fonts-->
+    <link rel="stylesheet" type="text/css" href="fonts/font/font-kopo.min.css" />
+
+    <!-- Vendor CSS-->
+    <!-- Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="css/drum.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom2.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css" />
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    
+    -->
+  </head>
+
+  <body class="body main-page find-pw domain-acc payment">
+    <div class="find-pw-header">
+      <a href="#"></a>
+      <span>헬로코인 충전</span>
+    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="acc-content">
+          <div class="avatar">
+            <img src="images/user-friend.jpg" >
+          </div>
+          <div class="avatar-content">
+            <p class="title">홍길동</p>
+            <p class="ct">현재 헬로코인  <span class="value1" data-id="55000">55,000원</span></p>
+          </div>
+        </div>
+        <div class="form-title">
+          <span class="title">충전 금액</span>
+          <span class="title-right">[부가세 포함]</span>
+        </div>
+        <div class="main-form">
+          <form method="get" action="" >
+            <ul class="formpayment">
+              <li>
+                <input type="radio" id="f-option" name="selector" checked="">
+                <label for="f-option">Pizza</label>
+                <div class="check"></div>
+              </li>
+              
+              <li>
+                <input type="radio" id="s-option" name="selector">
+                <label for="s-option">Boyfriend</label>
+                <div class="check"><div class="inside"></div></div>
+              </li>
+              
+              <li>
+                <input type="radio" id="t-option" name="selector">
+                <label for="t-option">Cats</label>
+                
+                <div class="check"><div class="inside"></div></div>
+              </li>
+              <li class="item-checkbox">
+                <input type="radio" id="h-option" name="selector">
+                <label for="h-option">Cats</label>
+                
+                <div class="check"><div class="inside"></div></div>
+                <div class="input-form block-input">
+                  <input type="number"  name="" placeholder="" required="" class="input-style" minlength="1" />
+                  <span>원</span>
+                </div>
+              </li>
+            </ul>
+            <div class="note-form">
+              <span>충전 후 예상 헬로코인</span>
+              <span class="note-price">88,000원</span>
+            </div>
+            <div class="footer-form">
+              <button class="btn green">충전하기</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer">
+      <span>마주보고 마음을 나누는 심리상담</span>
+      <img src="images/logo-footer.png" >
+    </div>
+  </body>
+
+  <!-- Vendor jQuery-->
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/icheck.min.js"></script>
+  <!--script type="text/javascript" src="js/hammer.min.js"></script>
+  <script type="text/javascript" src="js/hammer.fakemultitouch.js"></script-->
+  <script type="text/javascript" src="js/drum.js"></script>
+  <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+  <!-- <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script> -->
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+  <script type="text/javascript" src="js/admin.js"></script>
+  <script type="text/javascript" >
+
+    $(document).ready(function() {
+
+      var callbacks_list = $('.demo-callbacks ul');
+      $('.input-checkbox').on('ifCreated ifClicked ifChanged ifChecked ifUnchecked ifDisabled ifEnabled ifDestroyed', function(event){
+        callbacks_list.prepend('<li><span>#' + this.id + '</span> is ' + event.type.replace('if', '').toLowerCase() + '</li>');
+      }).iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
+        increaseArea: '20%'
+      });
+
+      var value1 = $('.value1').attr("data-id");
+      var valueinput1 = $('.value-input1').attr("data-id");
+      // alert(value1);
+      // alert(valueinput1);
+      // $('#valueall').val(value1);
+
+      $('#input-2').iCheck('uncheck');
+      $('input#input-2').on('ifChecked', function(event){
+        $('.input1 .icheckbox_square-blue').removeClass('checked');
+        $('.input3 .icheckbox_square-blue').removeClass('checked');
+        $('.input4 .icheckbox_square-blue').removeClass('checked');
+        $('.input5 .icheckbox_square-blue').removeClass('checked');
+        $('.input-form').addClass('block-input');
+        var value2 = $('.value-input2').attr("data-id");
+        $('#valueall').val(value2)
+      });
+      $('input#input-1').on('ifChecked', function(event){
+        $('.input2 .icheckbox_square-blue').removeClass('checked');
+        $('.input3 .icheckbox_square-blue').removeClass('checked');
+        $('.input4 .icheckbox_square-blue').removeClass('checked');
+        $('.input5 .icheckbox_square-blue').removeClass('checked');
+        $('.input-form').addClass('block-input');
+       
+      });
+      $('input#input-3').on('ifChecked', function(event){
+        $('.input1 .icheckbox_square-blue').removeClass('checked');
+        $('.input2 .icheckbox_square-blue').removeClass('checked');
+        $('.input4 .icheckbox_square-blue').removeClass('checked');
+        $('.input5 .icheckbox_square-blue').removeClass('checked');
+        $('.input-form').addClass('block-input');
+      });
+      $('input#input-4').on('ifChecked', function(event){
+        $('.input1 .icheckbox_square-blue').removeClass('checked');
+        $('.input3 .icheckbox_square-blue').removeClass('checked');
+        $('.input2 .icheckbox_square-blue').removeClass('checked');
+        $('.input5 .icheckbox_square-blue').removeClass('checked');
+        $('.input-form').addClass('block-input');
+      });
+      $('input#input-5').on('ifChecked', function(event){
+        $('.input1 .icheckbox_square-blue').removeClass('checked');
+        $('.input3 .icheckbox_square-blue').removeClass('checked');
+        $('.input4 .icheckbox_square-blue').removeClass('checked');
+        $('.input2 .icheckbox_square-blue').removeClass('checked');
+        $('.input-form').removeClass('block-input');
+      });
+      $('input#input-5').on('ifUnchecked', function(event){
+        $('.input-form').addClass('block-input');
+      });
+
+      (function($) {
+      
+        function heighthbody() {
+          var heightbody = $( window ).height() + 20;
+          if(heightbody < 600){
+            $('.payment').addClass('height-payment');
+          }
+            // $('.item-img-section').css({"height": widthimg, "line-height": widthimg+'px'});
+            //$('.face-video').css({"height": widthbody});
+            // $('.item-img-section').css({"line-height": widthimg+'px'});
+        }
+
+        $(window).on('load', function() {
+          heighthbody();
+        });
+      })(jQuery);
+
+  
+    });
+
+      
+  </script>
+  
+</html>

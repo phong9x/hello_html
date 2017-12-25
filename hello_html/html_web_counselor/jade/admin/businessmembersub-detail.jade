@@ -1,0 +1,336 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Business Member Subsidiaries Detail - Hello
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+
+        .page-content
+          .container
+            ="\n"
+            .sidebar-left
+              include ../includes/page-sidebar-left.jade
+            .main-body-content.member-page.member-detail.detail-sub
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 가입 회원
+                  li
+                    a(href="home.html") 상세 정보
+              // .page-bar
+              
+              ="\n"
+              .member-main-content
+                .tabbable-custom
+                  ul.nav.nav-tabs
+                    li.active
+                      a(href='#tab-11', data-toggle='tab') 상세 정보
+                    li
+                      a(href='#tab-12', data-toggle='tab') 소속 회원
+
+                  ="\n"
+                  .tab-content
+                    #tab-11.tab-10.tab-pane.active
+                      form.form_sample_3.form-horizontal(action='#')
+                        .portlet.box
+                          .portlet-body
+                            .form-title
+                              span.title [연도 > 기업상세분류명] 상세 정보 : 100건
+                              .form-body
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 기업 상세분류 번호 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='23434343')
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 연도 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      select.form-control.selectpickermember(name='selecttext',title='성명')
+                                        option(value='0') 2015
+                                        option(value='1') 2015
+                                        option(value='2') 2015
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 기업 상세분류명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='홍길동')
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 담당자명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', data-required='1', value='01012341234')
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 담당자 연락처 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='홍길동')
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 담당자 이메일 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', data-required='1', value='01012341234@gmail.com')
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 담당자 직급 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='홍길동')
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 상태 :
+                                      //- span.required *
+                                    .col-md-8.list-radio
+                                      .checkbox-list(data-error-container='#form_2_services_error')
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                          |  일반기업   
+                                        label
+                                          input.radio2(type='radio', value='2', name='service')
+                                          |  보험사
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                          |  일반기업   
+                                        label
+                                          input.radio2(type='radio', value='2', name='service')
+                                          |  보험사
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                          |  일반기업   
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 회원명 :
+                                      //- span.required *
+                                    .col-md-7.ct
+                                      .row.all-select
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 2015
+                                            option(value='1') 2015
+                                            option(value='2') 2015
+                                          span.note 년
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 월
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 일
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 계약 종료일 :
+                                      //- span.required *
+                                    .col-md-8.ct
+                                      .row.all-select
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 2015
+                                            option(value='1') 2015
+                                            option(value='2') 2015
+                                          span.note 년
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 월
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 일
+
+                              span.titlev2 기업 상담권 정보
+
+                              .form-body
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 상담권명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='23434343')
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 상담권 지급 개수 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      select.form-control.selectpickermember(name='selecttext',title='성명')
+                                        option(value='0') 2015
+                                        option(value='1') 2015
+                                        option(value='2') 2015
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 상담권 가격 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='홍길동',style='text-align: right;width: 80%;display: inline-block;')
+                                      span(style="display: inline-block;margin-left: 5px;") 원
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 사용기간 설정 :
+                                      //- span.required *
+                                    .col-md-4.list-radio
+                                      .checkbox-list(data-error-container='#form_2_services_error')
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                          |  종료일 지정   
+                                        label
+                                          input.radio2(type='radio', value='2', name='service')
+                                          |  유효기간 설정
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      span(style="width: 100%;display: inline-block;") 안내 문구 입력 :
+                                      span (글자수 100자 제한) :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      textarea.form-control(type='text', name='name', value='홍길동',rows="4")
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 사용 시작일 :
+                                      //- span.required *
+                                    .col-md-8.ct(style="height: 42px;")
+                                      .row.all-select
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 2015
+                                            option(value='1') 2015
+                                            option(value='2') 2015
+                                          span.note 년
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 월
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 일
+                                    label.control-label.col-md-4
+                                      | 사용 시작일 :
+                                      //- span.required *
+                                    .col-md-8.ct
+                                      .row.all-select
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 2015
+                                            option(value='1') 2015
+                                            option(value='2') 2015
+                                          span.note 년
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 월
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 일
+                                .form-group(style='margin-top: 10px;')
+                                  span.pull-right(style='line-height: 36px;margin-left: 10px;') 일
+                                  input.form-control.pull-right(type='text', name='name', value='180',style='text-align: right;width:200px;')
+
+
+                          .portlet-footer(style="display: inline-block;width:100%;")
+                            button.btn.green.pull-left(style="margin-left: 15px;") 목록  
+                            button.btn.green.pull-right(style="margin-right: 15px;")(type="submit") 저장  
+                    #tab-12.tab-12.tab-pane
+                      .md-tab-content.tabv2
+                        .member-title-table
+                          .md-ct
+                            span.title 소속 회원 리스트 : 100건
+
+                        .table-member-mng.table-responsive 
+                          table.table.table-striped.table-bordered.table-hover.text-center
+                            thead
+                              tr
+                                th 
+                                  input(type='checkbox', value='1', name='service')
+                                th 검사 항목
+                                th 소견
+                                th 검사일시
+                                th 점수
+                                th 점수
+                            tbody
+                              tr
+                                td 
+                                  input(type='checkbox', value='1', name='service')
+                                td 스트레
+                                td 중간 정도의 스트레스를 느끼고 있는 편입니다.
+                                td 2016-01-01 13:00:00
+                                td 2.5점
+                                td 2.5점
+                              tr
+                                td 
+                                  input(type='checkbox', value='1', name='service')
+                                td 스트레스
+                                td 중간 정도의 스트레스를 느끼고 있는 편입니다.
+                                td 2016-01-01 13:00:00
+                                td 2.5점
+                                td 2.5점
+                          include ../includes/rw-pagination.jade
+                              
+
+
+              //.table-member-mng
+
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade
+  ="\n"
+  include ../includes/popupBanAcc.jade
+  ="\n"
+  include ../includes/popupDeleteAcc.jade
+  ="\n"
+  include ../includes/popupRemoveBanAcc.jade

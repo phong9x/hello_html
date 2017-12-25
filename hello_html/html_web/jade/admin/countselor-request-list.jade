@@ -1,0 +1,200 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Counselor Approval Request List
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+
+    ="\n"
+    .page-content-wrapper.countselor.request-list
+
+        .page-content
+          .container
+            .main-body-content.member-page.business
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              
+              ="\n"
+              form.form_sample_3
+                .member-main-top.border-full
+                  .item-count(style="margin-bottom: 20px;")
+                    .item-left
+                      span.title 사업자 구분 :
+                      .left-ct
+                        .checkbox-list(data-error-container='#form_2_services_error')
+                          label
+                            input(type='checkbox', value='1', name='service')
+                            |  프리랜서   
+                          label
+                            input(type='checkbox', value='2', name='service')
+                            |  센터 소속
+                        
+             
+                    .item-right(style="padding-left: 0;")
+                      .right-ct
+                        .select-option.full
+                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                              option(value='0') 2015
+                              option(value='1') 2015
+                              option(value='2') 2015
+                  .item-count
+                    .item-left
+                      span.title 검토 결과 :
+                      .left-ct
+                        .checkbox-list(data-error-container='#form_2_services_error')
+                          label
+                            input(type='checkbox', value='1', name='service')
+                            |  검토중   
+                          label
+                            input(type='checkbox', value='2', name='service')
+                            |  보류
+                        
+             
+                    .item-right
+                      span.title 키워드 :
+                      .right-ct
+                        .select-option
+                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                              option(value='0') 2015
+                              option(value='1') 2015
+                              option(value='2') 2015
+                        input.form-control(type='text', name='name', data-required='1')
+                  
+                .link-submit
+                  button.btn.green(type='submit') 검색
+
+
+              .member-title-table
+                .md-ct
+                  span.title 기업 리스트  :
+                  span 100건
+              .table-member-mng.table-responsive
+                .item-table
+                  table.table.table-striped.table-bordered.table-hover.text-center
+                    thead
+                      tr
+                        th 번호
+                        th 썸네일
+                        th 상담사명
+                        th 생년월일
+                        th 사업자 구분
+                        th 센터명
+                        th 신청일시
+                        th 검토일시
+                        th 관리자
+                    tbody
+                      tr
+                        td 10
+                        td 
+                          .img
+                            img.logo-default(src='../../assets/images/avatar_men.png', alt='logo')
+                        td 김태희
+                        td 1970-01-05 (만 46세)
+                        td 프리랜서
+                        td -
+                        td 2016-03-12 15:00:00
+                        td -
+                        td -
+                  .table-bottom
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    span 검토 결과 :
+                    span.bold 검토중
+
+                .item-table
+                  table.table.table-striped.table-bordered.table-hover.text-center
+                    thead
+                      tr
+                        th 번호
+                        th 썸네일
+                        th 상담사명
+                        th 생년월일
+                        th 사업자 구분
+                        th 센터명
+                        th 신청일시
+                        th 검토일시
+                        th 관리자
+                    tbody
+                      tr
+                        td 10
+                        td 
+                          .img
+                            img.logo-default(src='../../assets/images/avatar_men.png', alt='logo')
+                        td 김태희
+                        td 1970-01-05 (만 46세)
+                        td 프리랜서
+                        td -
+                        td 2016-03-12 15:00:00
+                        td -
+                        td -
+                  .table-bottom
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    span 검토 결과 :
+                    span.bold 검토중
+
+                .item-table
+                  table.table.table-striped.table-bordered.table-hover.text-center
+                    thead
+                      tr
+                        th 번호
+                        th 썸네일
+                        th 상담사명
+                        th 생년월일
+                        th 사업자 구분
+                        th 센터명
+                        th 신청일시
+                        th 검토일시
+                        th 관리자
+                    tbody
+                      tr
+                        td 10
+                        td 
+                          .img
+                            img.logo-default(src='../../assets/images/avatar_men.png', alt='logo')
+                        td 김태희
+                        td 1970-01-05 (만 46세)
+                        td 프리랜서
+                        td -
+                        td 2016-03-12 15:00:00
+                        td -
+                        td -
+                  .table-bottom
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    span 검토 결과 :
+                    span.red 검토중
+                    span (사유 : 자격증 및 경력 미달)
+
+
+                      
+              //.table-member-mng
+
+              ="\n"
+              include ../includes/rw-pagination.jade
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade

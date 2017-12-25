@@ -1,0 +1,118 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Business Member - Hello
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+    .page-content-wrapper.business-detail.approval-request-detail
+
+        .page-content
+          .container
+            .main-body-content.member-page
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              .member-main-content
+                .tabbable-custom
+                  .tab-content
+                    .portlet.box.preview-mobile
+                      .portlet-body
+                          .body-preview
+                            .preview-body
+                              .preview-logo
+                              .preview-ctbox
+                              .preview-contetnt
+
+                          form.form_sample_3.form-horizontal.preview(action='#')
+                            .form-title
+                                span 홍보 페이지 편집
+                                button.btn.green.pull-right(type="submit") 초기화
+                            .form-body
+                              .form-group(style="margin-bottom: 25px;")
+                                .item-group.item2
+                                  label.control-label.col-md-4
+                                    | 기업 로고 :
+                                    //- span.required *
+                                  .col-md-8.ct
+                                    .inputfile
+                                      .tr-file-upload.image-upload
+                                        .preview-image
+                                          img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                              .form-group(style="margin-bottom: 25px;")
+                                .item-group.item3
+                                  label.control-label.col-md-4
+                                    span 문구 (1) :
+                                    //- span.required *
+                                  .col-md-8.ct.add-textbox
+                                    .input-box
+                                      p 회원 여러분 반갑습니다~ 어서오세요~
+                                      p http://aimmed.com
+                              .form-group(style="margin-bottom: 25px;")
+                                .item-group.item3
+                                  label.control-label.col-md-4
+                                    span 문구 (2) :
+                                    //- span.required *
+                                  .col-md-8.ct.add-textbox
+                                    .input-box
+                                      p 회원 여러분 반갑습니다~ 어서오세요~
+                                      p http://aimmed.com
+                                    
+                              .form-group
+                                .item-group.item4
+                                  label.control-label.col-md-4
+                                    | 배경 이미지 :
+                                    //- span.required *
+                                  .col-md-8.ct
+                                    .inputfile
+                                      .tr-file-upload.image-upload
+                                        .preview-image
+                                          img(src="../../assets/images/demo_single_1.jpg", alt='thumbnail')
+                                          button.dowload(type="text") 크게 보기 >
+
+                                        
+                            .form-footer
+                              span.btn.green.v1 승인 
+                              span.btn.green.v2 보류     
+                            .form-footer1.style1
+                              .md-content-footer
+                                p 승인할 경우 홍보 페이지가 앱에 즉시 노출됩니다. 승인하시겠습니까?
+                              button.btn.green(type="submit") 검토 완료
+                            .form-footer1.style2
+                              .md-content-footer
+                                span.title 보류 사유 입력
+                                span 보류 사유를 입력하세요.
+                                input.form-control(type='text', name='name', data-required='1', value='')
+                              button.btn.green(type="submit") 검토 완료
+
+
+              ="\n"
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade

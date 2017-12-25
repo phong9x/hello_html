@@ -1,0 +1,53 @@
+#popupEditMenu.modal.fade(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        strong.modal-title 메뉴 바로가기 편집
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        .row
+          .col-md-6 
+            .md-title 
+              span 전체 메뉴
+            .md-content
+              .border-full 
+                ul.v1 
+                  li.select 
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select 
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select  
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select  
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select  
+                    a(href="#") 회원 관리 > 가입회원
+                  li.noselect 
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select  
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select 
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select 
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select  
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select  
+                    a(href="#") 회원 관리 > 가입회원
+                  li.select 
+                    a(href="#") 회원 관리 > 가입회원
+                span.icon.v1.left
+                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          .col-md-6
+            .md-title.v2 
+              span 바로가기 메뉴
+            .md-content.v2
+              .border-full 
+                ul.v2 
+                  li 
+                    a(href="#") 회원 관리 > 가입회원
+                  
+                span.icon.v2
+                  <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+        .footer
+          a.btn.green(href="#", data-toggle='modal', data-target="#popupConfirmDelete") 저장

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Common Element - RestWalk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Web Fonts-->
+
+    <!-- Vendor CSS (GLOBAL MANDATORY STYLES)-->
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/simple-line-icons/simple-line-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/uniform/css/uniform.default.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css">
+
+    <!-- Vendor CSS (GLOBAL PAGE LEVEL STYLES)-->
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/select2/select2.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/plugins/fullcalendar/fullcalendar.min.css">
+
+    <!-- Vendor CSS (THEME STYLES)-->
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/global/css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/admin/layout/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/metronic-admin/admin/layout/css/themes/darkblue.css">
+
+    <!-- Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/admin.css">
+    <style>
+      body {
+        background: #E8E8E8;
+      }
+      #example-wrapper {
+        padding-top: 40px;
+        margin: auto;
+      }
+      #example-wrapper .well {
+        background: #fff;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      #example-wrapper .well:before,
+      #example-wrapper .well:after {
+        content: " ";
+        clear: both;
+        display: table;
+      }
+      #example-wrapper .t1 {
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 80px;
+        margin-bottom: 10px;
+      }
+      #example-wrapper .t2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      #example-wrapper .rw-inputbox-wrapper {
+        max-width: 300px;
+      }
+      #example-wrapper .bg1 {
+        background-color: #ff7831 !important;
+      }
+      #example-wrapper .bg2 {
+        background-color: #f5f5f5 !important;
+      }
+      
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    
+    -->
+  </head>
+
+  <body>
+    <div id="example-wrapper">
+      <div class="container">
+        <div class="t1">Typo</div>
+        <div class="t2">.rw-f{x}</div>
+        <div class="well">
+          <div class="rw-f12">.rw-f12</div>
+          <div class="rw-f14">.rw-f14</div>
+          <div class="rw-f16">.rw-f16</div>
+          <div class="rw-f18">.rw-f18</div>
+          <div class="rw-f20">.rw-f20</div>
+          <div class="rw-f22">.rw-f22</div>
+          <div class="rw-f24">.rw-f24</div>
+          <div class="rw-f26">.rw-f26</div>
+          <div class="rw-f28">.rw-f28</div>
+          <div class="rw-f30">.rw-f30</div>
+          <div class="rw-f32">.rw-f32</div>
+          <div class="rw-f34">.rw-f34</div>
+          <div class="rw-f36">.rw-f36</div>
+          <div class="rw-f38">.rw-f38</div>
+          <div class="rw-f40">.rw-f40</div>
+          <div class="rw-f42">.rw-f42</div>
+          <div class="rw-f44">.rw-f44</div>
+          <div class="rw-f46">.rw-f46</div>
+          <div class="rw-f48">.rw-f48</div>
+          <div class="rw-f50">.rw-f50</div>
+          <div class="rw-f52">.rw-f52</div>
+          <div class="rw-f54">.rw-f54</div>
+          <div class="rw-f56">.rw-f56</div>
+          <div class="rw-f58">.rw-f58</div>
+          <div class="rw-f60">.rw-f60</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="t1">TEXT OVERFLOW ELLIPSIS</div>
+        <div class="t2">.rw-overflow-ellipsis</div>
+        <div class="well">
+          <div style="width: 300px;" class="div">
+            <div class="rw-overflow-ellipsis">두 번 누르기 간격은 두 번 누를 때 " 두 번 누른 것으로 " 인식하기 위한 최대 클릭 간 간격입니다. 만약 두 번째 클릭이 첫 번째 클릭 후 이 시간 안에 발생한다면, 이것은 두 번 누른 것으로 인식됩니다</div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="t1">FORM</div>
+        <div class="portlet light bordered">
+          <div class="portlet-body form">
+            <!-- BEGIN FORM-->
+            <form action="#" class="form_sample_3 form-horizontal">
+              <div class="form-body">
+                <div class="alert alert-danger display-hide">
+                  <button data-close="alert" class="close"></button>                    You have some form errors. Please check below.
+                </div>
+                <div class="alert alert-success display-hide">
+                  <button data-close="alert" class="close"></button>                    Your form validation is successful!
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">Name <span class="required">*</span></label>
+                  <div class="col-md-4">
+                    <input type="text" name="name" data-required="1" class="form-control"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Email Address <span class="required">*</span></label>
+                  <div class="col-md-4">
+                    <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                      <input type="email" name="email" placeholder="Email Address" class="form-control"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">Occupation  </label>
+                  <div class="col-md-4">
+                    <input name="occupation" type="text" class="form-control"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">Select2 Dropdown <span class="required">*</span></label>
+                  <div class="col-md-4">
+                    <select name="options2" class="form-control select2me">
+                      <option value="">Select...</option>
+                      <option value="Option 1">Option 1</option>
+                      <option value="Option 2">Option 2</option>
+                      <option value="Option 3">Option 3</option>
+                      <option value="Option 4">Option 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">Select2 Tags <span class="required">*</span></label>
+                  <div class="col-md-4">
+                    <input id="select2_tags" type="hidden" value="" name="select2tags" class="form-control"/><span class="help-block">select tags</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">Datepicker</label>
+                  <div class="col-md-4">
+                    <input type="text" data-date-format="yyyy-mm-dd" name="datepicker" class="form-control date-picker"/><span class="help-block">select a date</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">Membership <span class="required">*</span></label>
+                  <div class="col-md-4">
+                    <div data-error-container="#form_2_membership_error" class="radio-list">
+                      <label>
+                        <input type="radio" name="membership" value="1"/>                        Fee
+                      </label>
+                      <label>
+                        <input type="radio" name="membership" value="2"/>                        Professional
+                      </label>
+                    </div>
+                    <div id="form_2_membership_error"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">Services <span class="required">*</span></label>
+                  <div class="col-md-4">
+                    <div data-error-container="#form_2_services_error" class="checkbox-list">
+                      <label>
+                        <input type="checkbox" value="1" name="service"/> Service 1
+                      </label>
+                      <label>
+                        <input type="checkbox" value="2" name="service"/> Service 2
+                      </label>
+                      <label>
+                        <input type="checkbox" value="3" name="service"/> Service 3
+                      </label>
+                    </div><span class="help-block">(select at least two)</span>
+                    <div id="form_2_services_error"></div>
+                  </div>
+                </div>
+                <div class="form-group last">
+                  <label class="control-label col-md-3">CKEditor <span class="required">*</span></label>
+                  <div class="col-md-9">
+                    <textarea name="editor2" rows="6" data-error-container="#editor2_error" class="rw-ckeditor form-control"></textarea>
+                    <div id="editor2_error"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-actions">
+                <div class="row">
+                  <div class="col-md-offset-3 col-md-9">
+                    <button type="submit" class="btn green">Submit</button>
+                    <button type="button" class="btn default">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- END FORM-->
+          </div>
+          <!-- END VALIDATION STATES-->
+        </div>
+      </div>
+      <div class="container">
+        <div class="t1">PAGINATION</div>
+        <div class="well">
+          <div class="pagination-wrapper">
+            <ul class="pagination">
+              <li class="first"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+              <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li class="active"><a>3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+              <li class="last"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="t1">POPUP</div>
+        <div class="well"><a href="#" data-toggle="modal" data-target="#popupAddPointPlace" class="btn green">#popupAddPointPlace</a>
+
+          <div id="popupAddPointPlace" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                  <h4 class="modal-title">포인트 장소 추가</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form">
+                    <div class="form-horizontal">
+                      <div class="form-body">
+                        <div class="form-group text-center">
+                          <div class="col-md-12"><a href="#" data-toggle="modal" data-target="#popupConfirmSave" class="btn green">등록</a><a href="#" data-toggle="modal" data-target="#popupConfirmDelete" class="btn red">삭제</a></div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"><strong>경로 포인트 제목</strong></label>
+                          <div class="col-md-9">
+                            <input name="test349" type="text" class="form-control input-inline input-xlarge"/>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"><strong>경도</strong></label>
+                          <div class="col-md-9">
+                            <input name="test349" type="text" readonly="" value="32.232321" class="form-control input-inline input-xlarge"/>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"><strong>위도</strong></label>
+                          <div class="col-md-9">
+                            <input name="test349" type="text" readonly="" value="32.232321" class="form-control input-inline input-xlarge"/>
+                          </div>
+                        </div>
+
+                        <div class="rw-toggle-checkbox">
+                          <div class="form-group">
+                            <div class="col-md-9 col-md-offset-3">
+                              <label>
+                                <input type="checkbox" value="0" name="" class="toggle-checkbox"/> 포인트 장소 내용 추가
+                              </label>
+                            </div>
+                          </div>
+
+                          <div style="display: none;" class="toggle-content well">
+                            <div class="form-group">
+                              <label class="col-md-3 control-label"><strong>포인트 장소 제목</strong></label>
+                              <div class="col-md-9">
+                                <input name="test349" type="text" class="form-control input-inline input-xlarge"/>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label"><strong>내용</strong></label>
+                              <div class="col-md-8">
+                                <textarea name="" rows="5" class="form-control"></textarea>
+                              </div>
+                            </div>
+
+                            <div class="form-group rw-file-upload image-upload">
+                              <label class="col-md-3 control-label"><strong>이미지</strong></label>
+                              <div class="col-md-9">
+                                <div class="input-icon input-inline input-xlarge right"><i class="fa fa-close btn-delete"></i><span class="form-control show-file-info border-box"></span></div>
+                                <label class="btn default btn-select-file">찾아보기
+                                  <input type="file" class="rw-hidden input-file"/>
+                                </label>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="preview-image no-image"><img src="" alt="thumbnail"/></div>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label"><strong>가이드</strong></label>
+                              <div class="col-md-8">
+                                <textarea name="" rows="5" class="form-control"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- .toggle-content-->
+                        </div>
+                        <!-- .rw-toggle-checkbox-->
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupAddPointPlace-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupConfirmDelete" class="btn green">#popupConfirmDelete</a>
+
+          <div id="popupConfirmDelete" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4><strong>삭제하시겠습니까?</strong>
+                    <!-- Are you sure you want to delete?-->
+                  </h4>
+                </div>
+                <div class="modal-footer"><a href="#" class="btn red btn-confirm">확인</a>
+                  <button type="button" data-dismiss="modal" class="btn btn-default">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupConfirmDelete-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupConfirmEdit" class="btn green">#popupConfirmEdit</a>
+
+          <div id="popupConfirmEdit" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4><strong>수정하시겠습니까?</strong>
+                    <!-- Do you want to edit?-->
+                  </h4>
+                </div>
+                <div class="modal-footer"><a href="#" class="btn green btn-confirm">확인</a>
+                  <button type="button" data-dismiss="modal" class="btn btn-default">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupConfirmEdit-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupConfirmMoveToList" class="btn green">#popupConfirmMoveToList</a>
+
+          <div id="popupConfirmMoveToList" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4><strong>목록으로 이동하시겠습니까?</strong>
+                    <!-- Do you want to move it to the list?-->
+                  </h4>
+                </div>
+                <div class="modal-footer"><a href="#" class="btn green btn-confirm">확인</a>
+                  <button type="button" data-dismiss="modal" class="btn btn-default">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupConfirmMoveToList-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupConfirmRegisterComment" class="btn green">#popupConfirmRegisterComment</a>
+
+          <div id="popupConfirmRegisterComment" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4><strong>답변을 등록하시겠습니까?</strong>
+                    <!-- Do you want to register the comment?-->
+                  </h4>
+                </div>
+                <div class="modal-footer"><a href="#" class="btn green btn-confirm">확인</a>
+                  <button type="button" data-dismiss="modal" class="btn btn-default">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupConfirmRegisterComment-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupConfirmSave" class="btn green">#popupConfirmSave</a>
+
+          <div id="popupConfirmSave" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4><strong>저장하시겠습니까?</strong>
+                    <!-- Do you want to save?-->
+                  </h4>
+                </div>
+                <div class="modal-footer"><a href="#" class="btn green">확인</a>
+                  <button type="button" data-dismiss="modal" class="btn btn-default">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupConfirmSave-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupHasBeenRegister" class="btn green">#popupHasBeenRegister</a>
+
+          <div id="popupHasBeenRegister" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4><strong>저장되었습니다 </strong>
+                    <!-- Has been saved-->
+                  </h4>
+                </div>
+                <div class="modal-footer"><a href="#" class="btn green">확인</a>
+                  <button type="button" data-dismiss="modal" class="btn btn-default">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupHasBeenRegister-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupHasBeenSaved" class="btn green">#popupHasBeenSaved</a>
+
+          <div id="popupHasBeenSaved" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4><strong>저장되었습니다 </strong>
+                    <!-- Has been saved-->
+                  </h4>
+                </div>
+                <div class="modal-footer"><a href="#" class="btn green">확인</a>
+                  <button type="button" data-dismiss="modal" class="btn btn-default">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupHasBeenSaved-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupProductScheduleConfirm" class="btn green">#popupProductScheduleConfirm</a>
+
+          <div id="popupProductScheduleConfirm" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="form">
+                    <div class="form-horizontal">
+                      <div class="form-body">
+                        <div class="form-group">
+                          <label class="col-md-3 col-md-offset-2 control-label"><strong>날짜:</strong></label>
+                          <div class="col-md-7">
+                            <div class="form-control-static">2016년 1월 23일 토요일</div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 col-md-offset-2 control-label"><strong>여행상품명:</strong></label>
+                          <div class="col-md-7">
+                            <div class="form-control-static">정동진 여행</div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 col-md-offset-2 control-label"><strong>예약 인원:</strong></label>
+                          <div class="col-md-7">
+                            <div class="form-control-static">10명/30명</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div style="border-bottom: 1px solid #e1e1e1; padding-top: 15px; margin-bottom: 30px;" class="rw-gap"></div>
+
+                      <div class="form-footer">
+                        <div class="form-group text-center">
+                          <div class="col-md-12">
+                            <label>
+                              <input type="checkbox" value="0" name="test523"/> 확정여행
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="form-group text-center"><a href="#" data-toggle="modal" data-target="#popupConfirmSave" class="btn green">저장</a>
+                          <button type="button" data-dismiss="modal" class="btn btn-default">닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupProductScheduleConfirm-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupProductScheduleCreate" class="btn green">#popupProductScheduleCreate</a>
+
+          <div id="popupProductScheduleCreate" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade rw-modal-large">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="date-range">
+                    <div data-date="10/11/2012" data-date-format="mm/dd/yyyy" class="input-group input-large date-picker input-daterange">
+                      <input type="text" name="from" class="form-control"/><span class="input-group-addon">~</span>
+                      <input type="text" name="to" class="form-control"/>
+                    </div>
+                  </div>
+                  <!-- .date-range-->
+
+                  <div style="border-bottom: 0 none; padding-top: 30px;" class="rw-gap"></div>
+
+                  <div class="sort-wrapper text-right">
+                    <select name="" class="form-control input-inline input-small">
+                      <option value="0">지역별 여행</option>
+                      <option value="1">기간별 여행</option>
+                    </select>
+                    <select name="" class="form-control input-inline input-small">
+                      <option value="0">지역별 여행</option>
+                      <option value="1">기간별 여행</option>
+                    </select>
+                  </div>
+                  <!-- .sort-wrapper-->
+
+                  <div style="border-bottom: 0 none; padding-top: 30px;" class="rw-gap"></div>
+
+                  <div class="table-wrapper table-responsive check-all-wrapper">
+                    <table class="table table-striped table-bordered table-hover text-center">
+                      <thead>
+                        <tr>
+                          <th>상품이미지</th>
+                          <th>여행상품명</th>
+                          <th>분류</th>
+                          <th> 
+                            <label>
+                              <input type="checkbox" value="" name="" class="check-all"/> 선택
+                            </label>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> 
+                            <div class="rw-thumb-style-1"><span style="background-image: url(../../assets/images/demo_single_1.jpg)" class="thumb-img"></span></div>
+                          </td>
+                          <td>여행상품명 여행상품명</td>
+                          <td>분류 분류 </td>
+                          <td> 
+                            <label>
+                              <input type="checkbox" value="" name="" class="check-item"/>
+                            </label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="rw-thumb-style-1"><span style="background-image: url(../../assets/images/demo_single_1.jpg)" class="thumb-img"></span></div>
+                          </td>
+                          <td>여행상품명 여행상품명</td>
+                          <td>분류 분류 </td>
+                          <td> 
+                            <label>
+                              <input type="checkbox" value="" name="" class="check-item"/>
+                            </label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="rw-thumb-style-1"><span style="background-image: url(../../assets/images/demo_single_1.jpg)" class="thumb-img"></span></div>
+                          </td>
+                          <td>여행상품명 여행상품명</td>
+                          <td>분류 분류 </td>
+                          <td> 
+                            <label>
+                              <input type="checkbox" value="" name="" class="check-item"/>
+                            </label>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div data-toggle="buttons" class="btn-group">
+                      <label class="btn btn-default">
+                        <input type="checkbox" class="toggle check-all"/> 전체선택
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="rw-pagination">
+                    <ul class="pagination">
+                      <li class="first"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                      <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li class="active"><a>3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                      <li class="last"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                    </ul>
+                  </div>
+                  <!-- .rw-pagination-->
+
+                  <div style="border-bottom: 1px solid #e1e1e1; padding-top: 15px; margin-bottom: 15px;" class="rw-gap"></div>
+
+                  <div class="text-center"><a href="#" data-toggle="modal" data-target="#popupConfirmSave" class="btn green">저장하기</a>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">닫기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupProductScheduleCreate-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupProductSearch" class="btn green">#popupProductSearch</a>
+
+          <div id="popupProductSearch" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade rw-modal-large">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                  <h4 class="modal-title">상품 검색</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form">
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <div class="col-md-12">
+                          <input name="test349" type="search" class="form-control input-inline input-medium"/><a href="#" class="btn green">검색</a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                  <div class="table-wrapper table-responsive">
+                    <table class="table table-striped table-bordered table-hover text-center">
+                      <thead>
+                        <tr>
+                          <th>상품명</th>
+                          <th>금액</th>
+                          <th>등록 일자 </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>한라산 눈꽃구경</td>
+                          <td>W 3000</td>
+                          <td>2015-06-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupProductSearch-->
+          <hr/><a href="#" data-toggle="modal" data-target="#popupUploadAgain" class="btn green">#popupUploadAgain</a>
+
+          <div id="popupUploadAgain" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                </div>
+                <div class="modal-body"><strong class="text-danger">21MB 이하 이미지 형태의 파일만 등록 가능합니다.(jpg, jpeg, gif, png)?</strong>
+                  <!-- Only 21MB or less in the form of image files can be registered. (jpg, jpeg, gif, png.)-->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" data-dismiss="modal" class="btn default">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .popupUploadAgain-->
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor jQuery (CORE PLUGINS - METRONIC)-->
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery.blockui.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery.cokie.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/uniform/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+
+    <!-- Vendor jQuery (PAGE LEVEL PLUGINS - METRONIC)-->
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/jquery-validation/js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.kr.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/ckeditor/adapters/jquery.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/ckeditor/lang/ko.js"></script>
+    <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support, and moment.min.js-->
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/moment.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/global/plugins/fullcalendar/lang/ko.js"></script>
+
+    <!-- Vendor jQuery (PAGE LEVEL STYLES - METRONIC)-->
+    <script type="text/javascript" src="../../libs/metronic-admin/global/scripts/metronic.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/admin/layout/scripts/layout.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/admin/layout/scripts/quick-sidebar.js"></script>
+    <script type="text/javascript" src="../../libs/metronic-admin/admin/layout/scripts/demo.js"></script>
+
+    <!-- Theme Script-->
+    <script type="text/javascript" src="../../assets/js/admin.js"></script>
+  </body>
+</html>

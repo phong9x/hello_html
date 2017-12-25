@@ -1,0 +1,80 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Edit My Info
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.massage.find-id
+      .page-title(style="margin-bottom: 15px;")
+        .title
+          span 아이디 및 비밀번호 찾기
+        .title-ct 
+          span 회원 아이디 및 비밀번호 찾기
+      .page-content.inquiry
+        .container
+          .main-top.border-full.bg-fff
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li.active
+                  a(href='#tab-11', data-toggle='tab') 
+                   span 기본 정보 
+                   i.fa.fa-caret-down(aria-hidden="true")
+                li
+                  a(href='#tab-12', data-toggle='tab') 
+                    span 서비스 노출 정보
+                    i.fa.fa-caret-down(aria-hidden="true")
+                li
+                  a(href='#tab-13', data-toggle='tab') 
+                    span 탈퇴 신청
+                    i.fa.fa-caret-down(aria-hidden="true")
+
+              ="\n"
+              .tab-content
+                #tab-11.tab-10.tab-pane.active
+                  .module-content 
+                    form
+                      .main-item
+                        h4.text-center.color888 일치하는 정보가 없습니다.
+                      .main-submit
+                        button(style="width: 220px;")
+                          i.fa.fa-pencil(aria-hidden='true') &nbsp;&nbsp;
+                          span 심리상담사 등록 신청
+                    
+                #tab-12.tab-10.tab-pane
+                  .module-content 
+                    span 3232
+
+                #tab-13.tab-10.tab-pane
+                  .module-content dsdds3232323
+
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  ="\n"
+  include ../includes/popup-preview-mobile-acc.jade 
+  
+  

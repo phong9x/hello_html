@@ -1,0 +1,1339 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Counselor’s Details - Hello
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    ="\n"
+    .page-content-wrapper
+        .page-content
+          .container
+            .main-body-content.member-page.member-detail
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 가입 회원
+                  li
+                    a(href="home.html") 상세 정보
+              // .page-bar
+              
+              ="\n"
+              .member-main-content
+                .tabbable-custom
+                  //- a.btn.green.link-top.stop-acc(href='#') 제재 취소
+                  ul.nav.nav-tabs
+                    li
+                      a(href='#tab-11', data-toggle='tab') 기본 정보
+                    li
+                      a(href='#tab-12', data-toggle='tab') 서비스 노출 정보
+                    li.active
+                      a(href='#tab-13', data-toggle='tab') 스케줄
+
+                  ="\n"
+                  .tab-content.tab-counselor-detail
+                    #tab-11.tab-10.tab-pane
+                      form.form_sample_3.form-horizontal(action='#')
+                        .portlet.box
+                          .portlet-body
+                            .form-title
+                              span.title 기본 정보
+                              a.btn.green.pull-right.delete-acc(href='#') 탈퇴
+                              a.btn.green.pull-right.ban-acc(href='#') 제재
+                            form.form_sample_3.form-horizontal(action='#')
+                              .form-body
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 상담사 번호 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 12345
+                                  .right
+                                    label.control-label.col-md-4
+                                      | ID :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span aa@aim.com
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 상담사명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='김태희')
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 연락처 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', data-required='1', value='01012341234')
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 생년월일 :
+                                      //- span.required *
+                                    .col-md-8.ct
+                                      .row.all-select
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 2015
+                                            option(value='1') 2015
+                                            option(value='2') 2015
+                                          span.note 년
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 월
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 일
+                                    
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 사업자 구분 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      .radio-list(data-error-container='#form_2_membership_error')
+                                        label
+                                          input(type='radio', name='membership', value='1')
+                                          | 프리랜서
+                                        label
+                                          input(type='radio', name='membership', value='2')
+                                          | 센터 소속
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 센터명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 기업
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 만족도평가 :
+                                      //- span.required *
+                                    .col-md-8.ct.v2
+                                      .item-review
+                                        input.rating(type='number', data-readonly='', value='4.1')
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 최근 로그인일시 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 2016-04-14 13:00:00
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 승인 신청일시 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 2016-03-10 15:00:00
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 검토일시 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 2016-03-10 15:00:00
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 제재 횟수 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 1
+                                      a.btn.green.history-ban-acc(href='#') 제재 내역
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 상담수 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 100
+                                  .right
+                                    
+                                .form-group
+                                  .left.v2
+                                    label.control-label.col-md-2
+                                      | 상태 :
+                                      //- span.required *
+                                    .ct
+                                      p 탈퇴  (2016-05-10 15:00:00  |  기타 : 그냥 심심해서 탈퇴했음)
+                              .margin-top
+                              .form-title
+                                span.title 기본 정보
+                              .form-body
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 생년월일 :
+                                      //- span.required *
+                                    .col-md-7.ct
+                                      select.form-control.selectpickermember(name='selecttext',title='성명')
+                                        option(value='0') 국민은행
+                                        option(value='1') 신한은행
+                                        option(value='2') 우리은행
+                                        option(value='3') 농협은행
+                                        option(value='4') 하나은행
+                                        option(value='5') SC은행
+                                        option(value='6') 우체국
+                                        option(value='7') 씨티은행
+                                        option(value='8') 수협은행
+                                        option(value='9') 상호저축은행
+                                        option(value='10') 새마을금고
+                                        option(value='11') 제주은행
+                                        option(value='12') 경남은행
+                                        option(value='13') 전북은행
+                                        option(value='14') 광주은행
+                                        option(value='15') 부산은행
+                                        option(value='16') 대구은행
+                                        
+                                    
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 계좌번호 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='434123423545')
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 예금주 :
+                                      //- span.required *
+                                    .col-md-7.ct
+                                      input.form-control(type='text', name='name', value='홍길동')
+                                  .right
+                              .margin-top
+                              .form-title
+                                span.title 설정 정보
+                              .form-body
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 생년월일 :
+                                      //- span.required *
+                                    .col-md-8.ct
+                                      .radio-list(data-error-container='#form_2_membership_error')
+                                        label
+                                          input(type='radio', name='membership', value='1')
+                                          | yes
+                                        label
+                                          input(type='radio', name='membership', value='2')
+                                          | no
+                                        
+                                    
+                                  .right
+                                    label.control-label.col-md-4
+                                      | AIMMED 추천 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      .radio-list(data-error-container='#form_2_membership_error')
+                                        label
+                                          input(type='radio', name='membership', value='1')
+                                          | yes
+                                        label
+                                          input(type='radio', name='membership', value='2')
+                                          | no
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-3
+                                      | 상담사 등급 :
+                                      //- span.required *
+                                    .col-md-8.ct
+                                      .radio-list(data-error-container='#form_2_membership_error')
+                                        label
+                                          input(type='radio', name='membership', value='1')
+                                          | Diamond
+                                        label
+                                          input(type='radio', name='membership', value='2')
+                                          | Gold
+                                        label
+                                          input(type='radio', name='membership', value='2')
+                                          | Silver
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 상담 가격 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      .all-select(style="margin-right: 0;")
+                                        .col-md-8(style="padding: 0;")
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='5.000') 5,000
+                                            option(value='10.000') 10,000
+                                            option(value='15.000') 15,000
+                                            option(value='20.000') 20,000
+                                            option(value='25.000') 25,000
+                                            option(value='30.000') 30,000
+                                            option(value='35.000') 35,000
+                                            option(value='40.000') 40,000
+                                            option(value='45.000') 45,000
+                                            option(value='50.000') 50,000
+                                            option(value='55.000') 55,000
+                                            option(value='60.000') 60,000
+                                            option(value='65.000') 65,000
+                                            option(value='70.000') 70,000
+                                            option(value='75.000') 75,000
+                                            option(value='80.000') 80,000
+                                            option(value='85.000') 85,000
+                                            option(value='90.000') 90,000
+                                            option(value='95.000') 95,000
+                                            option(value='100.000') 100,000
+                                        .col-md-4
+                                          span.note(style="left: 3px; right: auto;") 원
+
+                              .row
+                                .col-md-6
+                                  .margin-top
+                                  .form-title
+                                    span.title 심리검사 사이트(가이던스) 계정 정보
+                                  .form-body
+                                    table.table.table-bordered.text-center.table-schedule
+                                      tr
+                                        th.tg-yw4l.label-title(rowspan='2') 가이던스
+                                        th.tg-yw4l(style="background: #fbfdee;") 아이디
+                                        th.tg-yw4l
+                                          input.form-control(type='text', name='name', value='hello123')
+                                      tr
+                                        th(style="background: #fbfdee;") 비밀번호
+                                        td.tg-031e
+                                          input.form-control(type='text', name='name', value='19660218')
+                                .col-md-6
+                                  .margin-top
+                                  .form-title
+                                    span.title 어세스타 교육 수료 정보
+                                  .form-body
+                                    table.table.table-bordered.text-center.table-schedule
+                                      tr
+                                        th.tg-yw4l.label-title(rowspan='2') 어세스타 (수료번호)
+
+                                        th.tg-yw4l(style="background: #fbfdee;") MBTI
+                                        th.tg-yw4l
+                                          input.form-control(type='text', name='name', value='hello123')
+                                      tr
+                                        th.tg-yw4l(style="background: #fbfdee;") MMTIC
+                                        td.tg-031e
+                                          input.form-control(type='text', name='name', value='19660218')
+                                   
+                          .portlet-footer
+                            button.btn.default(type="submit") 목록      
+                            button.btn.green.submit(type="submit") 저장      
+
+                             
+                    #tab-12.tab-12.tab-pane
+                      .md-tab-content.tabv2
+                        .member-title-table
+                          .md-ct
+                            span.title 서비스 노출 정보
+                        form.form_sample_3.form-horizontal(action='#')
+                          .portlet.box
+                            .portlet-body
+                              .table-member-mng.table-responsive 
+                                table.table.table-striped.table-bordered.table-hover.text-center.table-schedule
+                                  tr
+                                    th(style="width: 150px;") 프로필 이미지
+                                    td 
+                                      .tr-block-style-1
+                                        .tr-file-upload.image-upload
+                                          .preview-image.border-box.no-image
+                                            span.image-bg
+                                          label.tr-btn.tr-btn-style-1.btn-select-file
+                                            | 찾아보기
+                                            input.hidden.input-file(type="file")
+                                          .note-input-img
+                                            p * JPG, GIF, PNG (3MB 이하)
+                                            p * 최소 300 x 300px 정사각형 형태로 업로드
+                                      // .tr-block-style-1
+                                  tr
+                                    th(style="width: 150px;") 상담 분야
+                                    td.text-left
+                                      .checkbox-list(data-error-container='#form_2_services_error')
+                                        label
+                                          input(type='checkbox', value='1', name='service')
+                                          | 전체
+                                        label
+                                          input(type='checkbox', value='2', name='service')
+                                          | 심리적 증상
+                                        label
+                                          input(type='checkbox', value='3', name='service')
+                                          | 성격 및 자기이해
+                                        label
+                                          input(type='checkbox', value='4', name='service')
+                                          | 가족관계
+                                        label
+                                          input(type='checkbox', value='5', name='service')
+                                          | 직장생활(직업
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 학업 및 진로
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 대인 관계
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 성문제
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 중독 및 섭식장애
+                                        label
+                                          input(type='checkbox', value='6', name='service' class="last-checkbox")
+                                          | 자녀양육
+                                      .list-sub-checkbox  
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 정서 및 행동 문제
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 또래 관계
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 가족관계
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 학업 및 진로
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 성
+                                        label
+                                          input(type='checkbox', value='6', name='service')
+                                          | 중독 및 섭식장애
+                                  tr
+                                    th(style="width: 150px;") 소개 문구
+                                    td.text-left
+                                      textarea.rw-ckeditor.form-control.text-left(name='editor2', rows='6', max-length="500")
+                                        | 혹시 조직 내에서 상사 또는 동료들로 인하여 심한 스트레스를 받고 있나요? 
+                                        | 이직을 생각하고 계시나요? 그로 인한 정서적인 불안을 느끼시나요? 허심탄회
+                                        | 하게 풀어놔보세요. 한결 마음이 편안해 지실거에요!!
+                                  tr
+                                    th(style="width: 150px;") 학력
+                                    td.text-left
+                                      .row
+                                        .col-md-3
+                                          input.form-control(type='text', name='name', value="서울")
+                                        .col-md-4
+                                          label.label-control(style="display: inline-block;") 대학원
+                                          input.form-control(type='text', name='name', value="심리학", style="display: inline-block; width: 200px;")
+                                        .col-md-5
+                                          label.label-control(style="display: inline-block; margin-right: 5px;") 전공
+                                          a.btn.green(href="../../assets/images/avatar_female.png", download, style="display: inline-block;") 졸업증명서 사본 보기
+
+                                  tr
+                                    th(style="width: 150px;") 주요 약력
+                                    td.text-left
+                                      div(style="margin-bottom: 10px;")
+                                        input.form-control(type='text', name='name', value="서울대학교 심리학과 교수", style="width: 280px;")
+                                      div
+                                        input.form-control(type='text', name='name', value="조직, 성격 전문상담사 (한국정보화진흥원)", style="width: 280px;")
+                                  tr
+                                    th(style="width: 150px;") 자격증
+                                    td.text-left
+                                      div(style="margin-bottom: 10px;")
+                                        input.form-control(type='text', name='name', value="심리상담 전문 자격증 1급", style="display: inline-block; width: 280px;")
+                                        a.btn.green(href="../../assets/images/avatar_female.png", download, style="display: inline-block; margin-left: 10px;") 자격증 사본 보기
+
+                                      div
+                                        input.form-control(type='text', name='name', value="심리상담 전문 자격증 2급", style="display: inline-block; width: 280px;")
+                                        a.btn.green(href="../../assets/images/avatar_female.png", download, style="display: inline-block; margin-left: 10px;") 자격증 사본 보기
+                                  tr
+                                    th(style="width: 150px;") 자격증
+                                    td.text-left
+                                      div(style="margin-bottom: 10px;")
+                                        a.btn.btn-download.btn-doc(href="../../assets/images/avatar_female.png", download) 김태희이력서.docx
+                                      div
+                                        a.btn.btn-download.btn-pdf(href="../../assets/images/avatar_female.png", download) 김태희_경력증명서.pdf
+                                  tr
+                                    th(style="width: 150px;") 상담 횟수
+                                    td.text-left.item-counselor_detail
+                                      select.form-control.selectpickermember(name='selecttext',title='성명', style="width: 200px!important;")
+                                        option(value='100회 미만 ') 100회 미만 
+                                        option(value='100회 이상 ') 100회 이상 
+                                        option(value='200회 이상') 200회 이상
+                                        option(value='300회 이상') 300회 이상
+                                        option(value='500회 이상', selected) 500회 이상
+                                        option(value='1,000회 이상') 1,000회 이상
+                                  tr
+                                    th(style="width: 150px;")  ㈜어세스타 교육 수료여부
+                                    td.text-left.item-counselor_detail
+                                      input.form-control(type='text', name='name', disabled, value="MBTI 수료번호 00003333 MMTIC -", style="width: 280px;")
+                            .portlet-footer
+                              button.btn.default(type="submit") 목록      
+                              button.btn.green.submit(type="submit") 저장    
+                    #tab-13.tab-13.tab-pane.active
+                      .md-tab-content.tabv3
+                        .portlet.box
+                          .portlet-body
+                            .schedule.schedule-full(style="padding: 0 10px;")
+                              .schedule-content
+                                .title 상담사 스케줄
+                                .schedule-top
+                                  span.navi.pre 
+                                    <i class="fa fa-caret-left" aria-hidden="true"></i>
+                                  span.title-date 2016년 2월 15일(월) ~ 21(일)
+                                  span.navi.next
+                                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                .schedule-main-content
+                                  .schedule-week
+                                  .schedule-table
+                                    
+                                    .schedule-day
+                                      ul
+                                        li
+                                          span 2.15(월)
+                                        li
+                                          span 실시간
+                                        li
+                                          span 2.16(화)
+                                        li
+                                          span 실시간
+                                        li
+                                          span 2.17(수)
+                                        li
+                                          span 실시간
+                                        li.today
+                                          span 2.18(목)
+                                        li
+                                          span 실시간
+                                        li
+                                          span 2.19(금)
+                                        li
+                                          span 실시간
+                                        li
+                                          span 2.20(토)
+                                        li
+                                          span 실시간
+                                        li
+                                          span 2.21(일)
+                                        li
+                                          span 실시간
+                                    .schedule-table-content
+                                      .schedule-hours
+                                        ul
+                                          li
+                                            span 오전
+                                            span 07:00
+                                          li
+                                            span 오전
+                                            span 08:00
+                                          li
+                                            span 오전
+                                            span 09:00
+                                          li
+                                            span 오전
+                                            span 010:00
+                                          li
+                                            span 오전
+                                            span 11:00
+                                          li
+                                            span 오전
+                                            span 12:00
+                                          li
+                                            span 오전
+                                            span 01:00
+                                          li
+                                            span 오전
+                                            span 02:00
+                                          li
+                                            span 오전
+                                            span 03:00
+                                          li
+                                            span 오전
+                                            span 04:00
+                                          li
+                                            span 오전
+                                            span 05:00
+                                          li
+                                            span 오전
+                                            span 06:00
+                                          li
+                                            span 오전
+                                            span 07:00
+                                          li
+                                            span 오전
+                                            span 08:00
+                                          li
+                                            span 오전
+                                            span 09:00
+                                          li
+                                            span 오전
+                                            span 10:00
+                                          li
+                                            span 오전
+                                            span 11:00
+                                          li
+                                            span 오전
+                                            span 12:00
+                                          li
+                                            span 오전
+                                            span 01:00
+                                          li
+                                            span 오전
+                                            span 02:00
+                                          li
+                                            span 오전
+                                            span 03:00
+                                          li
+                                            span 오전
+                                            span 04:00
+                                          li
+                                            span 오전
+                                            span 05:00
+                                          li
+                                            span 오전
+                                            span 06:00
+                                          
+                                      .table-member-mng
+                                        table.table.table-striped.table-bordered.table-hover.text-center
+                                          tbody
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td.active(rowspan="2") content
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td.active2 dsds
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td.active2(rowspan="2") content
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td dsds
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td.active(rowspan="2") content
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td dsds
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td.active(rowspan="2") content
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td dsds
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td.active(rowspan="2") content
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td dsds
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td.active(rowspan="2") content
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td dsds
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td.active(rowspan="2") content
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td dsds
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td.active(rowspan="2") content
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td dsds
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                            tr
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                                              td 
+                            
+
+                          .portlet-footer
+                            button.btn.green(type="submit") 목록  
+              //.table-member-mng
+
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade
+  ="\n"
+  include ../includes/popupBanAcc.jade
+  ="\n"
+  include ../includes/popupDeleteAcc.jade
+  ="\n"
+  include ../includes/popupRemoveBanAcc.jade

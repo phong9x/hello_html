@@ -1,0 +1,112 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Business Member Subsidiaries - Hello
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper.countselor
+
+        .page-content
+          .container
+            ="\n"
+            .sidebar-left
+              include ../includes/page-sidebar-left.jade
+            .main-body-content.member-page.business
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              
+              ="\n"
+              form.form_sample_3
+                .member-main-top.border-full
+                  .item-count.member-sub.show-item1
+                    .item-left
+                      span.title 기업 구분 :
+                      .left-ct
+                        .checkbox-list(data-error-container='#form_2_services_error')
+                          label
+                            input.radio1(type='radio', value='1', name='service', checked)
+                            |  일반기업   
+                          label
+                            input.radio2(type='radio', value='2', name='service')
+                            |  보험사
+                        
+             
+                    .item-right
+                      span.title 기업 회원명 :
+                      .right-ct
+                        .item1
+                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                              option(value='0') 2015
+                              option(value='1') 2015
+                              option(value='2') 2015
+                        .item2
+                          select.form-control.selectpickermember(name='selecttext',title='성명 성명 성명')
+                              option(value='0') dsdsdsd
+                              option(value='1') 201sdsdsds5
+                              option(value='2') 201dsdsdsds5
+                  
+                .link-submit
+                  button.btn.green(type='submit') 검색
+
+
+              .member-title-table
+                .md-ct
+                  span.title 기업 상세 분류
+                  a.btn.green.link-bussine-member(href="#") 등록
+
+              .table-member-mng.table-responsive
+                table.table.table-striped.table-bordered.table-hover.text-center
+                  thead
+                    tr
+                      th 번호
+                      th 연도
+                      th 기업 상세 분류
+                      th 소속 회원
+                      th 상담권 사용
+                      th 상담 금액
+                      th 상태
+                  tbody
+                    tr
+                      td 9
+                      td 2017
+                      td 
+                        a(href="#") 종신상품1
+                      td 50
+                      td 300
+                      td 100
+                      td 정상
+                      
+              //.table-member-mng
+
+              ="\n"
+              include ../includes/rw-pagination.jade
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade

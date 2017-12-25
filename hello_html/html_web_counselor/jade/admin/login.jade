@@ -1,0 +1,49 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Hello Login
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  
+
+    ="\n"
+    .member.page-content-wrapper
+      #slide-login
+        .owl-carousel.owl-theme
+          .item
+            img(src='../../assets/images/baner-slide1.png')
+          .item
+            img(src='../../assets/images/baner-slide2.png')
+          .item
+            img(src='../../assets/images/baner-slide3.png')
+          .item
+            img(src='../../assets/images/baner-slide4.png')
+        .login-contact
+          .container
+            .left
+              span 서비스 관련 문의
+              span hello@aimmed.com
+            .right
+              span.popup-faq 자주 묻는 질문
+        
+
+    include ../includes/footer.jade
+
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  ="\n"
+  include ../includes/popup-faq.jade 
+  

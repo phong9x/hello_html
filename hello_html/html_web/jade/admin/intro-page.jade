@@ -1,0 +1,115 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Intro Page - Hello
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    ="\n"
+    .page-content-wrapper.countselor
+
+        .page-content
+          .container
+            ="\n"
+            .main-body-content.member-page
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              
+              ="\n"
+              .member-title-table
+                h4(style="font-weight: bold;") 인트로 페이지 편집
+                .md-ct
+                  span.title(style="line-height: 32px;") 인트로 페이지 개수 :
+                  span.title
+                    select.form-control.selectpickermember.text-left(name='selecttext',title="선택...")
+                      option(data-hidden="true")
+                      option(value='1') 1
+                      option(value='2') 2
+                      option(value='3') 3
+                      option(value='4') 4
+                      option(value='5') 5
+                      option(value='6') 6
+
+              form.form_sample_3.intro-pageform
+                .member-main-top.border-full
+                  .main-content
+                    .col-sm-3
+                      .item-upload
+                        .inputfile
+                          .tr-file-upload.image-upload
+                            .preview-image
+                              img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                            label.btn.green.btn-select-file
+                              | 찾아보기
+                              input.hidden.input-file(type="file")
+                            //- span.help-inline 선택된 파일 없음.
+                            .input-icon.input-large.input-inline.right
+                              //- span.btn-delete
+                              span.show-file-info
+                            //- .note-img * JPG, GIF, PNG (3MB 이하)
+                    .col-sm-3
+                      .item-upload
+                        .inputfile
+                          .tr-file-upload.image-upload
+                            .preview-image
+                              img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                            label.btn.green.btn-select-file
+                              | 찾아보기
+                              input.hidden.input-file(type="file")
+                            //- span.help-inline 선택된 파일 없음.
+                            .input-icon.input-large.input-inline.right
+                              //- span.btn-delete
+                              span.show-file-info
+                            //- .note-img * JPG, GIF, PNG (3MB 이하)
+                    .col-sm-3
+                      .item-upload
+                        .inputfile
+                          .tr-file-upload.image-upload
+                            .preview-image
+                              img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                            label.btn.green.btn-select-file
+                              | 찾아보기
+                              input.hidden.input-file(type="file")
+                            //- span.help-inline 선택된 파일 없음.
+                            .input-icon.input-large.input-inline.right
+                              //- span.btn-delete
+                              span.show-file-info
+                            //- .note-img * JPG, GIF, PNG (3MB 이하)
+                  .main-note
+                    p * 위에 나열된 순서대로 인트로 페이지에 보여지게 됩니다.
+                    p * JPG, GIF, PNG (3MB 이하)
+                    p * 1920 x 1080 px 사이즈에 최적화
+
+                  
+                  .link-submit
+                    button.btn.green(type='submit') 저장
+
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

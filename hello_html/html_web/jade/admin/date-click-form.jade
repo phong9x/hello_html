@@ -1,0 +1,104 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Date click form - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page
+            .page-bar
+              ul.page-breadcrumb
+                li
+                  a(href="home.html").home 
+                    i.fa.fa-home
+                    | 홈
+                li
+                  a(href="home.html") 회원 관리
+            // .page-bar
+            
+            ="\n"
+            form.form_sample_3
+              .member-main-top.border-full
+                .form-date
+                  .datepicker-form.block1.active-block
+                    .item.icon-next.datepicker-item
+                      span
+                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                      span.text 달력
+                    .item.datepicker-item
+                      span
+                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                      span.text 달력
+                  .datepicker-form.block2
+                    .item.year
+                      select.form-control.selectpickermember.text-left(name='selecttext',title='성명')
+                        option(value='0') 2015
+                        option(value='1') 2016
+                        option(value='2') 2017
+                    .item
+                      select.form-control.selectpickermember.text-left(name='selecttext',title='성명')
+                        option(value='0') 2015
+                        option(value='1') 2016
+                        option(value='2') 2017
+                    span.pull-left.line-30.mrr-20 ~
+                    .item
+                      select.form-control.selectpickermember.text-left(name='selecttext',title='성명')
+                        option(value='0') 2015
+                        option(value='1') 2016
+                        option(value='2') 2017
+                  .datepicker-form.block3
+                    .item
+                      select.form-control.selectpickermember.text-left(name='selecttext',title='성명')
+                        option(value='0') 2015
+                        option(value='1') 2016
+                        option(value='2') 2017
+                    .item
+                      select.form-control.selectpickermember.text-left(name='selecttext',title='성명')
+                        option(value='0') 2015
+                        option(value='1') 2016
+                        option(value='2') 2017
+                    span.pull-left.line-30.mrr-20 ~
+                    .item
+                      select.form-control.selectpickermember.text-left(name='selecttext',title='성명')
+                        option(value='0') 2015
+                        option(value='1') 2016
+                        option(value='2') 2017
+                  .block-tab.pull-left
+                    span.btn.default.green.btn-block1 
+                      label.hidden
+                        input(type='radio', value='1', name='service')
+                      | 일간
+                    span.btn.default.btn-block2 
+                      label.hidden
+                        input(type='radio', value='1', name='service')
+                      | 주간
+                    span.btn.default.btn-block3 
+                      label.hidden
+                        input(type='radio', value='1', name='service')
+                      | 월간
+                
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

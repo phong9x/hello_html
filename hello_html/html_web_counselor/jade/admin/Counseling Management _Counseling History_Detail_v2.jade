@@ -1,0 +1,111 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title History Detail
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.detail
+      .page-title
+        .title
+          span 상담 내역
+        .title-ct 
+          span 지난 상담내역 확인이 가능합니다
+      .page-content.detail-style2
+        .container
+          .main-content-top.border-full.bg-fff(style="margin-bottom: 10px;")
+            .item-title 
+              span 요약 정보
+            .item-content
+              .item
+                span.title.comment 상담 구분
+                span.content 실시간 상담
+              .item
+                span.title.acc 회원
+                span.content 홍길동
+              .item.long
+                span.title.next 상담 시작
+                span.content 2016-03-02(월) 09:15
+              .item
+                span.title.clock 상담 시간
+                span.content 30분
+              .item
+                span.title.clock2 남은 시간
+                span.content 55분 19초
+          .main-content.border-full.bg-fff
+            .content-main
+              .main-ct
+                .main-item(style="margin-bottom: 10px;")
+                  .item-title 
+                    span 상세 정보
+                  .item-content
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          span content
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content 
+                          button() 쪽지쓰기
+                          button() 쪽지쓰기
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content 
+                          button() 쪽지쓰기
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          span content
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content
+                    .item
+                      .item-left
+                        span.title title
+                        .left-ct
+                          a.link(href="#") link content
+                      .item-right
+                        span.title title
+                        .left-ct
+                          span content
+          .main-submit
+            button 
+              span 목록 보기
+            button.v2 
+              span 상담실 입장
+
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  
+  

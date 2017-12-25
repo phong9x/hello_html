@@ -1,0 +1,78 @@
+#popup-preview-mobile-acc.modal.fade.popup-facetalk.popup-preview-mobile-acc(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    button.close-face(type='button', data-dismiss='modal', aria-hidden='true')
+    .modal-content
+      .container-counselor-intro.main
+        .main-counselor-intro
+          .counselor-intro
+            .thumb-avatar
+              .avatar
+                img(src="../../assets/images/img-7.jpg", alt='avatar')
+              .rank.rank_white
+            .counselor-name
+              span.first-name 김태희
+              span.last-name 심리상담사
+            .result-rated
+              input.rating(type='number', data-readonly='', value='3')
+            .counselor-other
+              span.total-vote
+                i.fa.fa-thumbs-o-up(aria-hidden='true')
+                |                 10
+              input(type='hidden', name='status_support', value='Off')
+              a.btn-support(href='') 쪽지보내기
+          .counselor-content
+            .title-counselor 바로 상담가능
+            .counselor-item.about
+              .sub-item 소개
+              .detail
+                p 우리 아이가 점점 난폭해지지는 않나요?
+                p 자꾸 반항하지는 않나요?
+                p 엄마들의 자녀 문제 지금 바로 명쾌하게 해결해 드릴게요.
+            .counselor-item.info-user(style='border-bottom: 0;')
+              .sub-item 주요 경력
+              .detail
+                ul
+                  li 현 서울대학교 아동심리학과 교수
+                  li 전문상담사 1급
+                  li 아동상담사 1급
+                  li 상담 1,000회 이상
+            .voucher-info.text-center
+              span.item-text.text-gray 30분
+              span.item-text.text-blue 33,000원
+              span.item-text.text-gray 또는
+              span.item-text.text-blue 상담권 1매
+            .box-review
+              .total-review
+                .title-review
+                  | 상담 만족도 평가 및 후기
+                  a.btn-review(href='#')
+                    i.fa.fa-pencil(aria-hidden='true')
+                    |                     작성하기
+                .result-review
+                  span.text-review 만족도 평가
+                  input.rating(type='number', data-readonly='', value='4.5')
+              .list-review
+                .item-review
+                  .user-info
+                    .user-name 이 * 희 님
+                    input.rating(type='hidden', data-readonly='', value='4.5')
+                  .content-review
+                    | 너무 친절하고 귀에 쏙쏙 들어옵니다.
+                    br
+                    |                      그런 방법을 왜 몰랐을까요? ㅠ.ㅠ
+                .item-review
+                  .user-info
+                    .user-name 홍 * 동
+                    input.rating(type='hidden', data-readonly='', value='3')
+                  .content-review
+                    | 감사합니다~ 제 아이에 대하여 다시 처음부터 생각해봐야겠네요. 말씀해주신 부분을 ….
+                .item-review(style='border-bottom: 0;')
+                  .user-info
+                    .user-name 홍 * 동
+                    input.rating(type='hidden', data-readonly='', value='2')
+                  .content-review
+                    | 그다지 나아진 것은 없었지만 일리는 있었습니다.
+                .box-control
+
+          // Are you sure you want to delete?
+// .popupConfirmDelete

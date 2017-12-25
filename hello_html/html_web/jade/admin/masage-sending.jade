@@ -1,0 +1,86 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Massage Sending
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page.push-list
+            .page-bar
+              ul.page-breadcrumb
+                li
+                  a(href="home.html").home 
+                    i.fa.fa-home
+                    | 홈
+                li
+                  a(href="home.html") 회원 관리
+            // .page-bar
+            
+            ="\n"
+            .massage-title
+              h4.pull-left.bold 쪽지 발송
+              span.pull-right ※ 상담사에게만 쪽지를 보낼 수 있습니다.
+            form.form_sample_3
+              .member-main-top.border-full.massage-sending
+                .item-massage.mrb-30
+                  .left
+                    span 받는 사람
+                  .right 
+                    .item-row.mrb-20
+                      button.btn.green 찾아보기
+                      span.mrl-10 총 100명
+                    .item-row
+                      span.btn.green.pull-left.add-massage
+                        span 김태희
+                        i.fa.fa-close.mrl-10(aria-hidden='true')
+                      span.btn.green.pull-left.add-massage
+                        span 김태희
+                        i.fa.fa-close.mrl-10(aria-hidden='true')
+                      span.btn.green.pull-left.add-massage
+                        span 김태희
+                        i.fa.fa-close.mrl-10(aria-hidden='true')
+                      span.btn.green.pull-left.add-massage
+                        span 김태희
+                        i.fa.fa-close.mrl-10(aria-hidden='true')
+                      span.btn.green.pull-left.add-massage
+                        span 김태희
+                        i.fa.fa-close.mrl-10(aria-hidden='true')
+                      span.btn.green.pull-left.add-massage
+                        span 김태희
+                        i.fa.fa-close.mrl-10(aria-hidden='true')
+                    .item-row
+                      button.btn-default.btn 모두 삭제
+                .item-massage
+                  .left
+                    span 내용
+                  .right 
+                    .item-row.mrb-20
+                      textarea.rw-ckeditor.form-control(name='editor2', rows='8', data-error-container='#editor2_error', placeholder='내용을 입력하세요.')
+              .item-submit.text-center.mrt-30
+                button.btn.green.width100 발송
+                
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupaddmassage.jade

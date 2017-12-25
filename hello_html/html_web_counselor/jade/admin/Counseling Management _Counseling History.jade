@@ -1,0 +1,159 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Home - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history
+      .page-title
+        .title
+          span 상담 내역
+        .title-ct 
+          span 지난 상담내역 확인이 가능합니다
+      .page-content
+        .container
+          .main-top.border-full.bg-fff
+            .content-top
+              .md-content
+                .md-item
+                  span.title 상담 날짜
+                  .item-ct
+                    .item.icon-next.datepicker-item
+                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                    .item.datepicker-item
+                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                .md-item
+                  span.title 결제 구분
+                  .item-ct
+                    .item.radio-checkboxstyle2
+                      input(type='checkbox', value='1', name='service')
+                      span 상담권 사용
+                    .item.radio-checkboxstyle2
+                      input#test-check1(type='checkbox', value='1', name='service')
+                      span 헬로코인 사용
+                .md-item
+                  span.title 상태
+                  .item-ct
+                    .item.radio-checkboxstyle2
+                      input(type='checkbox', value='1', name='service')
+                      span 상담완료
+                    .item.radio-checkboxstyle2
+                      input(type='checkbox', value='1', name='service')
+                      span 환급
+                .md-item
+                  span.title 회원 검색
+                  .item-ct.input-form
+                    input.form-control(type='text', name='name', data-required='1')
+              .md-link
+                span 검색
+          .main-content.border-full.bg-fff
+            .content-main
+              .main-top
+                span.title 지난 상담내역 리스트
+                span.price 10건
+                select.form-control.selectpickermember.pull-right(name='options2')
+                  option(value='Option 1') Option 1
+                  option(value='Option 2') Option 2
+                  option(value='Option 3') Option 3
+                  option(value='Option 4') Option 4
+              .main-ct
+                .table-wrapper
+                  .table-responsive
+                    table.table.table-striped.table-hover.text-center
+                      thead
+                        tr
+                          th 번호
+                          th 회원명
+                          th 상담 시작
+                          th 상담 종료
+                          th 상담 시간
+                          th 결제 구분
+                          th 만족도 평가
+                          th 상태
+                      tbody
+                        tr
+                          td 01
+                          td 
+                            a(href="#") 회원명
+                          td 2016-03-02 19:15:00
+                          td 2016-03-02 19:15:00
+                          td 59분 50초
+                          td 상담권 사용
+                          td 
+                            input.rating(type='number', data-readonly='', value='4.5')
+                          td 
+                            button.button-chis 상담 완료
+                        tr
+                          td 01
+                          td 회원명
+                          td 2016-03-02 19:15:00
+                          td 2016-03-02 19:15:00
+                          td 59분 50초
+                          td 상담권 사용
+                          td 
+                            input.rating(type='number', data-readonly='', value='4.5')
+                          td 
+                            button.button-chis.v2 환급
+                        tr
+                          td 01
+                          td 회원명
+                          td 2016-03-02 19:15:00
+                          td 2016-03-02 19:15:00
+                          td 59분 50초
+                          td 상담권 사용
+                          td 
+                            input.rating(type='number', data-readonly='', value='4.5')
+                          td 
+                            button.button-chis.v2 환급
+                        
+                    ="\n"
+                  .rw-pagination
+                    ul.pagination
+                      li
+                        a(href='#')
+                          span 이전
+                      li
+                        a(href='#') 1
+                      li
+                        a(href='#') 2
+                      li.active
+                        a 3
+                      li
+                        a(href='#') 4
+                      li
+                        a(href='#') 5
+                      li
+                        a(href='#')
+                          span 다음
+    
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  
+  

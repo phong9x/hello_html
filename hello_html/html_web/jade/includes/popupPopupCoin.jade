@@ -1,0 +1,77 @@
+#popupPopupCoin.modal.fade.popupPopupCoin(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 지급/차감 관리
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        .tabbable-custom
+          ul.nav.nav-tabs
+            li.active
+              a(href='#tab-11', data-toggle='tab') 헬로코인 지급/차감
+            li
+              a(href='#tab-12', data-toggle='tab') 하트 지급/차감
+            li
+              a(href='#tab-13', data-toggle='tab') 하트 상담권 지급
+
+          ="\n"
+          .tab-content
+            #tab-11.tab-11.tab-pane.active
+              .modal-search.border-full(style="margin-bottom: 20px;")
+                .search
+                  input.form-control(type='text', name='name', data-required='1')
+                  button.search.disable 조회
+                .search-content
+                  .item
+                    span.title ㆍ아이디
+                    .ct
+                      a(href="#") abcd@aimmed.com
+                  .item
+                    span.title ㆍ이름
+                    span.ct 홍길동
+                  .item
+                    span.title ㆍ연락처
+                    span.ct 01012341234
+                  .item
+                    span.title ㆍ생년월일
+                    span.ct 1970-01-01
+              .modal-search.border-full
+                .search-content.style2
+                  .item
+                    span.title 헬로코인 지급 / 차감
+                    .ct
+                      .radio-list(data-error-container='#form_2_membership_error')
+                        label
+                          input(type='radio', name='membership', value='1',checked)
+                          | 헬로코인 지급
+                        label
+                          input(type='radio', name='membership', value='2')
+                          | 헬로코인 차감
+                  .item
+                    span.title 지급 금액 입력
+                    span.ct 
+                      input.form-control(type='text', name='name', data-required='1')
+                  .item
+                    span.title 지급 사유
+                    .ct 
+                      .radio-list(data-error-container='#form_2_membership_error')
+                        label
+                          input(type='radio', name='membership', value='1',)
+                          | 테스트
+                        label
+                          input(type='radio', name='membership', value='2')
+                          | 이벤트
+                        label
+                          input(type='radio', name='membership', value='1')
+                          | 환급
+                        label
+                          input(type='radio', name='membership', value='2')
+                          | 기타
+
+              .modal-search-footer   
+                button.btn.green 완료    
+            #tab-12.tab-12.tab-pane
+              span dfgghh
+            #tab-13.tab-13.tab-pane
+              span dfgghh
+// .popupConfirmDelete

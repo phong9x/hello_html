@@ -1,0 +1,633 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Full Schedule - Hello
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    ="\n"
+    .page-content-wrapper
+        .page-content
+          .container
+            .main-body-content.member-page.member-detail.full-schedule
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 가입 회원
+                  li
+                    a(href="home.html") 상세 정보
+              // .page-bar
+              
+              ="\n"
+              .member-main-content
+                .portlet-body
+                  .schedule(style="padding: 0 10px;")
+                    .schedule-content
+                      .title 상담사 스케줄
+                      .schedule-top
+                        span.navi.pre 
+                          <i class="fa fa-caret-left" aria-hidden="true"></i>
+                        span.title-date 2016년 2월 15일(월) ~ 21(일)
+                        span.navi.next
+                          <i class="fa fa-caret-right" aria-hidden="true"></i>
+                      .schedule-main-content
+                        .schedule-table
+                          .schedule-day
+                            .day-title
+                              span 상담자수
+                            ul
+                              li
+                                span 30명
+                              li
+                                span 55명
+                              li
+                                span 15명
+                              li
+                                span 10명
+                              li
+                                span 25명
+                              li
+                                span 20명
+                              li
+                                span 100명
+                          .schedule-day
+                            ul
+                              li
+                                span 2.15(월)
+                              li
+                                span 2.16(화)
+                              li
+                                span 2.17(수)
+                              li.today
+                                span 2.18(목)
+                              li
+                                span 2.19(금)
+                              li
+                                span 2.20(토)
+                              li
+                                span 2.21(일)
+                          .schedule-table-content
+                            .schedule-hours
+                              ul
+                                li
+                                  span 오전
+                                  span 07:00
+                                li
+                                  span 오전
+                                  span 08:00
+                                li
+                                  span 오전
+                                  span 09:00
+                                li
+                                  span 오전
+                                  span 010:00
+                                li
+                                  span 오전
+                                  span 11:00
+                                li
+                                  span 오전
+                                  span 12:00
+                                li
+                                  span 오전
+                                  span 01:00
+                                li
+                                  span 오전
+                                  span 02:00
+                                li
+                                  span 오전
+                                  span 03:00
+                                li
+                                  span 오전
+                                  span 04:00
+                                li
+                                  span 오전
+                                  span 05:00
+                                li
+                                  span 오전
+                                  span 06:00
+                                li
+                                  span 오전
+                                  span 07:00
+                                li
+                                  span 오전
+                                  span 08:00
+                                li
+                                  span 오전
+                                  span 09:00
+                                li
+                                  span 오전
+                                  span 10:00
+                                li
+                                  span 오전
+                                  span 11:00
+                                li
+                                  span 오전
+                                  span 12:00
+                                li
+                                  span 오전
+                                  span 01:00
+                                li
+                                  span 오전
+                                  span 02:00
+                                li
+                                  span 오전
+                                  span 03:00
+                                li
+                                  span 오전
+                                  span 04:00
+                                li
+                                  span 오전
+                                  span 05:00
+                                li
+                                  span 오전
+                                  span 06:00
+                                
+                            .table-member-mng
+                              table.table.table-striped.table-bordered.table-hover.text-center
+                                tbody
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td.active
+                                    td.active
+                                    td.active
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td dsds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td.active2
+                                    td
+                                    td
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td.active2
+                                    td
+                                    td 
+                                    td 
+                                    td ds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td.active(rowspan="2") content
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td dsds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td.active(rowspan="2") content
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td dsds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td.active(rowspan="2") content
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td ds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td.active(rowspan="2") content
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td dsds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td.active(rowspan="2") content
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td dsds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td.active(rowspan="2") content
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td ds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td.active(rowspan="2") content
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td dsds
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                  tr
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                            
+
+                  
+              //.table-member-mng
+
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade
+  ="\n"
+  include ../includes/popupBanAcc.jade
+  ="\n"
+  include ../includes/popupDeleteAcc.jade
+  ="\n"
+  include ../includes/popupRemoveBanAcc.jade

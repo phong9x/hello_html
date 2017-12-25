@@ -1,0 +1,184 @@
+extends ../layouts/master.jade
+
+append Inquiry List
+  title Faq
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+    .page-content-wrapper.business-detail
+
+        .page-content
+          .container
+            .main-body-content.member-page
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              .member-main-content
+                .tabbable-custom
+                  ul.nav.nav-tabs
+                    li
+                      a(href='#tab-11', data-toggle='tab') 회원 1:1문의
+                    li.active
+                      a(href='#tab-12', data-toggle='tab') 상담사 1:1 문의
+
+                  ="\n"
+                  .tab-content
+                    #tab-11.tab-10.tab-pane
+                      .faq-page
+                        .faq-content
+                          .row.mrb-20
+                            .col-md-1.line-30 카테고리 
+                            .col-md-2 
+                              select.form-control.selectpickermember(name='')
+                                option(value='Option 1') Option 1
+                                option(value='Option 2') Option 2
+                                option(value='Option 3') Option 3
+                                option(value='Option 4') Option 4
+                          .row.mrb-30
+                            .col-md-1.line-30 키워드 
+                            .col-md-2 
+                              select.form-control.selectpickermember(name='')
+                                option(value='Option 1') Option 1
+                                option(value='Option 2') Option 2
+                                option(value='Option 3') Option 3
+                                option(value='Option 4') Option 4
+                            .col-md-4
+                              input.form-control(type='text', name='name', data-required='1')
+                          .footer.text-center
+                            button.btn.green.width100 검색
+                        .faq-table
+                          h4 회원 1:1 문의 리스트 : 
+                            span.font-12 100건
+                        .table-member-mng.table-responsive
+                          table.table.table-striped.table-bordered.table-hover.text-center
+                            thead
+                              tr
+                                th 번호
+                                th 카테고리
+                                th 내용
+                                th 문의일시
+                                th 답변자명
+                                th 상태
+                            tbody
+                              tr
+                                td 10
+                                td 오류 및 장애신고
+                                td 
+                                  a(href="#") 결제는 했는데 헬로코인이 안 들어왔어요
+                                td 
+                                  p 2016-04-01 
+                                  p 13:00:00
+                                td 1
+                                td.red 답변중
+                              tr
+                                td 10
+                                td 오류 및 장애신고
+                                td 
+                                  a(href="#") 결제는 했는데 헬로코인이 안 들어왔어요
+                                td 
+                                  p 2016-04-01 
+                                  p 13:00:00
+                                td 1
+                                td 답변중
+                                
+                        ="\n"
+                        include ../includes/rw-pagination.jade
+                        
+                      
+                    #tab-12.tab-10.tab-pane.active
+                      .faq-page
+                        .faq-content
+                          .row.mrb-20
+                            .col-md-1.line-30 카테고리 
+                            .col-md-2 
+                              select.form-control.selectpickermember(name='')
+                                option(value='Option 1') Option 1
+                                option(value='Option 2') Option 2
+                                option(value='Option 3') Option 3
+                                option(value='Option 4') Option 4
+                          .row.mrb-30
+                            .col-md-1.line-30 키워드 
+                            .col-md-2 
+                              select.form-control.selectpickermember(name='')
+                                option(value='Option 1') Option 1
+                                option(value='Option 2') Option 2
+                                option(value='Option 3') Option 3
+                                option(value='Option 4') Option 4
+                            .col-md-4
+                              input.form-control(type='text', name='name', data-required='1')
+                          .footer.text-center
+                            button.btn.green.width100 검색
+                        .faq-table
+                          h4 회원 1:1 문의 리스트 : 
+                            span.font-12 100건
+                        .table-member-mng.table-responsive
+                          table.table.table-striped.table-bordered.table-hover.text-center
+                            thead
+                              tr
+                                th 번호
+                                th 카테고리
+                                th 내용
+                                th 문의일시
+                                th 답변자명
+                                th 상태
+                            tbody
+                              tr
+                                td 10
+                                td 오류 및 장애신고
+                                td 
+                                  a(href="#") 결제는 했는데 헬로코인이 안 들어왔어요
+                                td 
+                                  p 2016-04-01 
+                                  p 13:00:00
+                                td 1
+                                td.red 답변중
+                              tr
+                                td 10
+                                td 오류 및 장애신고
+                                td 
+                                  a(href="#") 결제는 했는데 헬로코인이 안 들어왔어요
+                                td 
+                                  p 2016-04-01 
+                                  p 13:00:00
+                                td 1
+                                td 답변중
+                                
+                        ="\n"
+                        include ../includes/rw-pagination.jade
+
+                      
+
+
+              ="\n"
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade
+  ="\n"
+    include ../includes/popupUploadAgain.jade
+  

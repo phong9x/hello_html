@@ -1,0 +1,37 @@
+#popupheadvoucher.modal.fade(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3 하트 상담권 설정
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        .row.mrb-20
+          .col-md-3
+            span.line-40 가격
+          .col-md-8
+            input.form-control(type='text', name='name', data-required='1')
+          .col-md-1
+            span.line-40 원
+        .row.mrb-20
+          .col-md-3
+            span.line-40 하트 필요 개수
+          .col-md-8
+            input.form-control(type='text', name='name', data-required='1')
+          .col-md-1
+            span.line-40 개
+        .row.mrb-20
+          .col-md-3
+            span.line-40 유효 기간
+          .col-md-8
+            input.form-control(type='text', name='name', data-required='1')
+          .col-md-1
+            span.line-40 일
+        .row.mrb-20
+          .col-md-3
+          .col-md-8
+            span ※ 지급일로부터 계산
+          .col-md-1
+          // Are you sure you want to delete?
+      .modal-footer(style="text-align: center;")
+        a.btn.green(href="#") 설정 완료
+// .popupConfirmDelete

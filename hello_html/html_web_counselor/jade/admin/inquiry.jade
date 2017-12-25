@@ -1,0 +1,73 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Inquiry
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.detail.notice-detail
+      .page-title
+        .title
+          span 고객센터
+        .title-ct 
+          span 문의하기
+      .page-content.inquiry
+        .container
+          .main-content.border-full.bg-fff
+            .content-main
+              .main-ct
+                form
+                  .main-item
+                    h4 문의하기
+                    .item-content
+                      .item
+                        .title 이메일 
+                        .col-md-3
+                          input.form-control(type='text', name='name', data-required='1')
+                      .item.dot 
+                        .title(style="line-height: 28px;") 카테고리 
+                        .col-md-3(style="height: 28px;")
+                          select.form-control.selectpickermember(name='options2')
+                            option(value='Option 1') Option 1
+                            option(value='Option 2') Option 2
+                            option(value='Option 3') Option 3
+                            option(value='Option 4') Option 4
+                      .item.dot 
+                        .title(style="line-height: 160px;") 이메일 
+                        .col-md-6
+                          textarea.form-control(name='editor2', rows='8', data-error-container='#editor2_error')
+                  .main-submit
+                    button 
+                      span 문의 하기
+                    
+
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popup-inquiry.jade 
+  
+  

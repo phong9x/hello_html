@@ -1,0 +1,104 @@
+/* --------------------------------------------------------------------- */
+/* .header
+/* --------------------------------------------------------------------- */
+body{
+  position: relative;
+  padding-left: 235px !important;
+  background: #fff;
+}
+.header {
+  /**/  
+}
+.page-header{
+  margin: 0;
+}
+.sidebar-menu{
+  float: left;
+  width: 100%;
+}
+.sidebar-left{
+  position: absolute;
+  width: 235px;
+  z-index: 9;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  background: #2A3F54;
+  .page-sidebar{
+    background: #2A3F54;
+  }
+  .page-logo{
+    float: left;
+    width: 100%;
+    a{
+      float: left;
+      width: 100%;
+      padding-left: 20px;
+      padding-bottom: 15px;
+    }
+  }
+  .profile{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+    .profile_pic{
+      width: 60px;
+      height: 60px;
+      float: left;
+      margin-left: 20px;
+      border: 3px solid #fff;
+      display: inline-block;
+      border-radius: 100%;
+      position: relative;
+      overflow: hidden;
+      img{
+        max-width: 100%;
+        width: 60px;
+        height: 60px;
+      }
+    }
+    .profile_info{
+      display: inline-block;
+      padding-left: 15px;
+      padding-top: 5px;
+      h3{
+        margin: 0;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+  .sidebar-menu{
+    background: none;
+    > li > a{
+      color: #E7E7E7;
+      padding: 13px 15px 12px;
+      margin-bottom: 6px;
+      &:hover{
+        background: linear-gradient(#334556, #2C4257),#2A3F54;
+        box-shadow: rgba(0,0,0,0.25) 0 1px 0, inset rgba(255,255,255,0.16) 0 1px 0;
+      }
+      span{
+        margin-left: 10px;
+      }
+      > i.fa{
+        font-size: 16px;
+      }
+    }
+    > li.active > a{
+      background: linear-gradient(#334556, #2C4257),#2A3F54;
+      box-shadow: rgba(0,0,0,0.25) 0 1px 0, inset rgba(255,255,255,0.16) 0 1px 0;
+    }
+    .sidebar-submenu{
+      background: none;
+      padding-left: 0;
+      li a{
+        &:hover{
+          background: rgba(255,255,255,0.06);
+        }
+      }
+    }
+  }
+}

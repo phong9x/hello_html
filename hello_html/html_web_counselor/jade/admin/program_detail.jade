@@ -1,0 +1,293 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Program detail - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .page-bar
+          ul.page-breadcrumb
+            li
+              span 프로그램 관리
+        // .page-bar
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .block-1
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li.active
+                  a(href='/program_detail.html') 상세정보
+                li
+                  a(href='/program_detail_comment.html') 후기
+                li
+                  a(href='/program_detail_qa.html') Q&A
+
+              ="\n"
+              .tab-content
+                .tab-product.tab-pane.active
+                  .portlet.box
+                    .portlet-body
+                      form.form_sample_3.form-horizontal(action='#')
+                        .form-body
+                          .form-group
+                            label.control-label.col-md-3
+                              | 카테고리 
+                              //- span.required *
+                            .col-md-3
+                              select.form-control.select2me(name='options2')
+                                option(value='') 카테고리
+                                option(value='언어' selected) 언어
+                                option(value='지식/비즈') 지식/비즈
+                                option(value='운동') 운동
+                                option(value='라이프') 라이프
+                                option(value='건강') 건강
+                                option(value='뷰티') 뷰티
+                                option(value='문화') 문화
+                                option(value='소셜') 소셜
+                          .form-group
+                            label.control-label.col-md-3
+                              | 프로그램 제목 
+                              //- span.required *
+                            .col-md-4
+                              input.form-control(type='text', name='name', data-required='1', style="width: 250px; display: inline-block;", value="홍길동")
+                              a.btn.default(href="#", data-toggle='modal', data-target="#popupSupplierSearch", type='button', style="padding: 7px 29px; position: relative; bottom: 2px; margin-left: 5px;") 검색
+                          .form-group
+                            label.control-label.col-md-3
+                              | 프로그램 제목 
+                              //- span.required *
+                            .col-md-6
+                              input.form-control(type='text', name='name', data-required='1', value='포루투갈어와 함께 브라질로')
+                          .form-group
+                            label.control-label.col-md-3
+                              | 프로그램 부연설명
+                              //- span.required *
+                            .col-md-6
+                              input.form-control(type='text', name='name', data-required='1', value='청춘들에게 고한다. 브라질로 떠나자. 포루투갈어로')  
+                          .form-group
+                            label.control-label.col-md-3
+                              | 프로그램 부연설명
+                              //- span.required *
+                            .col-md-3
+                              input.form-control(type='text', name='name', data-required='1', value='100,000')
+                            .col-md-3
+                              label.control-label(style="display: inline-block;")
+                              | 원
+                              input.form-control(type='text', name='name', data-required='1', style="width: 80px; display: inline-block; margin: 0 5px;", value='6주') 
+                              | 주            
+                          .form-group
+                            label.control-label.col-md-3
+                              | 대표 이미지
+                              //- span.required *
+                            .col-md-6
+                              div
+                                .radio-list(data-error-container='#form_2_membership_error', style="margin-bottom: 10px;")
+                                  label.radio-inline
+                                    input(type='radio', name='membership', value='1', checked='true')
+                                    | 이미지
+                                  label.radio-inline
+                                    input(type='radio', name='membership', value='2')
+                                    | 동영상
+                              div
+                                // MINIMUM IMAGE DIMENSIONS
+                                input#input-dim-1.file-loading(name='inputdim1[]', type='file', multiple='', accept='image/*', style="margin-bottom: 15px;")
+                                script.
+                                  $("#input-dim-1").fileinput({
+                                    uploadUrl: "/file-upload-batch/2",
+                                    allowedFileExtensions: ["jpg", "png", "gif"],
+                                    minImageWidth: 50,
+                                    minImageHeight: 50
+                                  });
+                              div
+                                input.form-control(type='text', name='name', data-required='1', placeholder="URL video", value='http://www.youtube.com/alskdfjowie')  
+
+                          .form-group
+                            label.control-label.col-md-3
+                              | 수업일
+                              //- span.required *
+                            .col-md-6
+                              div
+                                a.btn.default.add_item(onclick='appendItem();', style="padding: 7px 29px; margin-bottom: 15px;") 추가
+                              div
+                                #list_append_item.controls
+                                  .border_control.append_item
+                                    .group_item(style="width: 37%")
+                                      label.sub_label 날짜
+                                      .sub_input
+                                        input.form-control.input-small.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                                    .group_item
+                                      label.sub_label 시간
+                                      .sub_input
+                                        div.item_time
+                                          input.form-control(type='text', name='from', style="width: 100px;", value='13:00')                                     
+                                        div.item_time
+                                          span.input-group-addon
+                                            | ~
+                                        div.item_time
+                                          input.form-control(type='text', name='from', style="width: 100px;", value='15:00')
+                                           
+                                    .trash.group_item
+                                      a.trash_icon.detele_item(href='javascript:;')
+                                        i.fa.fa-remove
+                                        //- i.trash_icon
+                                  .border_control.append_item
+                                    .group_item(style="width: 37%")
+                                      label.sub_label 날짜
+                                      .sub_input
+                                        input.form-control.input-small.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016-05-08')
+                                    .group_item
+                                      label.sub_label 시간
+                                      .sub_input
+                                        div.item_time
+                                          input.form-control(type='text', name='from', style="width: 100px;", value='13:00')                                     
+                                        div.item_time
+                                          span.input-group-addon
+                                            | ~
+                                        div.item_time
+                                          input.form-control(type='text', name='from', style="width: 100px;", value='15:00')
+                                    .trash.group_item
+                                      a.trash_icon.detele_item(href='javascript:;')
+                                        i.fa.fa-remove
+                                        //- i.trash_icon
+                                  
+                                  .border_control.append_item
+                                    .group_item(style="width: 37%")
+                                      label.sub_label 날짜
+                                      .sub_input
+                                        input.form-control.input-small.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2015-05-17')
+                                    .group_item
+                                      label.sub_label 시간
+                                      .sub_input
+                                        div.item_time
+                                          input.form-control(type='text', name='from', style="width: 100px;", value='13:00')                                     
+                                        div.item_time
+                                          span.input-group-addon
+                                            | ~
+                                        div.item_time
+                                          input.form-control(type='text', name='from', style="width: 100px;", value='15:00')
+                                    .trash.group_item
+                                      a.trash_icon.detele_item(href='javascript:;')
+                                        i.fa.fa-remove
+                                        //- i.trash_icon
+                          .form-group
+                            label.control-label.col-md-3
+                              | 장소
+                              //- span.required *
+                            .col-md-6
+                              input.form-control(type='text', name='name', data-required='1', value='서울시 마포구 마포대로123')  
+                          .form-group
+                            label.control-label.col-md-3
+                              | 수강인원
+                              //- span.required *
+                            .col-md-6
+                              input.form-control(type='text', name='name', data-required='1', value='10명')  
+                          .form-group
+                            label.control-label.col-md-3
+                              | 수강인원
+                              //- span.required *
+                            .col-md-6
+                              .border_control.append_item
+                                .group_item
+                                  label.sub_label 날짜
+                                  .sub_input
+                                    input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016-05-29')
+                                .group_item
+                                  label.sub_label 시간
+                                  .sub_input
+                                    input.form-control(name='test138', type='text', value='15:00') 
+                          .form-group
+                            label.control-label.col-md-3
+                              | 강사소개
+                              //- span.required *
+                            .col-md-9
+                              textarea.form-control.ckeditor(rows='5', placeholder='Autosizeme...')     
+                          .form-group
+                            label.control-label.col-md-3
+                              | 수업소개
+                              //- span.required *
+                            .col-md-9
+                              textarea.form-control.ckeditor(rows='5', placeholder='Autosizeme...')    
+                          .form-group
+                            label.control-label.col-md-3
+                              | 포함사항
+                              //- span.required *
+                            .col-md-9
+                              .checkbox-list
+                                label.checkbox-inline
+                                  input(type='checkbox', value='1', name='service', checked='true')
+                                  |  강습료
+                                label.checkbox-inline
+                                  input(type='checkbox', value='2', name='service', checked='true')
+                                  |  재료비
+                                label.checkbox-inline
+                                  input(type='checkbox', value='3', name='service', checked='true')
+                                  |  아이콘
+                                label.checkbox-inline
+                                  input(type='checkbox', value='3', name='service', checked='true')
+                                  |  와이파이
+                                label.checkbox-inline
+                                  input(type='checkbox', value='3', name='service')
+                                  |  주차시설
+                                label.checkbox-inline
+                                  input(type='checkbox', value='3', name='service')
+                                  |  음료제공
+                          .form-group
+                            label.control-label.col-md-3
+                              | 커리큘럼
+                              //- span.required *
+                            .col-md-9
+                              textarea.form-control.ckeditor(rows='5', placeholder='Autosizeme...')  
+                          .form-group
+                            label.control-label.col-md-2  
+                            label.control-label.col-md-8(style="text-align: left; font-weight: bold;")
+                              | 모임장소        
+                          .form-group
+                            label.control-label.col-md-3
+                              | 주소
+                              //- span.required *
+                            .col-md-6
+                              input.form-control(type='text', name='name', data-required='1', value='서울시 강남구 역삼1동746-20 B1 하마싸롱')       
+                          .form-group
+                            label.control-label.col-md-3
+                              | 장소 설명
+                              //- span.required *
+                            .col-md-6
+                              textarea.form-control.textarea-autosize(rows='5', placeholder='Autosizeme...')   
+                          .form-group
+                            label.control-label.col-md-3
+                              | 경도
+                              //- span.required *
+                            .col-md-3
+                              input.form-control(type='text', name='name', data-required='1', value='127.0380151')  
+                            .col-md-3
+                              label.control-label.item_inline
+                              | 위도 
+                              .item_inline
+                                input.form-control(type='text', name='name', style="width: 216px;", data-required='1', value='37.4966516')     
+                          .form-actions.text-center
+                            a.btn.green.btn-sumbit(href='#') 등록
+                                                           
+          // .block-1
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupSearchSupplier.jade
+  
+ 

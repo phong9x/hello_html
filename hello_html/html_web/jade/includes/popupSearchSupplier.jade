@@ -1,0 +1,88 @@
+#popupSupplierSearch.modal.fade(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        strong.modal-title 콜렉션 검색
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        .form-search-wrapper
+          form.form-search.form-horizontal.sb-container-style-1(action='#')
+            .form-body
+              .form-group
+                .col-md-3
+                  select.form-control(name='test38')
+                    option(value='0') 사용자
+                    option(value='1') 태그
+
+                ="\n"
+                .col-md-4
+                  .input-group
+                    input.form-control(type='search', name='')
+                    span.input-group-btn
+                      button.btn.btn-success(type='submit')
+                        i.fa.fa-search
+
+              ="\n"
+              .form-group.text-right
+                .col-md-12
+                  a.btn.green(href='#', data-toggle='modal', data-target='#popupConfirmSelect') 등록
+          // .form-search
+        // .form-search-wrapper
+        
+        ="\n"
+        .table-wrapper.table-responsive
+          table.table.table-striped.table-bordered.table-hover.align-middle.text-center
+            thead
+              tr
+                th 이름
+                th 이메일
+                th 선택
+            tbody
+              tr
+                td 최정훈
+                td abcd234@naver.com
+                td 
+                  label
+                    input(type='checkbox', value='0', name='')
+              tr
+                td 최정훈
+                td abcd234@naver.com
+                td 
+                  label
+                    input(type='checkbox', value='0', name='')
+              tr
+                td 최정훈
+                td abcd234@naver.com
+                td 
+                  label
+                    input(type='checkbox', value='0', name='')
+              tr
+                td 최정훈
+                td abcd234@naver.com
+                td 
+                  label
+                    input(type='checkbox', value='0', name='')
+              tr
+                td 최정훈
+                td abcd234@naver.com
+                td 
+                  label
+                    input(type='checkbox', value='0', name='')
+              tr
+                td 최정훈
+                td abcd234@naver.com
+                td 
+                  label
+                    input(type='checkbox', value='0', name='')
+              tr
+                td 최정훈
+                td abcd234@naver.com
+                td 
+                  label
+                    input(type='checkbox', value='0', name='')
+              
+        //.table-wrapper
+
+        ="\n"
+        include ../includes/rw-pagination.jade
+// .popupRecommendSearch

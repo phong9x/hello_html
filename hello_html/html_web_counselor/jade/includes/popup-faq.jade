@@ -1,0 +1,57 @@
+#popup-faq.modal.fade.popup-facetalk.popup-faq(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 
+          span 자주묻는 질문
+          span.color2 Q&A
+        button.close-face(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        .modal-list.counseling-history.detail.notice-detail
+          .main-ct.return-faq
+            .main-item
+              #accordion.item-content
+                .item.panel.panel-default
+                  .item-header
+                    span.color2 Q. 
+                    span Hello의 차별점은 무엇인가요?
+                    a.pull-right.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      <i class="fa fa-angle-up" aria-hidden="true"></i>
+                      span.close-faq 닫기
+                      span.open-faq open
+                  #collapseOne.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+                    .panel-body
+                      span.color2 A. 
+                      span Hello의 차별점은 무엇인가요?
+                .item.panel.panel-default
+                  .item-header
+                    span.color2 Q. 
+                    span Hello의 차별점은 무엇인가요?
+                    a.pull-right.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      <i class="fa fa-angle-up" aria-hidden="true"></i>
+                      span.close-faq 닫기
+                      span.open-faq open
+                  #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                    .panel-body
+                      span.color2 A. 
+                      span Hello의 차별점은 무엇인가요?
+                .item.panel.panel-default
+                  .item-header
+                    span.color2 Q. 
+                    span Hello의 차별점은 무엇인가요?
+                    a.pull-right.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      <i class="fa fa-angle-up" aria-hidden="true"></i>
+                      span.close-faq 닫기
+                      span.open-faq open
+                  #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                    .panel-body
+                      span.color2 A. 
+                      span Hello의 차별점은 무엇인가요?
+
+        .modal-footer
+          button.btn(href="#") 닫기
+          // Are you sure you want to delete?
+// .popupConfirmDelete

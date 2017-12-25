@@ -1,0 +1,488 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Edit My Info
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.register.massage
+      .page-title(style="margin-bottom: 15px;")
+        .title
+          span 아이디 및 비밀번호 찾기
+        .title-ct 
+          span 회원 아이디 및 비밀번호 찾기
+      .page-content
+        .container
+          .main-top.border-full.bg-fff
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li
+                  a(href='#tab-11', data-toggle='tab') 
+                   span 기본 정보 
+                   i.fa.fa-caret-down(aria-hidden="true")
+                li
+                  a(href='#tab-12', data-toggle='tab') 
+                    span 서비스 노출 정보
+                    i.fa.fa-caret-down(aria-hidden="true")
+                li.active
+                  a(href='#tab-13', data-toggle='tab') 
+                    span 탈퇴 신청
+                    i.fa.fa-caret-down(aria-hidden="true")
+
+              ="\n"
+              .tab-content
+                #tab-11.tab-10.tab-pane
+                  .module-content 
+                    .page-content.edit-my-info
+                      .item.form-register
+                        .item-main-content
+                          .item-main
+                            .item-content
+                              .content-top
+                                .md-title
+                                  span 기본 정보
+                                .md-content
+                                  .md-item
+                                    span.title 아이디(이메일)
+                                    .item-ct
+                                      span abcd@aimmed.com
+                                  .md-item
+                                    span.title 현재 비밀번호
+                                    .item-ct.input-form
+                                      input.form-control(type='text', name='name', data-required='1')
+                                      button.register 비밀번호 변경
+                                  .md-item
+                                    span.title 비밀번호 변경
+                                    .item-ct.input-form
+                                      input.form-control(type='text', name='name', data-required='1',placeholder='8-20자 이내, 영문+숫자+특수문자 혼용')
+                                  .md-item
+                                    span.title 비밀번호 확인
+                                    .item-ct.input-form
+                                      input.form-control(type='text', name='name', data-required='1',placeholder='8-20자 이내, 영문+숫자+특수문자 혼용')
+                                  .md-item
+                                    span.title 이름
+                                    .item-ct.input-form
+                                      input.form-control(type='text', name='name', data-required='1')
+                                  .md-item(style="height: 64px;")
+                                    span.title 휴대폰번호
+                                    .item-ct.input-form
+                                      input.form-control(type='text', name='name', data-required='1',placeholder='-없이 입력')
+                                      button.register 인증번호 발송
+                                    .item-ct.input-form
+                                      input.form-control(type='text', name='name', data-required='1',placeholder='인증번호 확인')
+                                      button.register 인증번호 확인
+                                      span.date 02:55
+                                  .md-item
+                                    span.title 생년월일
+                                    .item-ct.input-form
+                                      .item-select
+                                        select.form-control.selectpickermember(name='selecttext',title='성명')
+                                          option(value='0') 2015
+                                          option(value='1') 2015
+                                          option(value='2') 2015
+                                        span.note-select 년
+                                      .item-select
+                                        select.form-control.selectpickermember(name='selecttext',title='성명')
+                                          option(value='0') 12
+                                          option(value='1') 11
+                                          option(value='2') 08
+                                        span.note-select 월
+                                      .item-select
+                                        select.form-control.selectpickermember(name='selecttext',title='성명')
+                                          option(value='0') 12
+                                          option(value='1') 11
+                                          option(value='2') 08
+                                        span.note-select 일
+                                  .md-item
+                                    span.title 주소
+                                    .item-ct.input-form
+                                      input.form-control(type='text', name='name', data-required='1',style="width: 600px;")
+                                  .md-item
+                                    //- span.title 사업자 구분
+                                    .item-ct.input-form
+                                      span 허그맘 아동청소년심리상담센터 소속
+                              .content-top(style="margin-top: 20px;")
+                                .md-title(style="margin-bottom: 20px;")
+                                  span 계좌 정보
+                                  p . 계좌정보는 매월 말일 전에 변경하셔야 변경된 계좌로 정산됩니다.
+                                  p . 계좌정보를 입력하지 않으면 수익 발생 시
+                                .md-content
+                                  .md-item
+                                    span.title 은행명
+                                    .item-ct
+                                      .item-select.page-edit(style="margin-top: 2px;")
+                                        select.form-control.selectpickermember(name='selecttext',title='성명')
+                                          option(value='0') 12
+                                          option(value='1') 11
+                                          option(value='2') 08
+                                  .md-item
+                                    span.title 계좌 번호
+                                    .item-ct
+                                      .item-select.page-edit
+                                        select.form-control.selectpickermember(name='selecttext',title='성명')
+                                          option(value='0') 12
+                                          option(value='1') 11
+                                          option(value='2') 08
+                                  .md-item
+                                    span.title 예금주
+                                    .item-ct
+                                      .item-select.page-edit
+                                        select.form-control.selectpickermember(name='selecttext',title='성명')
+                                          option(value='0') 12
+                                          option(value='1') 11
+                                          option(value='2') 08
+                                  
+                                .main-submit(style="margin-top: 15px;")
+                                  button.submit 수정 완료
+                    
+                #tab-12.tab-10.tab-pane
+                  .module-content 
+                    .page-content.edit-my-info
+                      .item.form-register
+                        .item-main-content
+                          .item-main
+                            .item-content
+                              .content-top
+                                .md-content(style="margin-bottom: 50px;")
+                                  .md-item(style="height: 74px;")
+                                    span.title 프로필 이미지
+                                    .item-ct.input-form
+                                      .inputfile.avatar
+                                        .tr-file-upload.image-upload
+                                          .preview-image.img-avatar
+                                            img(src="../../assets/images/img-7.jpg", alt='avatar')
+                                          label.btn.green.btn-select-file
+                                            | 찾아보기
+                                            input.hidden.input-file(type="file")
+                                          //- span.help-inline 선택된 파일 없음.
+                                          .input-icon.input-large.input-inline.right
+                                            span.show-file-info img-7.jpg
+                                          
+                                  .md-item(style="height: 130px;")
+                                    span.title 상담 분야
+                                    .item-ct.input-form
+                                      .row-check.all-check
+                                        .item.radio-checkboxstyle2
+                                          input(type='checkbox', value='1', name='service', checked)
+                                          span 심리적 증상 (우울 . 불안 . 분노)
+                                        .item.radio-checkboxstyle2
+                                          input#test-check1(type='checkbox', value='1', name='service')
+                                          span 성격 및 자기 이해
+                                        .item.radio-checkboxstyle2
+                                          input(type='checkbox', value='1', name='service', checked)
+                                          span 가족 관계
+                                        .item.radio-checkboxstyle2
+                                          input#test-check1(type='checkbox', value='1', name='service')
+                                          span 직장 생활 (직업)
+                                        .item.radio-checkboxstyle2
+                                          input(type='checkbox', value='1', name='service', checked)
+                                          span 학업 및 진로
+                                        .item.radio-checkboxstyle2
+                                          input#test-check1(type='checkbox', value='1', name='service')
+                                          span 대인 관계
+                                        .item.radio-checkboxstyle2
+                                          input(type='checkbox', value='1', name='service', checked)
+                                          span 성 문제
+                                        .item.radio-checkboxstyle2
+                                          input#test-check1(type='checkbox', value='1', name='service')
+                                          span 중독 및 섭식장애
+                                        .item.radio-checkboxstyle2
+                                          input#test-check1(type='checkbox', value='1', name='service')
+                                          span 자녀 양육    
+                                          span.last-note*상세 체크 필수
+                                      .row-check.all-check
+                                        .item.radio-checkboxstyle2
+                                          input(type='checkbox', value='1', name='service', checked)
+                                          span 정서 및 행동 문제
+                                        .item.radio-checkboxstyle2
+                                          input#test-check1(type='checkbox', value='1', name='service')
+                                          span 또래 관계
+                                        .item.radio-checkboxstyle2
+                                          input(type='checkbox', value='1', name='service', checked)
+                                          span 가족 관계 
+                                        .item.radio-checkboxstyle2
+                                          input#test-check1(type='checkbox', value='1', name='service')
+                                          span 학업 및 진로
+                                        .item.radio-checkboxstyle2
+                                          input(type='checkbox', value='1', name='service', checked)
+                                          span 성
+                                        .item.radio-checkboxstyle2
+                                          input(type='checkbox', value='1', name='service', checked)
+                                          span 중독 및 섭식장애
+
+                                  .md-item(style="height: 123px;")
+                                    span.title 소개 문구
+                                    .item-ct.input-form
+                                      textarea.rw-ckeditor.form-control(name='editor2', rows='5', data-error-container='#editor2_error', maxlength="500")
+                                      span.max-leng 0/500
+                                  .md-item(style="height: 105px;")
+                                    span.title 학력
+                                    .item-ct(style="height: 28px;")
+                                      span.content . 최종 졸업 학교를 입력 후 졸업증명서를 업로드 해주세요.
+                                    .item-ct.input-form
+                                      .item-list
+                                        .item-radio
+                                          .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                            label
+                                              input.radio1(type='radio', value='1', name='service', checked)
+                                        input.form-control(type='text', name='name', data-required='1',placeholder='대학교 입력')
+                                        input.form-control(type='text', name='name', data-required='1',placeholder='전공 입력')
+                                        button.register 찾아보기
+                                        span 홍길동_졸업증명서_jpg
+                                        span.remove
+                                      .item-list
+                                        .item-radio
+                                          .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                            label
+                                              input.radio1(type='radio', value='1', name='service')
+                                        input.form-control(type='text', name='name', data-required='1',placeholder='대학교 입력')
+                                        input.form-control(type='text', name='name', data-required='1',placeholder='전공 입력')
+                                        button.register 찾아보기
+                                  .md-item.stylev2
+                                    span.title 주요 약력
+                                    .item-ct.input-form
+                                      .item-list
+                                        input.form-control(type='text', name='name', data-required='1',value='현재 서울대학교 심리학과 교수',style="width: 302px;")
+                                        button.register(style="padding: 0 5px;")
+                                          span.empty
+                                          span 삭제
+                                      .item-list
+                                        input.form-control(type='text', name='name', data-required='1',placeholder='대학교 입력',style="width: 302px;")
+                                        button.register(style="padding: 0 5px;")
+                                          span.empty
+                                          span 삭제
+                                      .item-list
+                                        button.register(style="margin-left: 0;") + 추가
+                                        span.last-note 최대 5개까지 등록 가능
+                                  .md-item.stylev2
+                                    span.title 자격증
+                                    .item-ct(style="height: 28px;")
+                                      span.content . 필수 선택 포함 최대 5개까지 등록 가능 
+                                      span.content.color2 필수 선택 (중복 선택 가능) 
+                                    .item-ct.input-form
+                                      .item-list-style2
+                                        .item-list-left
+                                          .top
+                                            span.content (사)한국상담학회 
+                                          .list-main
+                                            .item-main
+                                              .item-check
+                                                .item.radio-checkboxstyle2
+                                                  input(type='checkbox', value='1', name='service', checked)
+                                              .item-des
+                                                p 전문상담사 1급 (수련감독자)
+                                              .item-main-ct
+                                                button.register.none-float 자격증 사본 등록
+                                                p
+                                                  span 홍길동_졸업증명서
+                                                  span.remove
+                                            .item-main
+                                              .item-check
+                                                .item.radio-checkboxstyle2
+                                                  input(type='checkbox', value='1', name='service')
+                                              .item-des
+                                                p 전문상담사 1급 (수련감독자)
+                                              .item-main-ct
+                                                button.register.none-float 자격증 사본 등록
+                                                p
+                                                  span 홍길동_졸업증명서
+                                                  span.remove
+                                            .item-main
+                                              .item-check
+                                                .item.radio-checkboxstyle2
+                                                  input(type='checkbox', value='1', name='service')
+                                              .item-des
+                                                p 전문상담사 1급 (수련감독자)
+                                              .item-main-ct
+                                                button.register.none-float 자격증 사본 등록
+                                                p
+                                                  span 홍길동_졸업증명서
+                                                  span.remove
+                                        .item-list-left 
+                                          .top
+                                            span.content (사)한국상담학회 
+                                          .list-main
+                                            .item-main
+                                              .item-check
+                                                .item.radio-checkboxstyle2
+                                                  input(type='checkbox', value='1', name='service', checked)
+                                              .item-des
+                                                p 전문상담사 1급 (수련감독자)
+                                              .item-main-ct
+                                                button.register.none-float 자격증 사본 등록
+                                                p
+                                                  span 홍길동_졸업증명서
+                                                  span.remove
+                                            .item-main
+                                              .item-check
+                                                .item.radio-checkboxstyle2
+                                                  input(type='checkbox', value='1', name='service')
+                                              .item-des
+                                                p 전문상담사 1급 (수련감독자)
+                                              .item-main-ct
+                                                button.register.none-float 자격증 사본 등록
+                                                p
+                                                  span 홍길동_졸업증명서
+                                                  span.remove
+                                            .item-main
+                                              .item-check
+                                                .item.radio-checkboxstyle2
+                                                  input(type='checkbox', value='1', name='service')
+                                              .item-des
+                                                p 전문상담사 1급 (수련감독자)
+                                              .item-main-ct
+                                                button.register.none-float 자격증 사본 등록
+                                                p
+                                                  span 홍길동_졸업증명서
+                                                  span.remove
+                                      
+                                    .item-ct.input-form
+                                      span.content 추가 등록
+                                      .item-list
+                                        input.form-control(type='text', name='name', data-required='1',placeholder='대학교 입력')
+                                        input.form-control(type='text', name='name', data-required='1',placeholder='전공 입력')
+                                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='취득연월 (YYYy,mm)')
+                                        button.register(style="padding: 0 5px;")
+                                          span.empty
+                                          span 삭제
+                                      .item-list
+                                        button.register(style="margin-left: 0;") 찾아보기
+                                        span 홍길동_졸업증명서_jpg
+                                        span.remove
+                                    .item-ct.input-form
+                                      
+                                      .item-list(style="margin-bottom: 0px;")
+                                        button.register(style="margin-left: 0;") + 추가
+                                  .md-item.stylev2.style-list(style="min-height: 60px;")
+                                    span.title 증명 서류 등록
+                                    .item-ct.input-form
+                                      span.content ※ 이력서 및 기타 증명서를 등록해주세요. (중복 등록가능)
+                                      .item-list(style="margin-bottom: 0px;")
+                                        button.register(style="margin-left: 0;") 찾아보기
+                                        .list-remove
+                                          .item-list-remove
+                                            span 홍길동_졸업증명서_jpg
+                                            span.remove
+                                  .md-item(style="min-height: 52px;")
+                                    span.title(style="top: 20px;line-height: 16px;") 자격증 취득 후 상담 횟수
+                                    .item-ct.input-form(style="padding-top: 10px;")
+                                      .item-select.style2
+                                        select.form-control.selectpickermember(name='selecttext',title='성명')
+                                          option(value='0') 상담횟수 선택
+                                          option(value='1') 상담횟수 선택
+                                          option(value='2') 상담횟수 선택
+                          .item-main.style2.full-register 
+                            .item-top
+                             span.number 03
+                             span.title 가입을 위한 기본 정보를 입력해 주세요. 
+                            .item-content(style="padding-bottom: 30px;")
+                              .content-top
+                                .md-content
+                                  .md-item
+                                    span.title(style="margin-top: -20px;") (주)어세스타 교육 수료 여부
+                                    .item-ct.input-form
+                                      span.content(style="float: left;margin-right: 10px;width: initial;") MBTI 자격교육 보수과정을 수료하셨습니까?
+                                      .item-radio
+                                        .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                          label
+                                            input.radio1(type='radio', value='1', name='service', checked)
+                                        span.note-radio 예
+                                      .item-radio
+                                        .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                          label
+                                            input.radio1(type='radio', value='1', name='service')
+                                        span.note-radio 아니오
+                                      input.form-control(type='text', name='name', data-required='1',placeholder='수료번호 입력')
+                                      
+                            .main-submit
+                                button.submit.style-edit-acc.preview-mobile-acc 미리 보기 
+                                button.submit 신청 완료 
+
+                #tab-13.tab-10.tab-pane.active
+                  .module-content.content-tab3
+                    .page-content.edit-my-info
+                      .item.form-register
+                        .item-main-content
+                          .item-main.style2.full-register 
+                            .item-content
+                              .content-top
+                                .title-top3
+                                  h3 회원탈퇴 안내
+                                  p ㆍ 당분간 상담을 진행할 수 없는 상황이라면 스케줄 메뉴에서 [서비스 노출 : OFF]를 하시면 서비스 상에 노출되지 않습니다.
+                                  p ㆍ 서비스 탈퇴 시 상담사님의 개인정보는 개인정보 취급방침에 의거하여 삭제될 예정입니다.
+                                  p ㆍ 탈퇴 후에는 삭제된 개인 정보를 복원할 수 없습니다.
+                                .md-content-tab3.border-full
+                                  p.title 탈퇴 사유
+                                  .main-tab3
+                                    .item-radio
+                                      .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                      span.note-radio 다른 서비스와 스케줄 중복
+                                    .item-radio
+                                      .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                      span.note-radio 회원들의 예의 없는 말과 행동
+                                    .item-radio
+                                      .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                      span.note-radio 수익 개선의 여지가 보이지 않음
+                                    .item-radio
+                                      .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                      span.note-radio 사이트나 시스템 등 사용하기 불편함
+                                    .item-radio
+                                      .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                      span.note-radio 불합리한 서비스 정책
+                                    .item-radio
+                                      .checkbox-list.input-checkboxstyle2(data-error-container='#form_2_services_error')
+                                        label
+                                          input.radio1(type='radio', value='1', name='service', checked)
+                                      span.note-radio 기타 사유
+                                      input.form-control(type='text', name='name', data-required='1')
+                                  
+                            .note-content
+                              p 
+                                | 회원 탈퇴를 하시면 
+                                span 개인정보 및 회원님의 이용 내역과 자료들이 모두 삭제 
+                                | 됩니다. 
+                              p 그래도 탈퇴신청을 진행하시겠습니까        
+                            .main-submit
+                                button.submit 취소 
+                                button.submit.style-edit-acc 회원탈퇴 신청
+
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  ="\n"
+  include ../includes/popup-preview-mobile-acc.jade 
+  
+  

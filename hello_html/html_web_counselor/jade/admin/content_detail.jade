@@ -1,0 +1,100 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title product - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .page-bar
+          ul.page-breadcrumb
+            li
+              span 상품관리
+        // .page-bar
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .block-1
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li.active
+                  a 여행상품 관리
+                li
+                  a(href='product-category.html') 카테고리 관리
+                li
+                  a(href='product-schedule.html') 여행일정 관리
+
+              ="\n"
+              .tab-content
+                .tab-product.tab-pane.active
+                  .rw-gap(style='border-top: 0 none; padding-bottom: 15px;')
+
+                  ="\n"
+                  .form-search-wrapper
+                    form.form-search.form-horizontal.rw-container-style-1(action='#')
+                      .form-body
+                        .form-group
+                          .col-md-2.col-md-offset-1
+                            label.control-label 여행 상품명
+
+                          ="\n"
+                          .col-md-5.col-md-offset-1
+                            input.form-control(name='test349', type='search')
+                          
+                          .col-md-3.text-center
+                            button.btn.green.btn-search(type='submit') 검색
+                    // .form-search
+                  // .form-search-wrapper
+
+                  ="\n"
+                  .button-top.text-right
+                    a.btn.green(href="product-create.html") 상품 등록
+                  // .button-top
+
+                  ="\n"
+                  .rw-gap(style='border-top: 0 none; padding-bottom: 15px;')
+
+                  ="\n"
+                  .table-wrapper.table-responsive
+                    table.table.table-striped.table-bordered.table-hover.text-center
+                      thead
+                        tr
+                          th 상품명
+                          th 카테고리
+                          th 출발일
+                          th 금액
+                          th 관리
+                      tbody
+                        tr
+                          td 
+                            a(href="product-create.html") 정동진 일출 당일여행
+                          td 전남/ 당일여행/ 확정
+                          td 2016-01-15
+                          td 60,000
+                          td
+                            a.btn.red(href="#", data-toggle='modal', data-target="#popupConfirmDelete") 삭제
+                  //.table-wrapper
+
+                  ="\n"
+                  include ../includes/rw-pagination.jade
+          // .block-1
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

@@ -1,0 +1,113 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Notice List
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.psychological
+      .page-title
+        .title
+          span 심리검사
+        .title-ct 
+          span 회원에게 요청한 심리검사 정보입니다.
+      .page-content
+        .container
+          .main-content.border-full.bg-fff
+            .content-main
+              .main-top
+                span.title 공지사항 리스트
+                span.price 10건
+                select.form-control.selectpickermember.pull-right(name='options2')
+                  option(value='Option 1') Option 1
+                  option(value='Option 2') Option 2
+                  option(value='Option 3') Option 3
+                  option(value='Option 4') Option 4
+                
+              .main-ct
+                .table-wrapper
+                  .table-responsive
+                    table.table.table-striped.table-hover.text-center
+                      thead
+                        tr
+                          th 번호
+                          th 제목
+                          th 작성일
+                          th 조회수
+                      tbody
+                        tr
+                          td 01
+                          td [공지] iOS Hello 앱 업데이트 안내  [공지] 
+                          td 2016-03-02
+                          td 19:15:00
+                        tr
+                          td 01
+                          td [공지] iOS Hello 앱 업데이트 안내  [공지] 
+                          td 2016-03-02
+                          td 19:15:00
+                        tr
+                          td 01
+                          td [공지] iOS Hello 앱 업데이트 안내  [공지] 
+                          td 2016-03-02
+                          td 19:15:00
+                        tr
+                          td 01
+                          td [공지] iOS Hello 앱 업데이트 안내  [공지] 
+                          td 2016-03-02
+                          td 19:15:00
+                        
+                    ="\n"
+                  .rw-pagination
+                    ul.pagination
+                      li
+                        a(href='#')
+                          span 이전
+                      li
+                        a(href='#') 1
+                      li
+                        a(href='#') 2
+                      li.active
+                        a 3
+                      li
+                        a(href='#') 4
+                      li
+                        a(href='#') 5
+                      li
+                        a(href='#')
+                          span 다음
+    
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  
+  ="\n"
+  include ../includes/popup-psychlogical.jade 
+  ="\n"
+  include ../includes/popup-psychlogical2.jade 
+  ="\n"
+  include ../includes/popup-psychlogical3.jade
+  
+  

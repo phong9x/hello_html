@@ -1,0 +1,57 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title product - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .page-bar
+          ul.page-breadcrumb
+            li
+              span 프로그램 관리
+        // .page-bar
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .portlet-body
+            .row
+              .col-md-3.col-sm-12
+                // BEGIN DRAGGABLE EVENTS PORTLET
+                h3.event-form-title.margin-bottom-20 Draggable Events
+                #external-events
+                  form.inline-form
+                    input#event_title.form-control(type='text', value='', placeholder='Event Title...')
+                    br
+                    a#event_add.btn.green(href='javascript:;')  Add Event 
+                  hr
+                  #event_box.margin-bottom-10
+                  label.mt-checkbox.mt-checkbox-single.mt-checkbox-outline(for='drop-remove')
+                    | remove after drop
+                    input#drop-remove.group-checkable(type='checkbox')
+                    span
+                  hr.visible-xs
+                // END DRAGGABLE EVENTS PORTLET
+              .col-md-9.col-sm-12
+                #calendar.has-toolbar  
+          // .block-1
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

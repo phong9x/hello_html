@@ -1,0 +1,205 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Counselor Approval Request List
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper.countselor.request-list
+
+        .page-content
+          .container
+            ="\n"
+            .sidebar-left
+              include ../includes/page-sidebar-left.jade
+            .main-body-content.member-page.request-detail
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              
+              ="\n"
+              form.form_sample_3
+                .title-page 
+                  p 상세 정보
+                .member-main-top.border-full
+                  .row(style="margin-top: 20px;")
+                    .col-md-2 
+                      span.title(style="line-height: 40px;") 프로필 이미지 :
+                    .col-md-10 
+                      .img
+                        img.logo-default(src='../../assets/images/avatar_men.png', alt='logo')
+                  .row
+                    .col-md-2 
+                      span.title 상담사명 :
+                    .col-md-4
+                      span 김태희 
+                    .col-md-2 
+                      span.title 연락처 :
+                    .col-md-4
+                      span 01012341234 
+                  .row
+                    .col-md-2 
+                      span.title 이메일 :
+                    .col-md-4
+                      span pkkim@aimmed.com 
+                    .col-md-2 
+                      span.title 사업자 구분 :
+                    .col-md-4
+                      span 센터 소속 (A센터) 
+                  .row
+                    .col-md-2 
+                      span.title 상담 분야 :
+                    .col-md-10
+                      span 가족관계, 자녀양육 
+                  .row
+                    .col-md-2 
+                      span.title 안내 문구 :
+                    .col-md-10
+                      span  혹시 조직 내에서 상사 또는 동료들로 인하여 심한 스트레스를 받고 있나요? 허심탄회하게 풀어놔보세요. 한결 마음이 편안해 지실거에요!!
+                  .row
+                    .col-md-2 
+                      span.title 학력 :
+                    .col-md-10
+                      span  
+                        |  서울대학교 대학원 심리학과 전공
+                      a(href="#") 졸업증명서 사본 보기 >
+                  .row
+                    .col-md-2 
+                      span.title 주요 약력 :
+                    .col-md-10
+                      span    서울대학교 심리학과 교수 조직, 성격 전문상담사 (한국정보화진흥원)
+                  .row
+                    .col-md-2 
+                      span.title(style="line-height: 40px;") 자격증 :
+                    .col-md-10
+                      p
+                        span  
+                          |  심리상담 전문 자격증 1급
+                        a(href="#") 자격증 사본 보기 >
+                      p
+                        span  
+                          |  심리상담 전문 자격증 2급
+                        a(href="#") 자격증 사본 보기 >
+                  .row
+                    .col-md-2 
+                      span.title(style="line-height: 40px;") 증명 서류 :
+                    .col-md-10
+                      p
+                        span.file  
+                          |  김태희_이력서.hwp
+                      p
+                        span.file 
+                          |  김태희_이력서.hwp
+                  .row
+                    .col-md-2 
+                      span.title 상담 횟수 :
+                    .col-md-10
+                      span 500회 이상
+                  .row
+                    .col-md-2 
+                      span.title(style="line-height: 40px;") ㈜어세스타 교육 수료여부 :
+                    .col-md-10
+                      p MBTI 수료번호 00003333
+                      p MMTIC -
+                  .row.radio-check-request-list
+                    .col-md-2 
+                      span.title 승인/보류 선택 :
+                    .col-md-10
+                      .checkbox-list(data-error-container='#form_2_services_error')
+                        label.pull-left(style="margin-right: 20px;")
+                          input.radio1(type='radio', value='1', name='service', checked)
+                          |  승인   
+                        label.pull-left
+                          input.radio2(type='radio', value='2', name='service')
+                          |  보류
+                  .row.request-list-radio1.show-radio1(style="border-bottom: none;")
+                    .col-md-2 
+                      span.title 상담사 활성화 :
+                    .col-md-4
+                      .checkbox-list(data-error-container='#form_2_services_error')
+                        label.pull-left(style="margin-right: 20px;")
+                          input(type='radio', value='1', name='service')
+                          |  YES   
+                        label.pull-left
+                          input(type='radio', value='2', name='service')
+                          |  NO
+                    .col-md-2 
+                      span.title 에임메드 추천 :
+                    .col-md-4
+                      .checkbox-list(data-error-container='#form_2_services_error')
+                        label.pull-left(style="margin-right: 20px;")
+                          input(type='radio', value='1', name='service')
+                          |  YES   
+                        label.pull-left
+                          input(type='radio', value='2', name='service')
+                          |  NO
+                  .row.request-list-radio1.show-radio1(style="border-bottom: none;")
+                    .col-md-2 
+                      span.title 상담사 등급 :
+                    .col-md-4
+                      .checkbox-list(data-error-container='#form_2_services_error')
+                        label.pull-left(style="margin-right: 20px;")
+                          input(type='radio', value='1', name='service')
+                          |  Diamond   
+                        label.pull-left(style="margin-right: 20px;")
+                          input(type='radio', value='2', name='service')
+                          |  Gold
+                        label.pull-left
+                          input(type='radio', value='2', name='service')
+                          |  Silver
+                    .col-md-2 
+                      span.title 상담 금액 설정 :
+                    .col-md-4
+                      .select-option(style="width: 200px;")
+                        select.form-control.selectpickermember(name='selecttext',title='성명')
+                          option(value='0') 2015
+                          option(value='1') 2015
+                          option(value='2') 2015
+                  .row.request-list-radio2(style="border-bottom: none;")
+                    .col-md-2 
+                      span.title 보류 사유 입력 :
+                    .col-md-4
+                      span 보류 사유를 입력하세요.
+                    .col-md-4
+                      input.form-control(type='text', name='name', data-required='1',style="width: 100%;")
+                      
+                    
+                  
+                  
+                .link-submit
+                  button.btn.green(type='submit') 검토 완료
+
+
+                      
+              //.table-member-mng
+
+              ="\n"
+              //- include ../includes/rw-pagination.jade
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade

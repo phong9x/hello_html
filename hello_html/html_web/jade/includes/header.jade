@@ -1,0 +1,29 @@
+.page-header
+  .page-header-inner.container
+    // BEGIN LOGO
+    ="\n"
+    a.icon-menu(href='javascript:;') menu
+    // .responsive-toggler
+    
+    ="\n"
+    .top-menu
+      ul.nav.navbar-nav.pull-right
+        li.dropdown.dropdown-user
+          a.dropdown-toggle(href='javascript:;', data-toggle='dropdown', data-hover='dropdown', data-close-others='true')
+            span.username.username-hide-on-mobile
+              | 명의
+            i.fa.fa-angle-down
+          .dropdown-menu.dropdown-menu-default
+            .item-menu
+              span.title 최근 로그인
+              span 2016-03-09 18:00:00
+            .item-menu
+              span.title 홍길동
+              span pkkim@aimmed.com
+            .footer-menu
+              button.btn.green.pull-right 로그아웃
+        // .dropdown-user
+    // .top-menu
+// .page-header
+
+.clearfix

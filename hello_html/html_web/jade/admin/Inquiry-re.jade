@@ -1,0 +1,88 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Inquiry
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    ="\n"
+    .page-content-wrapper.countselor
+
+        .page-content
+          .container
+            ="\n"
+            .main-body-content.member-page.business
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 상담사
+              // .page-bar
+              
+              ="\n"
+              form.form_sample_3
+                .title
+                    h4.bold 회원 1:1 문의 상세 정보
+                .member-main-top.border-full.mrb-40
+                  .row.mrb-20
+                    .col-md-2.text-right Email :
+                    .col-md-3 pkkim@aimmed.com
+                    .col-md-2.col-md-offset-1.text-right 상태 :
+                    .col-md-3 답변완료
+                  .row.mrb-20
+                    .col-md-2.text-right 문의일시 :
+                    .col-md-3 2016-04-01 13:00:00
+                    .col-md-2.col-md-offset-1.text-right 답변자 | 답변일시 :
+                    .col-md-3 홍길동 | 2016-04-02 13:00:00
+                  .row.mrb-20
+                    .col-md-2.text-right 카테고리 :
+                    .col-md-3 오류 및 장애 관련
+                    .col-md-2.col-md-offset-1.text-right OS :
+                    .col-md-3 Android
+                  .row.mrb-20
+                    .col-md-2.text-right 버전 :
+                    .col-md-3 4.2.2
+                    .col-md-2.col-md-offset-1.text-right 모델명 :
+                    .col-md-3 SM-G930
+                  .row.mrb-20
+                    .col-md-2.text-right.pdt-30 내용 :
+                    .col-md-10 
+                      p 주저리.. 주저리.. 주저리..
+                .member-main-top.border-full
+                  .row.mrb-20
+                    .col-md-2.text-right.pdt-30 답변 :
+                    .col-md-10 
+                      p 주저리.. 주저리.. 주저리..
+
+             
+                    
+                  
+                .link-submit
+                  button.btn.green(type='submit') 목록
+              
+                      
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupCountselor.jade

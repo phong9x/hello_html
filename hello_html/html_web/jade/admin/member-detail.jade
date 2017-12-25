@@ -1,0 +1,350 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title member - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    ="\n"
+    .page-content-wrapper
+        .page-content
+          .container
+            .main-body-content.member-page.member-detail
+              .page-bar
+                ul.page-breadcrumb
+                  li
+                    a(href="home.html").home 
+                      i.fa.fa-home
+                      | 홈
+                  li
+                    a(href="home.html") 회원 관리
+                  li
+                    a(href="home.html") 가입 회원
+                  li
+                    a(href="home.html") 상세 정보
+              // .page-bar
+              
+              ="\n"
+              .member-main-content
+                .tabbable-custom
+                  a.btn.green.link-top.stop-acc(href='#') 제재 취소
+                  ul.nav.nav-tabs
+                    li.active
+                      a(href='#tab-11', data-toggle='tab') 상세 정보
+                    li
+                      a(href='#tab-12', data-toggle='tab') 문진 정보
+
+                  ="\n"
+                  .tab-content
+                    #tab-11.tab-10.tab-pane.active
+                      form.form_sample_3.form-horizontal(action='#')
+                        .portlet.box
+                          .portlet-body
+                            .form-title
+                              span.title 기본 정보
+                              a.btn.green.pull-right.delete-acc(href='#') 탈퇴
+                              a.btn.green.pull-right.ban-acc(href='#') 제재
+                            form.form_sample_3.form-horizontal(action='#')
+                              .form-body
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 회원 번호 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 12345
+                                  .right
+                                    label.control-label.col-md-4
+                                      | ID :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span aa@aim.com
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 성별 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', value='홍길동')
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 생년월일 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      input.form-control(type='text', name='name', data-required='1', value='01012341234')
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 회원명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      .radio-list(data-error-container='#form_2_membership_error')
+                                        label
+                                          input(type='radio', name='membership', value='1')
+                                          | 남자
+                                        label
+                                          input(type='radio', name='membership', value='2')
+                                          | 여자
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 생년월일 :
+                                      //- span.required *
+                                    .col-md-8.ct
+                                      .row.all-select
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 2015
+                                            option(value='1') 2015
+                                            option(value='2') 2015
+                                          span.note 년
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 월
+                                        .col-md-4
+                                          select.form-control.selectpickermember(name='selecttext',title='성명')
+                                            option(value='0') 12
+                                            option(value='1') 11
+                                            option(value='2') 08
+                                          span.note 일
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 회원 구분 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 기업
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 소속 :
+                                      //- span.required *
+                                    .col-md-8.ct.v2
+                                      span 메트라이프 >
+                                      span 2016 > 
+                                      span 종신상품1신세계 > 
+                                      span 2016 > 강남점
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 사용 OS :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span Android
+                                  .right
+                                    label.control-label.col-md-4
+                                      | OS 버전 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 4.2.2
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 앱 버전 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 1.0.1
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 모델명 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span SM-G920S
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | Device ID :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span abcdefg123456
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 가입 일시 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 2016-03-10 15:00:00
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 기업회원 인증 일시 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 2016-03-10 15:00:00
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 최근 로그인 일시 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 2016-03-10 15:00:00
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 제재 횟수 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 3
+                                      a.btn.green.history-ban-acc(href='#') 제재 내역
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 충전 횟수 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 5
+                                .form-group
+                                  .left
+                                    label.control-label.col-md-4
+                                      | 상담 횟수 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 5
+                                  .right
+                                    label.control-label.col-md-4
+                                      | 심리검사 횟수 :
+                                      //- span.required *
+                                    .col-md-6.ct
+                                      span 1
+                                .form-group
+                                  .left.v2
+                                    label.control-label.col-md-2
+                                      | 상태 :
+                                      //- span.required *
+                                    .ct
+                                      p  탈퇴  (2016-05-10 15:00:00  |  기타 : 그냥 심심해서 탈퇴했음)
+                          .portlet-footer
+                            button.btn.green.submit(type="submit") 저장      
+
+                      .member-title-table
+                        .md-ct
+                          span.title 헬로코인 정보
+                          a.btn.green.pull-right(href='#') 하트 지급/차감
+                          a.btn.green.pull-right(href='#') 헬로코인 지급 / 차감
+                        .md-content
+                          .item-50
+                            .col-md-3
+                              span 헬로코인 :
+                            .col-md-9
+                              span 50,000 원
+                          .item-50
+                            .col-md-2
+                              span 하트 :
+                            .col-md-9
+                              span 50개
+                        .md-ct
+                          span.title 상담권 정보
+                          a.btn.green.pull-right(href='#') 하트 상담권 지급
+                          a.btn.green.pull-right(href='#') 기업 상담권 지급
+                          a.btn.green.pull-right(href='#') 삭제
+
+                      .table-member-mng.table-responsive
+                        table.table.table-striped.table-bordered.table-hover.text-center
+                          thead
+                            tr
+                              th 
+                                input(type='checkbox', value='1', name='service')
+                              th 번호
+                              th 상담권명
+                              th 지급일시
+                              th 유효 기간
+                              th 남은 기간
+                          tbody
+                            tr
+                              td 
+                                input(type='checkbox', value='1', name='service')
+                              td 5
+                              td 하트 상담권
+                              td 2016-05-31 23:59:59
+                              td 2016-06-15 23:59:59
+                              td 15일
+                            tr
+                              td 
+                                input(type='checkbox', value='1', name='service')
+                              td 5
+                              td 하트 상담권
+                              td 2016-05-31 23:59:59
+                              td 2016-06-15 23:59:59
+                              td 15일
+                             
+                    #tab-12.tab-12.tab-pane
+                      .md-tab-content.tabv2
+                        .member-title-table
+                          .md-ct
+                            span.title 마인드체크 결과
+                            span.pull-right 최근 업데이트 일시 : 2016-04-10 16:00:00
+
+                        .table-member-mng.table-responsive 
+                          table.table.table-striped.table-bordered.table-hover.text-center
+                            thead
+                              tr
+                                th 번호
+                                th 질의
+                                th 답변
+                                th 점수
+                              tr 
+                                th(colspan="3") 합계
+                                th 15점
+                            tbody
+                              tr
+                                td 5
+                                td 혹시 결혼을 하셨나요?
+                                td 미혼
+                                td -
+                              tr
+                                td 6
+                                td 직장이나 학교 등에서 나의 역할을 잘 못해내고 있는 것 같았다
+                                td 항상 그랬다
+                                td 5점
+                        .member-title-table
+                          .md-ct
+                            span.title 자가진단 결과
+
+                        .table-member-mng.table-responsive 
+                          table.table.table-striped.table-bordered.table-hover.text-center
+                            thead
+                              tr
+                                th 검사 항목
+                                th 소견
+                                th 검사일시
+                                th 점수
+                            tbody
+                              tr
+                                td 스트레스
+                                td 중간 정도의 스트레스를 느끼고 있는 편입니다.
+                                td 2016-01-01 13:00:00
+                                td 2.5점
+                              tr
+                                td 스트레스
+                                td 중간 정도의 스트레스를 느끼고 있는 편입니다.
+                                td 2016-01-01 13:00:00
+                                td 2.5점
+                              
+
+
+              //.table-member-mng
+
+              
+              // .block-1
+            // .member-main
+        // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade
+  ="\n"
+  include ../includes/popupBanAcc.jade
+  ="\n"
+  include ../includes/popupDeleteAcc.jade
+  ="\n"
+  include ../includes/popupRemoveBanAcc.jade

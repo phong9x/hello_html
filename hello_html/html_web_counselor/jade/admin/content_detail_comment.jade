@@ -1,0 +1,92 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Content detail comment - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .page-bar
+          ul.page-breadcrumb
+            li
+              span 평균 별점
+        // .page-bar
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .block-1
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li
+                  a(href='content_detail.html') 상세내용
+                li.active
+                  a(href='content_detail_comment.html') 댓글
+
+              ="\n"
+              .tab-content
+                .tab-product.tab-pane.active
+                  .portlet.box  
+                    .portlet-body
+                      .list-comment
+                        .item-comment
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10 
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-comment
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-comment
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10 
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-comment.last-item
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                      
+                       ="\n"
+                      .pagination-wrapper.sb-pb-30
+                        include ../includes/rw-pagination.jade
+          // .block-1
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

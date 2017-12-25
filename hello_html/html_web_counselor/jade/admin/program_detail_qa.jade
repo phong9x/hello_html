@@ -1,0 +1,195 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Program detail Q&A - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+  
+append popup-wrapper
+  include ../includes/popupConfirmDelete.jade 
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .portlet.box
+          .page-bar
+            ul.page-breadcrumb
+              li
+                span 평균 별점
+            .reviews_result
+              ul.reviews_list
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_yes.png")
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_yes.png")
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_yes.png")
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_yes.png")
+                li
+                  span.star_item
+                    img(src="../../assets/images/icon/star_no.png")
+              .number_review 8    
+        // .page-bar
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .block-1
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li.active
+                  a 상세정보
+                li
+                  a(href='/program_detail_comment.html') 후기
+                li
+                  a(href='/program_detail_qa.html') Q&A
+
+              ="\n"
+              .tab-content
+                .tab-product.tab-pane.active
+                  //- .rw-gap(style='border-top: 0 none; padding-bottom: 15px;')
+
+                  //- ="\n"
+                  //- .form-search-wrapper
+                  //-   form.form-search.form-horizontal.rw-container-style-1(action='#')
+                  //-     .form-body
+                  //-       .form-group
+                  //-         .col-md-2.col-md-offset-1
+                  //-           label.control-label 여행 상품명
+
+                  //-         ="\n"
+                  //-         .col-md-5.col-md-offset-1
+                  //-           input.form-control(name='test349', type='search')
+                          
+                  //-         .col-md-3.text-center
+                  //-           button.btn.green.btn-search(type='submit') 검색
+                  //-   // .form-search
+                  //- // .form-search-wrapper
+
+                  //- ="\n"
+                  //- .button-top.text-right
+                  //-   a.btn.green(href="product-create.html") 상품 등록
+                  //- // .button-top
+                  ="\n"
+                  .portlet-body
+                    .list-comment
+                      .item-comment
+                        .item-question
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-answer
+                          .col-md-10.col-left
+                            .avatar
+                              a(href="#")
+                                img(src="../../assets/images/avatar_men.png")
+                            .content-anwser      
+                              .member-info
+                                span.name 김은정
+                                span.space |
+                                span.date 2016-04-10
+                              .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-answer
+                          .col-md-10.col-left
+                            .avatar
+                              a(href="#")
+                                img(src="../../assets/images/avatar_men.png")
+                            .content-anwser      
+                              .member-info
+                                span.name 김은정
+                                span.space |
+                                span.date 2016-04-10
+                              .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                      .item-comment
+                        .item-question
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-answer
+                          .col-md-10.col-left
+                            .avatar
+                              a(href="#")
+                                img(src="../../assets/images/avatar_men.png")
+                            .content-anwser      
+                              .member-info
+                                span.name 김은정
+                                span.space |
+                                span.date 2016-04-10
+                              .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-answer
+                          .col-md-10.col-left
+                            .avatar
+                              a(href="#")
+                                img(src="../../assets/images/avatar_men.png")
+                            .content-anwser      
+                              .member-info
+                                span.name 김은정
+                                span.space |
+                                span.date 2016-04-10
+                              .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+
+                      .item-comment.last-item
+                        .item-question
+                          .col-md-10.col-left
+                            .member-info
+                              span.name 김은정
+                              span.space |
+                              span.date 2016-04-10
+                            .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+                        .item-answer
+                          .col-md-10.col-left
+                            .avatar
+                              a(href="#")
+                                img(src="../../assets/images/avatar_men.png")
+                            .content-anwser      
+                              .member-info
+                                span.name 김은정
+                                span.space |
+                                span.date 2016-04-10
+                              .comment-content 수업 내용이 유익하고, 흥미로웠습니다.
+                          .col-md-2.col-right.text-center
+                            a.btn.red(href="#", data-toggle='modal', data-target='#popupConfirmDelete') 삭제
+
+                  ="\n"
+                  include ../includes/rw-pagination.jade
+          // .block-1
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  

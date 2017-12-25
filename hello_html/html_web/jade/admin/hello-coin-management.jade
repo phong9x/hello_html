@@ -1,0 +1,175 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Hello Coin Management
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page.hello-coin
+            .page-bar
+              ul.page-breadcrumb
+                li
+                  a(href="home.html").home 
+                    i.fa.fa-home
+                    | 홈
+                li
+                  a(href="home.html") 회원 관리
+            // .page-bar
+            
+            ="\n"
+            .member-title-table
+              .md-ct
+                span.title 헬로코인 요약
+                span.pull-right 2016년 04월 25일 19:00 기준 누적 헬로코인 총액입니다.
+            .hello-coin-total.border-full(style="margin-bottom: 30px;")
+              .total-all
+                .item-total
+                  p
+                    span.title-total 지급 
+                    span.title-note (+)
+                  p
+                    span.total 1,500,000 
+                    span.total-note 원
+                .item-total
+                  p
+                    span.title-total 차감 
+                    span.title-note (-)
+                  p
+                    span.total 1,500,000 
+                    span.total-note 원
+                .item-total
+                  p
+                    span.title-total 헬로코인 총액 
+                    span.title-note (지급 – 차감)
+                  p
+                    span.total 1,500,000 
+                    span.total-note 원
+            form.form_sample_3
+              .member-main-top.border-full
+                .item-top
+                  .left
+                    span 일시 :
+                  .right
+                    .item.icon-next.datepicker-item
+                      span
+                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                      span.text 달력
+                    .item.datepicker-item
+                      span
+                        input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/24')
+                      span.text 달력
+                
+                .item-top.stylev2(style="margin-top: 20px;")
+                  .left
+                    span 사유 :
+                  .right
+                    .item-check-box
+                      span.title-box 지급 :
+                      .checkbox-list(data-error-container='#form_2_services_error')
+                        label
+                          input(type='checkbox', value='1', name='service')
+                          |  정상충전   
+                        label
+                          input(type='checkbox', value='2', name='service')
+                          |  예약취소
+                        label
+                          input(type='checkbox', value='2', name='service')
+                          |  수동지급
+                    .item-check-box
+                      span.title-box  지급 :
+                      .checkbox-list(data-error-container='#form_2_services_error')
+                        label
+                          input(type='checkbox', value='1', name='service')
+                          |  예약   
+                        label
+                          input(type='checkbox', value='2', name='service')
+                          |  상담
+                        label
+                          input(type='checkbox', value='2', name='service')
+                          |  심리검사
+                        label
+                          input(type='checkbox', value='2', name='service')
+                          |  회원탈퇴
+                        label
+                          input(type='checkbox', value='2', name='service')
+                          |  수동차감
+                .item-top
+                  .left
+                    span 키워드 :
+                  .right 
+                    .item
+                      select.form-control.select2me(name='options2')
+                        option(value='') Select...
+                        option(value='Option 1') Option 1
+                        option(value='Option 2') Option 2
+                        option(value='Option 3') Option 3
+                        option(value='Option 4') Option 4
+                    .item
+                      input.form-control(type='text', name='name', data-required='1')
+              .link-submit
+                button.btn.green(type='submit') 검색
+
+
+            .member-title-table
+              .md-ct
+                span.title 헬로코인 변동 내역 리스트 :
+                span 100건
+                button.pull-right.btn.green.open-popupcoin 헬로코인 지급 / 차감
+            .table-member-mng.table-responsive
+              table.table.table-striped.table-bordered.table-hover.text-center
+                thead
+                  tr
+                    th 번호
+                    th 회원명
+                    th 일시
+                    th 사유
+                    th 헬로코인 지급
+                    th 헬로코인 차감
+                    th 관리자명
+                  tr
+                    th(colspan="4") 합계
+                    th 500,000
+                    th 250,000
+                    th -
+                tbody
+                  tr
+                    td 10
+                    td 
+                      a(href="member-detail.html") 홍길동
+                    td 
+                      p 2016-03-08
+                      p 11:59:59
+                    td 1983-02-18
+                    td 메트라이프신세계
+                    td 1
+                    td 30,000
+                    
+            //.table-member-mng
+
+            ="\n"
+            include ../includes/rw-pagination.jade
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupPopupCoin.jade

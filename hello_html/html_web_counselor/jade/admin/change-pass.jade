@@ -1,0 +1,71 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Change Pass
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.change-pass
+      .page-title
+        .title
+          span 비밀번호 변경
+        .title-ct 
+          span 개인정보 보호를 위한 비밀번호 변경 안내
+      .page-content
+        .container
+          .icon-key-pass
+            img(src='../../assets/images/icon/icon-changepass.png', alt='logo')
+            p.color888 
+              span.blod 김태희 
+              | 상담사 님께서는 동일한 비밀번호를 3개월 동안 사용하고 계십니다.
+            p.color888 안전한 정보 보호를 위해 3개월마다 비밀
+          .main-content
+            form
+              .border-full.bg-fff 
+                .row
+                  .col-md-4.title 현재 비밀번호
+                  .col-md-6
+                    input.form-control(type='text', name='name', data-required='1')
+                .row
+                  .col-md-4.title 현재 비밀번호
+                  .col-md-6
+                    input.form-control(type='text', name='name', data-required='1',maxlength="20",minlength="8",placeholder="8~20자 이내, 영문+숫자+특수문자 혼용")
+                .row
+                  .col-md-4.title 현재 비밀번호
+                  .col-md-6
+                    input.form-control(type='text', name='name', data-required='1',maxlength="20",minlength="8",placeholder="8~20자 이내, 영문+숫자+특수문자 혼용")
+              .main-submit
+                button 
+                  span 비밀번호 변경
+            
+
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  
+  

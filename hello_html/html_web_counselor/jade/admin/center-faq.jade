@@ -1,0 +1,80 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Faq
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .member.page-content-wrapper.counseling-history.detail.notice-detail
+      .page-title
+        .title
+          span 고객센터
+        .title-ct 
+          span FAQ  &nbsp; | &nbsp;  자주묻는 질문
+      .page-content
+        .container
+          .main-content.border-full.bg-fff
+            .content-main
+              .main-ct
+                .item-title 
+                    h4 FAQ
+                .border-full.form-search-faq
+                  .col-md-2.text-right 키워드 검색
+                  .search-faq
+                    input.form-control(type='text', name='name', data-required='1')
+                    .main-submit
+                      button 
+                        span 검색
+              .main-ct.return-faq
+                .main-item
+                  h4 자주 묻는 질문
+                  .item-content
+                    .item 
+                      span.color2 Q. 
+                      span Hello의 차별점은 무엇인가요?
+                    .item.style2
+                      span.color2 A. 
+                      span Hello의 차별점은 무엇인가요?
+                    .item 
+                      span.color2 Q. 
+                      span Hello의 차별점은 무엇인가요?
+                    .item 
+                      span.color2 Q. 
+                      span Hello의 차별점은 무엇인가요?
+                    .item 
+                      span.color2 Q. 
+                      span Hello의 차별점은 무엇인가요?
+                    .item 
+                      span.color2 Q. 
+                      span Hello의 차별점은 무엇인가요?
+
+    include ../includes/footer.jade
+
+
+
+
+          ="\n"
+          
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+
+  //.page-container
+  
+  ="\n"
+  include ../includes/popupfirstlogin.jade
+  ="\n"
+  include ../includes/popupConfirmDelete.jade 
+  
+  

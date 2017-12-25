@@ -1,0 +1,146 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Member feed - RestWalk
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    include ../includes/page-sidebar.jade
+
+    ="\n"
+    .product.page-content-wrapper
+      .page-content
+        .page-bar
+          ul.page-breadcrumb
+            li
+              span 신고내역
+        // .page-bar
+        
+        ="\n"
+        .product-main.rw-pb-50
+          .block-1
+            .tabbable-custom
+              ul.nav.nav-tabs
+                li.active
+                  a(href='#') 일반 회원 관리
+                li
+                  a(href='#') 공급자 관리
+                li
+                  a(href='#') 회원 모아보기
+
+              ="\n"
+              
+              .tab-content
+                .tab-product.tab-pane.active
+                  .portlet.box
+                    ul.nav.nav-right
+                      li
+                        a.btn.btn-default(href='/member_feed.html') 개강 하루 전 회원
+                      li
+                        a.btn.btn-default(href='/member_feed_auditor.html') 청강신청회원    
+                    form.form-search.form-horizontal.sb-mb-30(action='#')
+                      .form-body
+                        .form-group
+                          .col-md-3.col-md-offset-3
+                            select.form-control(name='test38')
+                              option(value='0') 휴대폰번호
+                              option(value='1') 가입일시
+                              option(value='2') 이메일
+
+                          ="\n"
+                          .col-md-4
+                            input.form-control(name='test349', type='search')
+                          
+                          ="\n"
+                          .col-md-2.text-center
+                            button.btn.btn-block.green.btn-search(type='submit') 검색
+                    // .form-search   
+                    
+                    .table-wrapper
+                      .table-responsive
+                        table.table.table-striped.table-bordered.table-hover.text-center
+                          thead
+                            tr
+                              th 번호
+                              th 이름
+                              th 휴대폰 번호
+                              th 프로그램명
+                              th 개강
+                          tbody
+                            tr
+                              td 01
+                              td 
+                                a(href="/member_detail.html") 김길동
+                              td 010-1234-3421
+                              td 
+                                a(href="/program_detail.html") 포루투갈어와 함께 브라질로
+                              td 2016-05-26 12:00-14:00
+                            tr
+                              td 02
+                              td 
+                                a(href="/member_detail.html") 김길동
+                              td 010-1234-3421
+                              td 
+                                a(href="/program_detail.html") 포루투갈어와 함께 브라질로
+                              td 2016-05-26 12:00-14:00
+                            tr
+                              td 03
+                              td 
+                                a(href="/member_detail.html") 김길동
+                              td 010-1234-3421
+                              td 
+                                a(href="/program_detail.html") 포루투갈어와 함께 브라질로
+                              td 2016-05-26 12:00-14:00
+                            tr
+                              td 04
+                              td 
+                                a(href="/member_detail.html") 김길동
+                              td 010-1234-3421
+                              td 
+                                a(href="/program_detail.html") 포루투갈어와 함께 브라질로
+                              td 2016-05-26 12:00-14:00
+                            tr
+                              td 05
+                              td 
+                                a(href="/member_detail.html") 김길동
+                              td 010-1234-3421
+                              td 
+                                a(href="/program_detail.html") 포루투갈어와 함께 브라질로
+                              td 2016-05-26 12:00-14:00
+                            tr
+                              td 06
+                              td 
+                                a(href="/member_detail.html") 김길동
+                              td 010-1234-3421
+                              td 
+                                a(href="/program_detail.html") 포루투갈어와 함께 브라질로
+                              td 2016-05-26 12:00-14:00
+                            tr
+                              td 07
+                              td 
+                                a(href="/member_detail.html") 김길동
+                              td 010-1234-3421
+                              td 
+                                a(href="/program_detail.html") 포루투갈어와 함께 브라질로
+                              td 2016-05-26 12:00-14:00
+
+
+                        ="\n"
+                  include ../includes/rw-pagination.jade
+          // .block-1
+        // .product-main
+      // .page-content
+    // .product
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

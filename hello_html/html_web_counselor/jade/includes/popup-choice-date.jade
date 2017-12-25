@@ -1,0 +1,59 @@
+#popup-choiceDate.popup-choiceDate.modal.fade.popup-facetalk(tabindex='-1', aria-hidden='true', data-backdrop="static" data-keyboard="false")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 반복 설정
+        button.close-face(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        .modal-about
+          p 요일과 반복 종료 날짜를 선택하세요.
+          p 해당 요일 스케줄 그대로 반복 종료 날짜까지 적용됩니다.
+          p 단, 회원이 이미 예약한 시간은 변경되지 않습니다.
+        .modal-item
+          .sub-title 요일 선택
+          .list-choice
+            ul
+              li
+                .radio-checkboxstyle2
+                  input#checkbox1(type='checkbox', value='1', name='service')
+                  label(for="checkbox1") 월요일
+              li
+                .radio-checkboxstyle2
+                  input#checkbox2(type='checkbox', value='1', name='service')
+                  label(for="checkbox2") 화요일
+              li
+                .radio-checkboxstyle2
+                  input#checkbox3(type='checkbox', value='1', name='service')
+                  label(for="checkbox3") 수요일
+              li
+                .radio-checkboxstyle2
+                  input#checkbox4(type='checkbox', value='1', name='service')
+                  label(for="checkbox4") 목요일
+              li
+                .radio-checkboxstyle2
+                  input#checkbox5(type='checkbox', value='1', name='service')
+                  label(for="checkbox5") 금요일
+              li
+                .radio-checkboxstyle2
+                  input#checkbox6(type='checkbox', value='1', name='service')
+                  label(for="checkbox6") 토요일
+              li
+                .radio-checkboxstyle2
+                  input#checkbox7(type='checkbox', value='1', name='service')
+                  label(for="checkbox7") 일요일
+        .modal-item
+          .sub-title 
+            span 반복 종료 날짜 선택
+            #datepickerpopup.input-group.date
+              input.form-control#date(type='text')
+              span.input-group-addon
+                span.glyphicon.glyphicon-calendar 날짜선택
+              //- #datepicker-popup
+
+          .modal-item-content
+            
+        .modal-footer
+          button.btn-confirm(href="#") 적용하기
+          // Are you sure you want to delete?
+    // .popupConfirmDelete
+    
